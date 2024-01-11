@@ -35,6 +35,7 @@
       :color-back="colors.colorBack"
       :color-grid="colors.colorGrid"
       :color-text="colors.colorText"
+      :roundOffVolume="roundOffVolume"
       :legend-buttons="buttons"
       :ignore_OHLC="['Spline']"
         :indexBased="true"
@@ -66,6 +67,7 @@ export default {
       min:100,
       decimalPlace:3,
       legendDecimal:false,
+      roundOffVolume:true,
       chartType:"Candle",
       priceLine:true,
       enableSideBarBoxValue:false,

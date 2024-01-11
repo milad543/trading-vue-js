@@ -39,6 +39,7 @@
       :rerender="rerender"
       @sidebar-transform="sidebar_transform"
       :decimalPlace="decimalPlace"
+      :roundOffVolume="roundOffVolume"
       :applyShaders="applyShaders"
       :enableSideBarBoxValue="enableSideBarBoxValue"
     >
@@ -60,7 +61,7 @@ export default {
     ChartLegend,
   },
   mixins: [Shaders],
-  props: ["common", "grid_id",'enableSideBarBoxValue', "enableZoom","decimalPlace","priceLine","enableCrosshair","applyShaders","ignore_OHLC","legendDecimal"],
+  props: ["common", "grid_id",'enableSideBarBoxValue', "enableZoom","decimalPlace","priceLine","enableCrosshair","applyShaders","ignore_OHLC","legendDecimal","roundOffVolume"],
   data() {
     return {
       meta_props: {},

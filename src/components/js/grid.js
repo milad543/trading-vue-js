@@ -24,6 +24,7 @@ export default class Grid {
     this.range = this.$p.range;
     this.id = this.$p.grid_id;
     this.layout = this.$p.layout.grids[this.id];
+    console.log("this.layout.grid",this.layout )
     this.interval = this.$p.interval;
     this.cursor = comp.$props.cursor;
     this.offset_x = 0;
@@ -271,6 +272,7 @@ export default class Grid {
     if (layer.name === "crosshair") {
       this.crosshair = layer;
     } else {
+      console.log("layer==>",layer)
       this.overlays.push(layer);
     }
     this.update();
@@ -290,6 +292,8 @@ export default class Grid {
     // Update reference to the grid
     // TODO: check what happens if data changes interval
     this.layout = this.$p.layout.grids[this.id];
+    // console.log("this.layout update",this.layout)
+    // console.log("this.layout",this.layout)
     this.interval = this.$p.interval;
 
     if (!this.layout) return;
@@ -305,6 +309,7 @@ export default class Grid {
     // z-index sorting
     overlays.sort((l1, l2) => l1.z - l2.z);
 
+
     overlays.forEach((l) => {
       if (!l.display) return;
       this.ctx.save();
@@ -314,6 +319,8 @@ export default class Grid {
       if (r.post_draw) r.post_draw(this.ctx);
       this.ctx.restore();
     });
+
+    console.log("overlay==>",this.overlays[0]?.name)
 
     if (this.crosshair) {
       this.crosshair.renderer.draw(this.ctx);
@@ -353,7 +360,6 @@ export default class Grid {
     //     this.ctx.lineTo(x - 0.5, ymax)
     //
     // }
-
     for (var [y, y$] of this.layout.ys) {
       this.ctx.moveTo(0, y - 0.5);
       this.ctx.lineTo(this.layout.width, y - 0.5);

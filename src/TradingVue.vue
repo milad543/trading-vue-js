@@ -36,6 +36,7 @@
     :applyShaders="applyShaders"
     :priceLine="priceLine"
     :decimalPlace="decimalPlace"
+    :roundOffVolume="roundOffVolume"
     :legendDecimal="legendDecimal"
     :enableCrosshair="enableCrosshair"
     :ignoreNegativeIndex="ignoreNegativeIndex"
@@ -79,6 +80,10 @@ export default {
     titleTxt: {
       type: String,
       default: "TradingVue.js",
+    },
+    roundOffVolume:{
+      type:Boolean,
+      default:false
     },
     id: {
       type: String,

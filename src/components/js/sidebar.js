@@ -96,7 +96,6 @@ export default class Sidebar {
   update() {
     // Update reference to the grid
     this.layout = this.$p.layout.grids[this.id];
-
     var points = this.layout.ys;
     var x,
       y,
@@ -208,6 +207,12 @@ export default class Sidebar {
        let roundOffValue= this.$p.cursor.y$ < 1.00 ? 3 : this.$p.cursor.y$ < 0.01 ? 4 : 2
        lbl = this.$p.cursor.y$.toFixed(roundOffValue);
     } 
+
+    let volumOverlay=true
+    if(volumOverlay && this.$p?.roundOffVolume){
+      lbl = Math.round(lbl)
+    }
+
     // else {
     //    lbl = this.$p.cursor.y$.toFixed(2);
     // }

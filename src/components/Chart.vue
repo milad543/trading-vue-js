@@ -18,6 +18,7 @@
                   :enableZoom="enableZoom"
                   :enableSideBarBoxValue="enableSideBarBoxValue"
                   :decimalPlace="decimalPlace"
+                  :roundOffVolume="roundOffVolume"
                   :legendDecimal="legendDecimal"
                   :applyShaders="applyShaders"
                   :priceLine="priceLine"
@@ -59,7 +60,7 @@ export default {
     'title_txt', 'data', 'width', 'height', 'font', 'colors',
     'overlays', 'tv_id', 'config', 'buttons', 'toolbar', 'ib', 'applyShaders',
     'skin', 'timezone', 'enableZoom', 'enableSideBarBoxValue', 'decimalPlace', 'ignore_OHLC', 'priceLine', 'ignoreNegativeIndex', 'enableCrosshair', 'legendDecimal',
-    'showSettingsButton'
+    'showSettingsButton','roundOffVolume'
   ],
   data() {
     return {
@@ -121,6 +122,9 @@ export default {
       p.showSettingsButton = this.$props.showSettingsButton
       return p
     },
+    get_layout(){
+      return this._layout.grids
+    },
     sub_section() {
       let p = Object.assign({}, this.common_props())
       p.data = this.overlay_subset(this.offchart, 'offchart')
@@ -148,6 +152,7 @@ export default {
       return this.$props.data.onchart || []
     },
     offchart() {
+      console.log("this.$props.data.offchart",this.$props.data.offchart)
       return this.$props.data.offchart || []
     },
     filter() {
@@ -256,7 +261,7 @@ export default {
     this.sub = this.subset(this.range,'subset created')
     Utils.overwrite(this.range, this.range) // Fix for IB mode
     this._layout = new Layout(this)
-
+    
     // Updates current cursor values
     this.updater = new CursorUpdater(this)
 
