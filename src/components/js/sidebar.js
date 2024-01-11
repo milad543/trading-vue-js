@@ -208,10 +208,12 @@ export default class Sidebar {
        lbl = this.$p.cursor.y$.toFixed(roundOffValue);
     } 
 
-    let volumOverlay=true
-    if(volumOverlay && this.$p?.roundOffVolume){
-      lbl = Math.round(lbl)
-    }
+    // let volumOverlay=true
+    // if(volumOverlay && this.$p?.roundOffVolume){
+    //   lbl = Math.round(lbl)
+    // }
+
+    lbl = Math.round(lbl)
 
     // else {
     //    lbl = this.$p.cursor.y$.toFixed(2);
