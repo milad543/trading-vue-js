@@ -156,11 +156,21 @@ export default class Sidebar {
 
       var offst = side === "left" ? -10 : 10;
       this.ctx.textAlign = side === "left" ? "end" : "start";
+    const offChartOverlay = this.$p?.common?.data
+
+     if(offChartOverlay[this.$p.grid_id-1]?.name == 'Volume') {
       this.ctx.fillText(
-          p[1].toFixed(this.$p.decimalPlace),
-          x1 + offst,
-          p[0] + 4
-      );      
+        p[1],
+        x1 + offst,
+        p[0] + 4
+        );    
+     }else{
+       this.ctx.fillText(
+         p[1].toFixed(this.$p.decimalPlace),
+         x1 + offst,
+         p[0] + 4
+         );      
+      }
     }
 
     this.ctx.stroke();
