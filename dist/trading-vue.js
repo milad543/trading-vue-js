@@ -11597,6 +11597,7 @@ var Sidebar = /*#__PURE__*/function () {
         _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var _this$$p, _offChartOverlay;
           var p = _step.value;
           if (p[0] > this.layout.height) continue;
           var x1 = side === "left" ? w - 0.5 : x - 0.5;
@@ -11605,7 +11606,12 @@ var Sidebar = /*#__PURE__*/function () {
           this.ctx.lineTo(x2, p[0] - 0.5);
           var offst = side === "left" ? -10 : 10;
           this.ctx.textAlign = side === "left" ? "end" : "start";
-          this.ctx.fillText(p[1].toFixed(this.$p.decimalPlace), x1 + offst, p[0] + 4);
+          var offChartOverlay = (_this$$p = this.$p) === null || _this$$p === void 0 || (_this$$p = _this$$p.common) === null || _this$$p === void 0 ? void 0 : _this$$p.data;
+          if (((_offChartOverlay = offChartOverlay[this.$p.grid_id - 1]) === null || _offChartOverlay === void 0 ? void 0 : _offChartOverlay.name) == 'Volume') {
+            this.ctx.fillText(p[1], x1 + offst, p[0] + 4);
+          } else {
+            this.ctx.fillText(p[1].toFixed(this.$p.decimalPlace), x1 + offst, p[0] + 4);
+          }
         }
       } catch (err) {
         _iterator.e(err);
@@ -11656,7 +11662,7 @@ var Sidebar = /*#__PURE__*/function () {
   }, {
     key: "panel",
     value: function panel() {
-      var _this$$p, _offChartOverlay, _this$$p2;
+      var _this$$p2, _offChartOverlay2, _this$$p3;
       if (this.$p.cursor.grid_id !== this.layout.id) {
         return;
       }
@@ -11668,8 +11674,8 @@ var Sidebar = /*#__PURE__*/function () {
         var roundOffValue = this.$p.cursor.y$ < 1.00 ? 3 : this.$p.cursor.y$ < 0.01 ? 4 : 2;
         lbl = this.$p.cursor.y$.toFixed(roundOffValue);
       }
-      var offChartOverlay = (_this$$p = this.$p) === null || _this$$p === void 0 || (_this$$p = _this$$p.common) === null || _this$$p === void 0 ? void 0 : _this$$p.data;
-      if (((_offChartOverlay = offChartOverlay[this.$p.grid_id - 1]) === null || _offChartOverlay === void 0 ? void 0 : _offChartOverlay.name) == 'Volume' && (_this$$p2 = this.$p) !== null && _this$$p2 !== void 0 && _this$$p2.roundOffVolume) {
+      var offChartOverlay = (_this$$p2 = this.$p) === null || _this$$p2 === void 0 || (_this$$p2 = _this$$p2.common) === null || _this$$p2 === void 0 ? void 0 : _this$$p2.data;
+      if (((_offChartOverlay2 = offChartOverlay[this.$p.grid_id - 1]) === null || _offChartOverlay2 === void 0 ? void 0 : _offChartOverlay2.name) == 'Volume' && (_this$$p3 = this.$p) !== null && _this$$p3 !== void 0 && _this$$p3.roundOffVolume) {
         lbl = Math.round(lbl);
       }
 
