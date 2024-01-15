@@ -320,7 +320,7 @@ export default class Grid {
       this.ctx.restore();
     });
 
-    console.log("overlay==>",this.overlays[0]?.name)
+    // console.log("overlay==>",this.overlays[0]?.name)
 
     if (this.crosshair) {
       this.crosshair.renderer.draw(this.ctx);

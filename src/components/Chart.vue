@@ -575,7 +575,7 @@ export default {
     }
   },
   mounted() {
-    //console.log(this._layout)
+    console.log("layout==>",this._layout.grids)
   }
 }
 

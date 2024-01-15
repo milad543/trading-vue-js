@@ -67,7 +67,7 @@ export default {
       min:100,
       decimalPlace:3,
       legendDecimal:false,
-      roundOffVolume:true,
+      roundOffVolume:false,
       chartType:"Candle",
       priceLine:true,
       enableSideBarBoxValue:false,

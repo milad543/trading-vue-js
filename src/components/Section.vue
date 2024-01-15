@@ -40,6 +40,7 @@
       @sidebar-transform="sidebar_transform"
       :decimalPlace="decimalPlace"
       :roundOffVolume="roundOffVolume"
+      :common="common"
       :applyShaders="applyShaders"
       :enableSideBarBoxValue="enableSideBarBoxValue"
     >

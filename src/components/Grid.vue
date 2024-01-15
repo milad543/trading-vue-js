@@ -188,6 +188,7 @@ export default {
     this.renderer = new Grid(el, this);
     this.setup();
     this.$nextTick(() => this.redraw());
+
   },
   methods: {
     new_layer(layer) {
@@ -213,6 +214,7 @@ export default {
       // to this._registry; returns compo list
       let comp_list = [],
         count = {};
+
 
       for (var d of this.$props.data) {
         let comp = this._list[this._registry[d.type]];

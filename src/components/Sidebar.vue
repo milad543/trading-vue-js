@@ -10,7 +10,7 @@ export default {
     props: [
         'sub', 'layout', 'range', 'interval', 'cursor', 'colors', 'font',
         'width', 'height', 'grid_id', 'enableSideBarBoxValue','rerender', 'y_transform','decimalPlace','applyShaders','tv_id',
-        'config', 'shaders','roundOffVolume'
+        'config', 'shaders','roundOffVolume','common'
     ],
     watch: {
         range: {

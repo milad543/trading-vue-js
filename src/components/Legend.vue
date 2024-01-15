@@ -141,6 +141,7 @@ export default {
             ).map(x => {
                 if (!(x.type in types)) types[x.type] = 0
                 const id = x.type + `_${types[x.type]++}`
+                
                 return {
                     v: 'display' in x.settings ? x.settings.display : true,
                     name: x.name || id,
@@ -152,6 +153,8 @@ export default {
                     showLegendButtons: 'legendButtons' in x.settings ? x.settings.legendButtons : true
                 }
             })
+
+
         },
         calc_style() {
             let top = this.layout.height > 150 ? 10 : 5
