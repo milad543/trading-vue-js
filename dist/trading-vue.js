@@ -387,7 +387,7 @@ module.exports.isSortableArrayLike = function (o) {
 
 /***/ }),
 
-/***/ 925:
+/***/ 277:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -4155,19 +4155,19 @@ if (true) {
 
 /***/ }),
 
-/***/ 946:
+/***/ 72:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(925);
+var content = __webpack_require__(277);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(346)/* ["default"] */ .Z)
-var update = add("96399190", content, false, {});
+var update = add("6812fad7", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -5095,7 +5095,7 @@ __webpack_require__.d(__webpack_exports__, {
   primitives: () => (/* binding */ primitives)
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=template&id=728a0642&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=template&id=32040c1b&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -5173,7 +5173,7 @@ var render = function render() {
 var staticRenderFns = [];
 render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=template&id=728a0642&
+;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=template&id=32040c1b&
 
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
 function _arrayLikeToArray(arr, len) {
@@ -15152,7 +15152,6 @@ function TradingVuevue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
         }
         // update
         this.$emit("range-changed", rNew, manualInteraction);
-
         // this.custom_event({ event: "range-changed", args: [r,r2] });
         if (this.onrange) this.onrange(rNew);
       } else {
@@ -15230,9 +15229,9 @@ function TradingVuevue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
 });
 ;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=script&lang=js&
  /* harmony default export */ const src_TradingVuevue_type_script_lang_js_ = (TradingVuevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=style&index=0&id=728a0642&prod&lang=css&
-var TradingVuevue_type_style_index_0_id_728a0642_prod_lang_css_ = __webpack_require__(946);
-;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=style&index=0&id=728a0642&prod&lang=css&
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=style&index=0&id=32040c1b&prod&lang=css&
+var TradingVuevue_type_style_index_0_id_32040c1b_prod_lang_css_ = __webpack_require__(72);
+;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=style&index=0&id=32040c1b&prod&lang=css&
 
 ;// CONCATENATED MODULE: ./src/TradingVue.vue
 

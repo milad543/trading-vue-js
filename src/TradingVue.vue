@@ -459,7 +459,6 @@ export default {
       }
       // update
       this.$emit("range-changed", rNew,manualInteraction);
-      
       // this.custom_event({ event: "range-changed", args: [r,r2] });
       if (this.onrange) this.onrange(rNew);
       }
