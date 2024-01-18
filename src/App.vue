@@ -95,6 +95,7 @@ export default {
       this.width = window.innerWidth * 0.98;
       this.height = window.innerHeight * 0.97;
     })
+
     // this.chart.data.chart.type = "Splines";
     // console.log("chart", this.chart.tv);
     // this.chart.tv.goto(1543626000000);
