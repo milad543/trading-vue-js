@@ -451,11 +451,13 @@ export default {
       if (ctrl) this.post_dc(d);
     },
     range_changed(r,manualInteraction = false) {
+      console.log("r before from library",r,manualInteraction)
       if (this.chart_props.ib) {
         const ti_map = this.$refs.chart.ti_map;
         r = r.map((x) => ti_map.i2t(x));
       }
       // update
+      console.log("updated range changed from library",r,manualInteraction,this.chart_props.ib,this.$refs.chart.ti_map,r)
       this.$emit("range-changed", r,manualInteraction);
       
       // this.custom_event({ event: "range-changed", args: [r,r2] });
