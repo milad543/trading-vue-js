@@ -21,7 +21,7 @@ export default {
       return this.$props.settings;
     },
     show_volume() {
-      return "showVolume" in this.sett ? this.sett.showVolume : false;
+      return "showVolume" in this.sett ? this.sett.showVolume : true;
     },
     price_line() {
       return "priceLine" in this.sett ? this.sett.priceLine : true;
@@ -75,12 +75,20 @@ export default {
         cnv = layout_cnv(this);
       }
 
-      if (this.show_volume) {
+
+      if (false) {
         var cv = cnv.volume;
         for (var i = 0, n = cv.length; i < n; i++) {
           new Volbar(this, ctx, cv[i]);
         }
       }
+
+      // if (this.show_volume) {
+      //   var cv = cnv.volume;
+      //   for (var i = 0, n = cv.length; i < n; i++) {
+      //     new Volbar(this, ctx, cv[i]);
+      //   }
+      // }
 
       var cc = cnv.candles;
       for (var i = 0, n = cc.length; i < n; i++) {
