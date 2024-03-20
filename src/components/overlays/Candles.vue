@@ -21,7 +21,7 @@ export default {
       return this.$props.settings;
     },
     show_volume() {
-      return "showVolume" in this.sett ? this.sett.showVolume : true;
+      return "showVolume" in this.sett ? this.sett.showVolume : false;
     },
     price_line() {
       return "priceLine" in this.sett ? this.sett.priceLine : true;
