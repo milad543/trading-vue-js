@@ -68,9 +68,8 @@ export default {
       if (this.$props.sub === this.$props.data) {
         var cnv = {
           candles: this.$props.layout.candles,
-          volume: this.$props.layout.volume,
+          // volume: this.$props.layout.volume,
         };
-        // Else, as offchart / onchart indicator:
       } else {
         cnv = layout_cnv(this);
       }
