@@ -1,5 +1,5 @@
 /*!
- * TradingVue.JS - v1.0.3 - Thu Mar 21 2024
+ * TradingVue.JS - v1.0.3 - Fri Mar 22 2024
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2019 C451 Code's All Right;
  *     Licensed under the MIT license
@@ -387,7 +387,7 @@ module.exports.isSortableArrayLike = function (o) {
 
 /***/ }),
 
-/***/ 787:
+/***/ 171:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -443,14 +443,14 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 897:
+/***/ 763:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(314);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.id, "\n.trading-vue-legend {\r\n    position: relative;\r\n    z-index: 100;\r\n    font-size: 1.25em;\r\n    margin-left: 10px;\r\n    pointer-events: none;\r\n    text-align: left;\r\n    user-select: none;\r\n    font-weight: 300;\n}\n@media (min-resolution: 2x) {\n.trading-vue-legend {\r\n        font-weight: 400;\n}\n}\n.trading-vue-ohlcv {\r\n    pointer-events: none;\r\n    margin-bottom: 0.5em;\n}\n.cs-vol{\r\n    /* display: none */\n}\n.t-vue-lspan {\r\n    font-variant-numeric: tabular-nums;\r\n    font-size: 0.95em;\r\n    color: #999999; /* TODO: move => params */\r\n    margin-left: 0.1em;\r\n    margin-right: 0.2em;\n}\n.t-vue-title {\r\n    margin-right: 0.25em;\r\n    font-size: 1.45em;\n}\n.t-vue-ind {\r\n  display: flex;\r\n    margin-left: 0.2em;\r\n    margin-bottom: 0.5em;\r\n    font-size: 1.0em;\r\n    margin-top: 0.3em;\n}\n.t-vue-ivalue {\r\n    margin-left: 0.5em;\n}\n.t-vue-unknown {\r\n    color: #999999; /* TODO: move => params */\n}\n.tvjs-appear-enter-active,\r\n.tvjs-appear-leave-active\r\n{\r\n    transition: all .25s ease;\n}\n.tvjs-appear-enter, .tvjs-appear-leave-to\r\n{\r\n    opacity: 0;\n}\r\n", ""]);
+exports.push([module.id, "\n.trading-vue-legend {\r\n  position: relative;\r\n  z-index: 100;\r\n  font-size: 1.25em;\r\n  margin-left: 10px;\r\n  pointer-events: none;\r\n  text-align: left;\r\n  user-select: none;\r\n  font-weight: 300;\n}\n.cs-vue-title {\r\n  font-weight: 400;\r\n  color: #0043fc;\r\n  font-size: 16px;\n}\n.cs-title-1 {\r\n  border: 1px solid red;\r\n  border-radius: 6px;\r\n  font-weight: 400;\r\n  background-color: white;\r\n  color: red;\r\n  padding: 5px 10px 5px 10px;\n}\n.cs-title-2 {\r\n  border: 1px solid blue;\r\n  border-radius: 6px;\r\n  font-weight: 400;\r\n  background-color: white;\r\n  color: #0043fc;\r\n  padding: 5px 10px 5px 10px;\n}\n@media (min-resolution: 2x) {\n.trading-vue-legend {\r\n    font-weight: 400;\n}\n}\n.trading-vue-ohlcv {\r\n  pointer-events: none;\r\n  margin-bottom: 0.5em;\n}\n.t-vue-lspan {\r\n  font-variant-numeric: tabular-nums;\r\n  font-size: 0.95em;\r\n  color: #999999; /* TODO: move => params */\r\n  margin-left: 0.1em;\r\n  margin-right: 0.2em;\n}\n.t-vue-title {\r\n  margin-right: 0.25em;\r\n  font-size: 1.45em;\n}\n.t-vue-ind {\r\n  display: flex;\r\n  margin-left: 0.2em;\r\n  margin-bottom: 0.5em;\r\n  font-size: 1em;\r\n  margin-top: 0.3em;\n}\n.t-vue-ivalue {\r\n  margin-left: 0.5em;\n}\n.t-vue-unknown {\r\n  color: #999999; /* TODO: move => params */\n}\n.tvjs-appear-enter-active,\r\n.tvjs-appear-leave-active {\r\n  transition: all 0.25s ease;\n}\n.tvjs-appear-enter,\r\n.tvjs-appear-leave-to {\r\n  opacity: 0;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -471,7 +471,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 859:
+/***/ 654:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -4155,19 +4155,19 @@ if (true) {
 
 /***/ }),
 
-/***/ 108:
+/***/ 840:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(787);
+var content = __webpack_require__(171);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("3d62d219", content, false, {});
+var update = add("14810bb6", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -4227,19 +4227,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 956:
+/***/ 738:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(897);
+var content = __webpack_require__(763);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("3b39ea24", content, false, {});
+var update = add("e366e970", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -4263,19 +4263,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 188:
+/***/ 881:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(859);
+var content = __webpack_require__(654);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("8dfce120", content, false, {});
+var update = add("4a15960a", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -4658,7 +4658,7 @@ function applyToTag (styleElement, obj) {
 /***/ 633:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var _typeof = (__webpack_require__(738)["default"]);
+var _typeof = (__webpack_require__(357)["default"]);
 function _regeneratorRuntime() {
   "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
   module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
@@ -4965,7 +4965,7 @@ module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.e
 
 /***/ }),
 
-/***/ 738:
+/***/ 357:
 /***/ ((module) => {
 
 function _typeof(o) {
@@ -5095,7 +5095,7 @@ __webpack_require__.d(__webpack_exports__, {
   primitives: () => (/* binding */ primitives)
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=template&id=b500430c
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=template&id=196aea7a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -5173,7 +5173,7 @@ var render = function render() {
 var staticRenderFns = [];
 render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=template&id=b500430c
+;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=template&id=196aea7a
 
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
 function _arrayLikeToArray(arr, len) {
@@ -6877,8 +6877,8 @@ var CursorUpdater = /*#__PURE__*/function () {
   }]);
 }();
 /* harmony default export */ const updater = (CursorUpdater);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=template&id=e10036a2
-var Sectionvue_type_template_id_e10036a2_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=template&id=76caf69a
+var Sectionvue_type_template_id_76caf69a_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
@@ -6932,10 +6932,10 @@ var Sectionvue_type_template_id_e10036a2_render = function render() {
     }
   }, "sidebar", _vm.sidebar_props, false))], 1);
 };
-var Sectionvue_type_template_id_e10036a2_staticRenderFns = [];
-Sectionvue_type_template_id_e10036a2_render._withStripped = true;
+var Sectionvue_type_template_id_76caf69a_staticRenderFns = [];
+Sectionvue_type_template_id_76caf69a_render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=template&id=e10036a2
+;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=template&id=76caf69a
 
 ;// CONCATENATED MODULE: ./src/stuff/frame.js
 
@@ -9581,6 +9581,75 @@ var CandleExt = /*#__PURE__*/function () {
   //         );
   //     }
   // }
+
+  // draw(data) {
+  //     const green = data.raw[4] >= data.raw[1];
+  //     const body_color = green ?
+  //         this.style.colorCandleUp :
+  //         this.style.colorCandleDw;
+
+  //     const wick_color = green ?
+  //         this.style.colorWickUp :
+  //         this.style.colorWickDw;
+
+  //     const border_color = this.style.borderColor || 'black'; // Define border color
+
+  //     let w = Math.max(data.w, 1);
+  //     let hw = Math.max(Math.floor(w * 0.5), 1);
+  //     let h = Math.abs(data.o - data.c);
+  //     let max_h = data.c === data.o ? 1 : 2;
+  //     let x05 = Math.floor(data.x) - 0.5;
+
+  //     this.ctx.strokeStyle = wick_color;
+  //     this.ctx.beginPath();
+  //     this.ctx.moveTo(x05, Math.floor(data.h));
+  //     this.ctx.lineTo(x05, Math.floor(data.l));
+  //     this.ctx.stroke();
+
+  //     if (data.w > 1.5) {
+  //         // Draw candlestick body with border
+  //         this.ctx.fillStyle = border_color; // Set border color
+  //         let s = green ? 1 : -1;
+  //         this.ctx.fillRect(
+  //             Math.floor(data.x - hw - 1),
+  //             data.c,
+  //             Math.floor(hw * 2 + 1),
+  //             s * Math.max(h, max_h)
+  //         );
+
+  //         // Draw inner candlestick body
+  //         this.ctx.fillStyle = body_color;
+  //         this.ctx.fillRect(
+  //             Math.floor(data.x - hw),
+  //             data.c + 1, // Adjust for border thickness
+  //             Math.floor(hw * 2 - 1),
+  //             s * Math.max(h, max_h) - 2 // Adjust for border thickness
+  //         );
+  //     } else {
+  //         // Draw candlestick with border
+  //         this.ctx.strokeStyle = border_color; // Set border color
+  //         this.ctx.beginPath();
+  //         this.ctx.moveTo(
+  //             x05,
+  //             Math.floor(Math.min(data.o, data.c))
+  //         );
+  //         this.ctx.lineTo(
+  //             x05,
+  //             Math.floor(Math.max(data.o, data.c)) +
+  //             (data.o === data.c ? 1 : 0)
+  //         );
+  //         this.ctx.stroke();
+
+  //         // Draw inner candlestick
+  //         this.ctx.fillStyle = body_color;
+  //         this.ctx.fillRect(
+  //             Math.floor(data.x - hw),
+  //             Math.min(data.o, data.c) + 1, // Adjust for border thickness
+  //             Math.floor(hw * 2 - 1),
+  //             Math.abs(data.o - data.c) - 2 // Adjust for border thickness
+  //         );
+  //     }
+  // }
   return createClass_createClass(CandleExt, [{
     key: "draw",
     value: function draw(data) {
@@ -9599,32 +9668,35 @@ var CandleExt = /*#__PURE__*/function () {
       this.ctx.moveTo(x05, Math.floor(data.h));
       this.ctx.lineTo(x05, Math.floor(data.l));
       this.ctx.stroke();
+
+      // Set the border color for the candlestick body
+      this.ctx.strokeStyle = border_color;
       if (data.w > 1.5) {
         // Draw candlestick body with border
-        this.ctx.fillStyle = border_color; // Set border color
-        var s = green ? 1 : -1;
-        this.ctx.fillRect(Math.floor(data.x - hw - 1), data.c, Math.floor(hw * 2 + 1), s * Math.max(h, max_h));
-
-        // Draw inner candlestick body
         this.ctx.fillStyle = body_color;
-        this.ctx.fillRect(Math.floor(data.x - hw), data.c + 1,
-        // Adjust for border thickness
-        Math.floor(hw * 2 - 1), s * Math.max(h, max_h) - 2 // Adjust for border thickness
-        );
+        this.ctx.fillRect(Math.floor(data.x - hw), Math.floor(data.c), Math.floor(w), Math.floor(h));
+
+        // Draw the border around all four sides of the candlestick body
+        this.ctx.beginPath();
+        this.ctx.moveTo(Math.floor(data.x - hw), Math.floor(data.c));
+        this.ctx.lineTo(Math.floor(data.x - hw), Math.floor(data.c + h));
+        this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(data.c + h));
+        this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(data.c));
+        this.ctx.closePath();
+        this.ctx.stroke();
       } else {
         // Draw candlestick with border
-        this.ctx.strokeStyle = border_color; // Set border color
-        this.ctx.beginPath();
-        this.ctx.moveTo(x05, Math.floor(Math.min(data.o, data.c)));
-        this.ctx.lineTo(x05, Math.floor(Math.max(data.o, data.c)) + (data.o === data.c ? 1 : 0));
-        this.ctx.stroke();
-
-        // Draw inner candlestick
         this.ctx.fillStyle = body_color;
-        this.ctx.fillRect(Math.floor(data.x - hw), Math.min(data.o, data.c) + 1,
-        // Adjust for border thickness
-        Math.floor(hw * 2 - 1), Math.abs(data.o - data.c) - 2 // Adjust for border thickness
-        );
+        this.ctx.fillRect(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c)), Math.floor(w), Math.floor(h) + (data.o === data.c ? 1 : 0));
+
+        // Draw the border around all four sides of the candlestick body
+        this.ctx.beginPath();
+        this.ctx.moveTo(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c)));
+        this.ctx.lineTo(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c) + h));
+        this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(Math.min(data.o, data.c) + h));
+        this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(Math.min(data.o, data.c)));
+        this.ctx.closePath();
+        this.ctx.stroke();
       }
     }
   }]);
@@ -12003,8 +12075,8 @@ var Sidebar_component = normalizeComponent(
 )
 
 /* harmony default export */ const components_Sidebar = (Sidebar_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=5608eab3
-var Legendvue_type_template_id_5608eab3_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=7541d108
+var Legendvue_type_template_id_7541d108_render = function render() {
   var _vm$common;
   var _vm = this,
     _c = _vm._self._c;
@@ -12025,22 +12097,43 @@ var Legendvue_type_template_id_5608eab3_render = function render() {
       key: i,
       style: n.style
     }, [_vm._v(_vm._s(n.name) + " ")]);
-  }) : _vm._e(), _vm._v(" "), _vm._v('"}">\r\n              '), _vm._v("\r\n              International Business Machines Corporation\r\n        "), _vm._v(" "), _vm.show_values && !_vm.show_CustomProps ? _c("span", [_vm._v("\r\n            O"), _c("span", {
-    staticClass: "t-vue-lspan"
-  }, [_vm._v(_vm._s(_vm.ohlcv[0]))]), _vm._v("\r\n            H"), _c("span", {
-    staticClass: "t-vue-lspan"
-  }, [_vm._v(_vm._s(_vm.ohlcv[1]))]), _vm._v("\r\n            L"), _c("span", {
-    staticClass: "t-vue-lspan"
-  }, [_vm._v(_vm._s(_vm.ohlcv[2]))]), _vm._v("\r\n            C"), _c("span", {
-    staticClass: "t-vue-lspan"
-  }, [_vm._v(_vm._s(_vm.ohlcv[3]))]), _vm._v("\r\n            V"), _c("span", {
-    staticClass: "t-vue-lspan"
-  }, [_vm._v(_vm._s(_vm.ohlcv[4]))])]) : _vm._e(), _vm._v(" "), _vm._m(0), _vm._v(" "), !_vm.show_values ? _c("span", {
+  }) : _vm._e(), _vm._v(" "), !_vm.show_CustomProps ? _c("span", {
+    staticClass: "t-vue-title",
+    style: {
+      color: _vm.common.colors.title
+    }
+  }) : _vm._e(), _vm._v(" "), _c("span", {
+    staticClass: "t-vue-title"
+  }, [_c("span", {
+    staticStyle: {
+      color: "#131722",
+      "font-size": "22px",
+      "font-weight": "500"
+    }
+  }, [_vm._v("International Business Machines Corporation")]), _vm._v(" "), _c("span", {
+    staticClass: "cs-vue-title"
+  }, [_vm._v(_vm._s(_vm.ohlcv[3]))]), _vm._v(" "), _c("span", {
+    staticClass: "cs-vue-title"
+  }, [_vm._v(_vm._s(_vm.changeInPrice))]), _vm._v(" "), _c("span", {
+    staticClass: "cs-vue-title"
+  }, [_vm._v(_vm._s(_vm.percentageChange) + "%")])]), _vm._v(" "), _c("br"), _vm._v(" "), !_vm.show_custom ? _c("div", {
+    staticStyle: {
+      "margin-top": "12px"
+    }
+  }, [_c("span", {
+    staticClass: "cs-title-1"
+  }, [_vm._v(_vm._s(_vm.secondLastData))]), _vm._v(" "), _c("span", {
+    staticStyle: {
+      padding: "6px"
+    }
+  }, [_vm._v(_vm._s((_vm.lastJsonData - _vm.secondLastData).toFixed(2)))]), _vm._v(" "), _c("span", {
+    staticClass: "cs-title-2"
+  }, [_vm._v(_vm._s(_vm.lastJsonData))])]) : _vm._e(), _vm._v(" "), !_vm.show_values ? _c("span", {
     staticClass: "t-vue-lspan",
     style: {
       color: _vm.common.colors.text
     }
-  }, [_vm._v("\r\n            " + _vm._s((_vm.common.meta.last || [])[4]) + "\r\n        ")]) : _vm._e(), _vm._v(" "), _vm.show_Settings ? _c("legend-button", {
+  }, [_vm._v("\n      " + _vm._s((_vm.common.meta.last || [])[4]) + "\n    ")]) : _vm._e(), _vm._v(" "), _vm.show_Settings ? _c("legend-button", {
     key: "main_chart_settings",
     attrs: {
       id: "main_settings",
@@ -12082,10 +12175,10 @@ var Legendvue_type_template_id_5608eab3_render = function render() {
         style: {
           color: v.color
         }
-      }, [_vm._v("\r\n                " + _vm._s(v.value) + "\r\n            ")]) : _vm._e();
+      }, [_vm._v("\n        " + _vm._s(v.value) + "\n      ")]) : _vm._e();
     }), 0) : _vm._e(), _vm._v(" "), ind.unk ? _c("span", {
       staticClass: "t-vue-unknown"
-    }, [_vm._v("\r\n            (Unknown type)\r\n        ")]) : _vm._e(), _vm._v(" "), _c("transition", {
+    }, [_vm._v(" (Unknown type) ")]) : _vm._e(), _vm._v(" "), _c("transition", {
       attrs: {
         name: "tvjs-appear"
       }
@@ -12096,14 +12189,10 @@ var Legendvue_type_template_id_5608eab3_render = function render() {
     }) : _vm._e()], 1)], 1);
   })], 2);
 };
-var Legendvue_type_template_id_5608eab3_staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", [_c("span", [_vm._v("Opening proce")]), _vm._v(" "), _c("span", [_vm._v("increase amoutj proce")]), _vm._v(" "), _c("span", [_vm._v("closing proce")])]);
-}];
-Legendvue_type_template_id_5608eab3_render._withStripped = true;
+var Legendvue_type_template_id_7541d108_staticRenderFns = [];
+Legendvue_type_template_id_7541d108_render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=5608eab3
+;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=7541d108
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ButtonGroup.vue?vue&type=template&id=72b6dd45
 var ButtonGroupvue_type_template_id_72b6dd45_render = function render() {
@@ -12328,13 +12417,13 @@ var Spinner_component = normalizeComponent(
 
 var settingPng = icons_namespaceObject["gear.png"];
 /* harmony default export */ const Legendvue_type_script_lang_js = ({
-  name: 'ChartLegend',
+  name: "ChartLegend",
   components: {
     LegendButton: LegendButton,
     ButtonGroup: ButtonGroup,
     Spinner: Spinner
   },
-  props: ['common', 'values', 'decimalPlace', 'grid_id', 'meta_props', 'legendDecimal'],
+  props: ["common", "values", "decimalPlace", "grid_id", "meta_props", "legendDecimal"],
   computed: {
     show_CustomProps: function show_CustomProps() {
       var _this$common;
@@ -12353,13 +12442,13 @@ var settingPng = icons_namespaceObject["gear.png"];
     },
     ohlcv: function ohlcv() {
       if (!this.$props.values || !this.$props.values.ohlcv) {
-        return Array(6).fill('n/a');
+        return Array(6).fill("n/a");
       }
       // const prec = this.layout.prec
       var prec = this.decimalPlace;
       // const prec = 3
       // TODO: main the main legend more customizable
-      var id = this.main_type + '_0';
+      var id = this.main_type + "_0";
       var meta = this.$props.meta_props[id] || {};
       if (meta.legend) {
         return (meta.legend() || []).map(function (x) {
@@ -12367,9 +12456,9 @@ var settingPng = icons_namespaceObject["gear.png"];
         });
       }
       if (this.$props.legendDecimal) {
-        return [this.$props.values.ohlcv[1].toFixed(this.$props.values.ohlcv[1] < 1 ? 3 : 2), this.$props.values.ohlcv[2].toFixed(this.$props.values.ohlcv[2] < 1 ? 3 : 2), this.$props.values.ohlcv[3].toFixed(this.$props.values.ohlcv[3] < 1 ? 3 : 2), this.$props.values.ohlcv[4].toFixed(this.$props.values.ohlcv[4] < 1 ? 3 : 2), this.$props.values.ohlcv[5] ? Number(this.$props.values.ohlcv[5].toFixed(0)).toLocaleString('en-AU') : 'n/a'];
+        return [this.$props.values.ohlcv[1].toFixed(this.$props.values.ohlcv[1] < 1 ? 3 : 2), this.$props.values.ohlcv[2].toFixed(this.$props.values.ohlcv[2] < 1 ? 3 : 2), this.$props.values.ohlcv[3].toFixed(this.$props.values.ohlcv[3] < 1 ? 3 : 2), this.$props.values.ohlcv[4].toFixed(this.$props.values.ohlcv[4] < 1 ? 3 : 2), this.$props.values.ohlcv[5] ? Number(this.$props.values.ohlcv[5].toFixed(0)).toLocaleString("en-AU") : "n/a"];
       } else {
-        return [this.$props.values.ohlcv[1].toFixed(prec), this.$props.values.ohlcv[2].toFixed(prec), this.$props.values.ohlcv[3].toFixed(prec), this.$props.values.ohlcv[4].toFixed(prec), this.$props.values.ohlcv[5] ? Number(this.$props.values.ohlcv[5].toFixed(0)).toLocaleString('en-AU') : 'n/a'];
+        return [this.$props.values.ohlcv[1].toFixed(prec), this.$props.values.ohlcv[2].toFixed(prec), this.$props.values.ohlcv[3].toFixed(prec), this.$props.values.ohlcv[4].toFixed(prec), this.$props.values.ohlcv[5] ? Number(this.$props.values.ohlcv[5].toFixed(0)).toLocaleString("en-AU") : "n/a"];
       }
     },
     // TODO: add support for { grid: { id : N }}
@@ -12384,14 +12473,14 @@ var settingPng = icons_namespaceObject["gear.png"];
         if (!(x.type in types)) types[x.type] = 0;
         var id = x.type + "_".concat(types[x.type]++);
         return {
-          v: 'display' in x.settings ? x.settings.display : true,
+          v: "display" in x.settings ? x.settings.display : true,
           name: x.name || id,
           index: (_this.off_data || _this.json_data).indexOf(x),
           id: id,
           values: values ? f(id, values) : _this.n_a(1),
           unk: !(id in (_this.$props.meta_props || {})),
           loading: x.loading,
-          showLegendButtons: 'legendButtons' in x.settings ? x.settings.legendButtons : true
+          showLegendButtons: "legendButtons" in x.settings ? x.settings.legendButtons : true
         };
       });
     },
@@ -12414,6 +12503,26 @@ var settingPng = icons_namespaceObject["gear.png"];
     off_data: function off_data() {
       return this.$props.common.offchart;
     },
+    lastJsonData: function lastJsonData() {
+      console.log("this json_data last", this.json_data[0].data[this.json_data[0].data.length - 1][2] - this.json_data[0].data[this.json_data[0].data.length - 2][2]);
+      console.log("this json_data second last", this.json_data[0].data[this.json_data[0].data.length - 1]);
+      return this.json_data[0].data[this.json_data[0].data.length - 1][3].toFixed(2);
+    },
+    secondLastData: function secondLastData() {
+      console.log("this is changing price");
+      return this.json_data[0].data[this.json_data[0].data.length - 2][3].toFixed(2);
+    },
+    changeInPrice: function changeInPrice() {
+      var currentPriceClosing = this.json_data[0].data[this.json_data[0].data.length - 1][3];
+      var previousePriceClosing = this.json_data[0].data[this.json_data[0].data.length - 2][3];
+      console.log("changing", (currentPriceClosing - previousePriceClosing).toFixed(2));
+      return (currentPriceClosing - previousePriceClosing).toFixed(2);
+    },
+    percentageChange: function percentageChange() {
+      // formula (changeinprice / open price) * 100
+      var previousePriceClosing = this.json_data[0].data[this.json_data[0].data.length - 2][3];
+      return (this.changeInPrice / previousePriceClosing * 100).toFixed(2);
+    },
     main_type: function main_type() {
       var f = this.common.data.find(function (x) {
         return x.main;
@@ -12421,7 +12530,7 @@ var settingPng = icons_namespaceObject["gear.png"];
       return f ? f.type : undefined;
     },
     show_values: function show_values() {
-      return this.common.cursor.mode !== 'explore';
+      return this.common.cursor.mode !== "explore";
     }
   },
   methods: {
@@ -12435,7 +12544,7 @@ var settingPng = icons_namespaceObject["gear.png"];
       if (meta.legend) return meta.legend(values[id]);
       return values[id].slice(1).map(function (x, i) {
         var cs = meta.data_colors ? meta.data_colors() : [];
-        if (typeof x == 'number') {
+        if (typeof x == "number") {
           // Show 8 digits for small values
           x = x.toFixed(Math.abs(x) > 0.001 ? 4 : 8);
         }
@@ -12447,22 +12556,31 @@ var settingPng = icons_namespaceObject["gear.png"];
     },
     n_a: function n_a(len) {
       return Array(len).fill({
-        value: 'n/a'
+        value: "n/a"
       });
     },
     button_click: function button_click(event) {
-      this.$emit('legend-button-click', event);
+      this.$emit("legend-button-click", event);
     }
   },
   mounted: function mounted() {
-    console.log("this is common", this.common);
+    // console.log("math calculation",this.ohlcv)
+    // const open = Number(this.$props?.values?.ohlcv[0]);
+    // const close = Number(this.$props?.values?.ohlcv[3])
+    // console.log("this is props ohlcv==>", this.$props.values.ohlcv)
+    // this.secondLastvalue()
+    // if(this.ohlcv === n/a){
+    //     return []
+    // }else{
+    //     return this.ohlcv
+    // }
   }
 });
 ;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Legendvue_type_script_lang_js = (Legendvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=5608eab3&prod&lang=css
-var Legendvue_type_style_index_0_id_5608eab3_prod_lang_css = __webpack_require__(956);
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=5608eab3&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=7541d108&prod&lang=css
+var Legendvue_type_style_index_0_id_7541d108_prod_lang_css = __webpack_require__(738);
+;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=7541d108&prod&lang=css
 
 ;// CONCATENATED MODULE: ./src/components/Legend.vue
 
@@ -12475,8 +12593,8 @@ var Legendvue_type_style_index_0_id_5608eab3_prod_lang_css = __webpack_require__
 
 var Legend_component = normalizeComponent(
   components_Legendvue_type_script_lang_js,
-  Legendvue_type_template_id_5608eab3_render,
-  Legendvue_type_template_id_5608eab3_staticRenderFns,
+  Legendvue_type_template_id_7541d108_render,
+  Legendvue_type_template_id_7541d108_staticRenderFns,
   false,
   null,
   null,
@@ -12771,9 +12889,9 @@ function shaders_arrayLikeToArray(arr, len) { if (len == null || len > arr.lengt
 });
 ;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Sectionvue_type_script_lang_js = (Sectionvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=style&index=0&id=e10036a2&prod&lang=css
-var Sectionvue_type_style_index_0_id_e10036a2_prod_lang_css = __webpack_require__(188);
-;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=style&index=0&id=e10036a2&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=style&index=0&id=76caf69a&prod&lang=css
+var Sectionvue_type_style_index_0_id_76caf69a_prod_lang_css = __webpack_require__(881);
+;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=style&index=0&id=76caf69a&prod&lang=css
 
 ;// CONCATENATED MODULE: ./src/components/Section.vue
 
@@ -12786,8 +12904,8 @@ var Sectionvue_type_style_index_0_id_e10036a2_prod_lang_css = __webpack_require_
 
 var Section_component = normalizeComponent(
   components_Sectionvue_type_script_lang_js,
-  Sectionvue_type_template_id_e10036a2_render,
-  Sectionvue_type_template_id_e10036a2_staticRenderFns,
+  Sectionvue_type_template_id_76caf69a_render,
+  Sectionvue_type_template_id_76caf69a_staticRenderFns,
   false,
   null,
   null,
@@ -15340,9 +15458,9 @@ function TradingVuevue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
 });
 ;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=script&lang=js
  /* harmony default export */ const src_TradingVuevue_type_script_lang_js = (TradingVuevue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=style&index=0&id=b500430c&prod&lang=css
-var TradingVuevue_type_style_index_0_id_b500430c_prod_lang_css = __webpack_require__(108);
-;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=style&index=0&id=b500430c&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=style&index=0&id=196aea7a&prod&lang=css
+var TradingVuevue_type_style_index_0_id_196aea7a_prod_lang_css = __webpack_require__(840);
+;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=style&index=0&id=196aea7a&prod&lang=css
 
 ;// CONCATENATED MODULE: ./src/TradingVue.vue
 
