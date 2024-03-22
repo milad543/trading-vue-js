@@ -140,7 +140,7 @@ export default {
           if(Array.isArray(showLegendPropsData) && showLegendPropsData.length > 0){
             p.showLegendPropsData = showLegendPropsData
           }
-        }
+      } 
         let mainData = p.data.find(d => d.main)
         let chartType = mainData.type ? mainData.type : "";
         let show_CustomProps = this.$props.ignore_OHLC.includes(chartType)
