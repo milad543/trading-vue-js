@@ -24,6 +24,7 @@
       >
         {{common.title_txt}}
       </span> -->
+      <!--This is my legend -->
       <span v-if="show_values && !show_CustomProps">
         <span style="color: #131722; font-size: 22px; font-weight: 500"
           >International Business Machines Corporation</span
