@@ -1,5 +1,5 @@
 /*!
- * TradingVue.JS - v1.0.3 - Fri Mar 22 2024
+ * TradingVue.JS - v1.0.3 - Mon Mar 25 2024
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2019 C451 Code's All Right;
  *     Licensed under the MIT license
@@ -443,7 +443,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 763:
+/***/ 251:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -4227,19 +4227,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 738:
+/***/ 414:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(763);
+var content = __webpack_require__(251);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("e366e970", content, false, {});
+var update = add("4ec2230a", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -4658,7 +4658,7 @@ function applyToTag (styleElement, obj) {
 /***/ 633:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var _typeof = (__webpack_require__(357)["default"]);
+var _typeof = (__webpack_require__(738)["default"]);
 function _regeneratorRuntime() {
   "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
   module.exports = _regeneratorRuntime = function _regeneratorRuntime() {
@@ -4965,7 +4965,7 @@ module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.e
 
 /***/ }),
 
-/***/ 357:
+/***/ 738:
 /***/ ((module) => {
 
 function _typeof(o) {
@@ -12075,8 +12075,8 @@ var Sidebar_component = normalizeComponent(
 )
 
 /* harmony default export */ const components_Sidebar = (Sidebar_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=7541d108
-var Legendvue_type_template_id_7541d108_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=4e356ec3
+var Legendvue_type_template_id_4e356ec3_render = function render() {
   var _vm$common;
   var _vm = this,
     _c = _vm._self._c;
@@ -12102,8 +12102,6 @@ var Legendvue_type_template_id_7541d108_render = function render() {
     style: {
       color: _vm.common.colors.title
     }
-  }) : _vm._e(), _vm._v(" "), _c("span", {
-    staticClass: "t-vue-title"
   }, [_c("span", {
     staticStyle: {
       color: "#131722",
@@ -12116,7 +12114,7 @@ var Legendvue_type_template_id_7541d108_render = function render() {
     staticClass: "cs-vue-title"
   }, [_vm._v(_vm._s(_vm.changeInPrice))]), _vm._v(" "), _c("span", {
     staticClass: "cs-vue-title"
-  }, [_vm._v(_vm._s(_vm.percentageChange) + "%")])]), _vm._v(" "), _c("br"), _vm._v(" "), !_vm.show_custom ? _c("div", {
+  }, [_vm._v(_vm._s(_vm.percentageChange) + "%")])]) : _vm._e(), _vm._v(" "), _c("br"), _vm._v(" "), !_vm.show_custom ? _c("div", {
     staticStyle: {
       "margin-top": "12px"
     }
@@ -12189,10 +12187,10 @@ var Legendvue_type_template_id_7541d108_render = function render() {
     }) : _vm._e()], 1)], 1);
   })], 2);
 };
-var Legendvue_type_template_id_7541d108_staticRenderFns = [];
-Legendvue_type_template_id_7541d108_render._withStripped = true;
+var Legendvue_type_template_id_4e356ec3_staticRenderFns = [];
+Legendvue_type_template_id_4e356ec3_render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=7541d108
+;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=4e356ec3
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ButtonGroup.vue?vue&type=template&id=72b6dd45
 var ButtonGroupvue_type_template_id_72b6dd45_render = function render() {
@@ -12578,9 +12576,9 @@ var settingPng = icons_namespaceObject["gear.png"];
 });
 ;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Legendvue_type_script_lang_js = (Legendvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=7541d108&prod&lang=css
-var Legendvue_type_style_index_0_id_7541d108_prod_lang_css = __webpack_require__(738);
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=7541d108&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=4e356ec3&prod&lang=css
+var Legendvue_type_style_index_0_id_4e356ec3_prod_lang_css = __webpack_require__(414);
+;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=4e356ec3&prod&lang=css
 
 ;// CONCATENATED MODULE: ./src/components/Legend.vue
 
@@ -12593,8 +12591,8 @@ var Legendvue_type_style_index_0_id_7541d108_prod_lang_css = __webpack_require__
 
 var Legend_component = normalizeComponent(
   components_Legendvue_type_script_lang_js,
-  Legendvue_type_template_id_7541d108_render,
-  Legendvue_type_template_id_7541d108_staticRenderFns,
+  Legendvue_type_template_id_4e356ec3_render,
+  Legendvue_type_template_id_4e356ec3_staticRenderFns,
   false,
   null,
   null,

@@ -17,14 +17,18 @@
           >{{ n.name }}&nbsp;</span
         ></template
       >
-      <span
+      <!-- <span
         class="t-vue-title"
         v-if="!show_CustomProps"
         :style="{ color: common.colors.title }"
       >
-        <!-- {{common.title_txt}} -->
-      </span>
-      <span class="t-vue-title">
+        {{common.title_txt}}
+      </span> -->
+      <span
+        v-if="!show_CustomProps"
+        :style="{ color: common.colors.title }"
+        class="t-vue-title"
+      >
         <span style="color: #131722; font-size: 22px; font-weight: 500"
           >International Business Machines Corporation</span
         >
