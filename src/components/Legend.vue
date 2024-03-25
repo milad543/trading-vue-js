@@ -25,7 +25,8 @@
         {{common.title_txt}}
       </span> -->
       <!-- Old legend -->
-      <span  v-if="show_values && !show_CustomProps">
+      <!-- <span  v-if="show_values && !show_CustomProps"> -->
+      <span>
         <span style="color: #131722; font-size: 22px; font-weight: 500"
           >International Business Machines Corporation</span
         >
@@ -41,7 +42,8 @@
             V<span style="color: #00977e;" class="t-vue-lspan" >{{ohlcv[4]}}</span>
         </span> -->
       <br />
-      <div v-if="!show_custom" style="margin-top: 12px">
+      <!-- <div v-if="!show_custom" style="margin-top: 12px"> -->
+      <div style="margin-top: 12px">
         <span class="cs-title-1">{{ secondLastData }}</span>
         <span style="padding: 6px">{{
           (lastJsonData - secondLastData).toFixed(2)
