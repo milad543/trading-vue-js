@@ -27,12 +27,12 @@
       <!-- Old legend -->
       <!-- <span  v-if="show_values && !show_CustomProps"> -->
       <span>
-        <span style="color: #131722; font-size: 22px; font-weight: 500"
-          >International Business Machines Corporation</span
-        >
-        <span style="margin-left: 12px" class="cs-vue-title">{{ ohlcv[3] }}</span>
-        <span class="cs-vue-title">{{ changeInPrice }}</span>
-        <span class="cs-vue-title">{{ percentageChange }}%</span>
+          <span style="color: #131722; font-size: 22px; font-weight: 500"
+            >International Business Machines Corporation</span
+          >
+          <span style="margin-left: 12px" class="cs-vue-title">{{ ohlcv[3] }}</span>
+          <span class="cs-vue-title">{{ changeInPrice }}</span>
+          <span class="cs-vue-title">{{ percentageChange }}%</span>
       </span>
       <!-- <span  v-if="show_values && !show_CustomProps">
             O<span style="color: #00977e;" class="t-vue-lspan" >{{ohlcv[0]}}</span>
