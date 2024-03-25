@@ -81,6 +81,10 @@ export default {
       type: String,
       default: "TradingVue.js",
     },
+    legendTxtColor: {
+      type: String,
+      default: "#00977e",
+    },
     roundOffVolume: {
       type: Boolean,
       default: false,
@@ -285,6 +289,7 @@ export default {
       let offset = this.$props.toolbar ? this.chart_config.TOOLBAR : 0;
       let chart_props = {
         title_txt: this.$props.titleTxt,
+        legend_txt_color: this.$props.legendTxtColor,
         overlays: this.$props.overlays.concat(this.mod_ovs),
         data: this.decubed,
         width: this.$props.width - offset,

@@ -36,6 +36,7 @@
       :roundOffVolume="roundOffVolume"
       :legend-buttons="buttons"
       :ignore_OHLC="['Spline']"
+      legendTxtColor="red"
       :indexBased="true"
       :ignoreNegativeIndex="true"
       ref="tradeRef"

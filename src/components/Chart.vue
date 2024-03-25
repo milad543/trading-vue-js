@@ -57,7 +57,7 @@ export default {
   },
   mixins: [Shaders, DataTrack],
   props: [
-    'title_txt', 'data', 'width', 'height', 'font', 'colors',
+    'title_txt', 'data', 'width', 'height', 'font', 'colors','legend_txt_color',
     'overlays', 'tv_id', 'config', 'buttons', 'toolbar', 'ib', 'applyShaders',
     'skin', 'timezone', 'enableZoom', 'enableSideBarBoxValue', 'decimalPlace', 'ignore_OHLC', 'priceLine', 'ignoreNegativeIndex', 'enableCrosshair', 'legendDecimal',
     'showSettingsButton','roundOffVolume'
@@ -410,6 +410,7 @@ export default {
     common_props() {
       return {
         title_txt: this.chart.name || this.$props.title_txt,
+        legend_txt_color: this.$props.legend_txt_color,
         layout: this._layout,
         sub: this.sub,
         range: this.range,
