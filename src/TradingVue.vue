@@ -99,7 +99,7 @@ export default {
     },
     colorTitle: {
       type: String,
-      default: "#42b883",
+      default: "#42b883"
     },
     colorOhlcv:{
       type: String,
