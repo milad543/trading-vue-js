@@ -194,7 +194,7 @@ export default {
   },
   mounted() {
     this.init_shaders(this.$props.common.skin);
-    console.log('common.data',this.meta_props)
+    // console.log('common.data',this.meta_props)
   },
   methods: {
     hasGridId(single){

@@ -471,7 +471,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 654:
+/***/ 706:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -4263,19 +4263,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 881:
+/***/ 585:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(654);
+var content = __webpack_require__(706);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("4a15960a", content, false, {});
+var update = add("43ffac1e", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -5328,8 +5328,8 @@ var MAP_UNIT = {
   map_unit: MAP_UNIT,
   IB_TF_WARN: IB_TF_WARN
 });
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Chart.vue?vue&type=template&id=7f9f3353
-var Chartvue_type_template_id_7f9f3353_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Chart.vue?vue&type=template&id=7b3f0679
+var Chartvue_type_template_id_7b3f0679_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
@@ -5374,10 +5374,10 @@ var Chartvue_type_template_id_7f9f3353_render = function render() {
     }
   }, "botbar", _vm.botbar_props, false))], 2);
 };
-var Chartvue_type_template_id_7f9f3353_staticRenderFns = [];
-Chartvue_type_template_id_7f9f3353_render._withStripped = true;
+var Chartvue_type_template_id_7b3f0679_staticRenderFns = [];
+Chartvue_type_template_id_7b3f0679_render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/components/Chart.vue?vue&type=template&id=7f9f3353
+;// CONCATENATED MODULE: ./src/components/Chart.vue?vue&type=template&id=7b3f0679
 
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
 function _arrayWithHoles(arr) {
@@ -6877,8 +6877,8 @@ var CursorUpdater = /*#__PURE__*/function () {
   }]);
 }();
 /* harmony default export */ const updater = (CursorUpdater);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=template&id=76caf69a
-var Sectionvue_type_template_id_76caf69a_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=template&id=524bd745
+var Sectionvue_type_template_id_524bd745_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
@@ -6932,10 +6932,10 @@ var Sectionvue_type_template_id_76caf69a_render = function render() {
     }
   }, "sidebar", _vm.sidebar_props, false))], 1);
 };
-var Sectionvue_type_template_id_76caf69a_staticRenderFns = [];
-Sectionvue_type_template_id_76caf69a_render._withStripped = true;
+var Sectionvue_type_template_id_524bd745_staticRenderFns = [];
+Sectionvue_type_template_id_524bd745_render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=template&id=76caf69a
+;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=template&id=524bd745
 
 ;// CONCATENATED MODULE: ./src/stuff/frame.js
 
@@ -7273,7 +7273,7 @@ var Grid = /*#__PURE__*/function () {
       if (layer.name === "crosshair") {
         this.crosshair = layer;
       } else {
-        console.log("layer==>", layer);
+        // console.log("layer==>",layer)
         this.overlays.push(layer);
       }
       this.update();
@@ -12857,7 +12857,7 @@ function shaders_arrayLikeToArray(arr, len) { if (len == null || len > arr.lengt
   },
   mounted: function mounted() {
     this.init_shaders(this.$props.common.skin);
-    console.log('common.data', this.meta_props);
+    // console.log('common.data',this.meta_props)
   },
   methods: {
     hasGridId: function hasGridId(single) {
@@ -12923,9 +12923,9 @@ function shaders_arrayLikeToArray(arr, len) { if (len == null || len > arr.lengt
 });
 ;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Sectionvue_type_script_lang_js = (Sectionvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=style&index=0&id=76caf69a&prod&lang=css
-var Sectionvue_type_style_index_0_id_76caf69a_prod_lang_css = __webpack_require__(881);
-;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=style&index=0&id=76caf69a&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=style&index=0&id=524bd745&prod&lang=css
+var Sectionvue_type_style_index_0_id_524bd745_prod_lang_css = __webpack_require__(585);
+;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=style&index=0&id=524bd745&prod&lang=css
 
 ;// CONCATENATED MODULE: ./src/components/Section.vue
 
@@ -12938,8 +12938,8 @@ var Sectionvue_type_style_index_0_id_76caf69a_prod_lang_css = __webpack_require_
 
 var Section_component = normalizeComponent(
   components_Sectionvue_type_script_lang_js,
-  Sectionvue_type_template_id_76caf69a_render,
-  Sectionvue_type_template_id_76caf69a_staticRenderFns,
+  Sectionvue_type_template_id_524bd745_render,
+  Sectionvue_type_template_id_524bd745_staticRenderFns,
   false,
   null,
   null,
@@ -13555,26 +13555,23 @@ var TI = /*#__PURE__*/function () {
 
       // Discrete mapping
       var res = this.ti_map[t];
-      console.log("t2i Discrete mapping", res);
+      // console.log("t2i Discrete mapping",res)
       if (res !== undefined) return res;
       var t0 = this.sub[0][0];
       var tN = this.sub[this.sub.length - 1][0];
-      console.log("t2i value", {
-        t0: t0,
-        tN: tN
-      });
+      // console.log("t2i value",{t0,tN})
       // Linear extrapolation
       if (t < t0) {
-        console.log("t2i fall into first if");
+        // console.log("t2i fall into first if")
         return this.ss - (t0 - t) / this.tf;
       } else if (t > tN) {
-        console.log("t2i fall into else if");
+        // console.log("t2i fall into else if")
         var k = this.sub.length - 1;
         return this.ss + k - (tN - t) / this.tf;
       }
       try {
         // Linear Interpolation
-        console.log("t2i fall into fastest nearest ");
+        // console.log("t2i fall into fastest nearest ")
         var i = utils.fast_nearest(this.sub, t);
         var tk = this.sub[i[0]][0];
         var tk2 = this.sub[i[1]][0];
@@ -13740,7 +13737,7 @@ var TI = /*#__PURE__*/function () {
       return this.$props.data.onchart || [];
     },
     offchart: function offchart() {
-      console.log("this.$props.data.offchart", this.$props.data.offchart);
+      // console.log("this.$props.data.offchart",this.$props.data.offchart)
       return this.$props.data.offchart || [];
     },
     filter: function filter() {
@@ -13925,12 +13922,12 @@ var TI = /*#__PURE__*/function () {
       if (this.ohlcv.length < 2 && !tf) return;
       this.interval_ms = tf || utils.detect_interval(this.ohlcv);
       this.interval = this.$props.ib ? 1 : this.interval_ms;
-      console.log("calc_interval", {
-        interval: this.interval,
-        interval_ms: this.interval_ms,
-        forced_tf: this.forced_tf,
-        caller: caller
-      });
+      /*console.log("calc_interval",{
+        interval:this.interval,
+        interval_ms:this.interval_ms,
+        forced_tf:this.forced_tf,
+        caller
+      })*/
       utils.warn(function () {
         return _this2.$props.ib && !_this2.chart.tf;
       }, constants.IB_TF_WARN, constants.SECOND);
@@ -13959,9 +13956,8 @@ var TI = /*#__PURE__*/function () {
       if (!this.$props.ib) {
         utils.overwrite(this.range, [this.ohlcv[s][0] - this.interval * d, this.ohlcv[l][0] + this.interval * ml]);
       } else {
-        var _this$chart3;
         var newArr = [s - this.interval * d, l + this.interval * ml];
-        console.log("this.forced_initRange", this.forced_initRange);
+        // console.log("this.forced_initRange",this.forced_initRange)
         if (this.forced_initRange) {
           newArr = this.forced_initRange;
         } else {
@@ -13970,7 +13966,8 @@ var TI = /*#__PURE__*/function () {
             newArr = this.chart.initRange;
           }
         }
-        console.log("searchResults Library Data", newArr, (_this$chart3 = this.chart) === null || _this$chart3 === void 0 ? void 0 : _this$chart3.initRange, this.forced_initRange);
+
+        // console.log("searchResults Library Data",newArr,this.chart?.initRange,this.forced_initRange)
         utils.overwrite(this.range, newArr);
       }
     },
@@ -14181,8 +14178,8 @@ var TI = /*#__PURE__*/function () {
 ;
 var Chart_component = normalizeComponent(
   components_Chartvue_type_script_lang_js,
-  Chartvue_type_template_id_7f9f3353_render,
-  Chartvue_type_template_id_7f9f3353_staticRenderFns,
+  Chartvue_type_template_id_7b3f0679_render,
+  Chartvue_type_template_id_7b3f0679_staticRenderFns,
   false,
   null,
   null,

@@ -152,7 +152,7 @@ export default {
       return this.$props.data.onchart || []
     },
     offchart() {
-      console.log("this.$props.data.offchart",this.$props.data.offchart)
+      // console.log("this.$props.data.offchart",this.$props.data.offchart)
       return this.$props.data.offchart || []
     },
     filter() {
@@ -332,12 +332,12 @@ export default {
       if (this.ohlcv.length < 2 && !tf) return
       this.interval_ms = tf || Utils.detect_interval(this.ohlcv)
       this.interval = this.$props.ib ? 1 : this.interval_ms
-      console.log("calc_interval",{
+      /*console.log("calc_interval",{
         interval:this.interval,
         interval_ms:this.interval_ms,
         forced_tf:this.forced_tf,
         caller
-      })
+      })*/
       Utils.warn(
           () => this.$props.ib && !this.chart.tf,
           Const.IB_TF_WARN, Const.SECOND
@@ -375,7 +375,7 @@ export default {
           s - this.interval * d,
           l + this.interval * ml
         ];
-        console.log("this.forced_initRange",this.forced_initRange)
+        // console.log("this.forced_initRange",this.forced_initRange)
         if(this.forced_initRange){
           newArr = this.forced_initRange
         }else{
@@ -384,7 +384,7 @@ export default {
           }  
         }
         
-        console.log("searchResults Library Data",newArr,this.chart?.initRange,this.forced_initRange)
+        // console.log("searchResults Library Data",newArr,this.chart?.initRange,this.forced_initRange)
         Utils.overwrite(this.range, newArr)
       }
     },

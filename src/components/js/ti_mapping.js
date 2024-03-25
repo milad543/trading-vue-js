@@ -180,28 +180,28 @@ export default class TI {
 
         // Discrete mapping
         let res = this.ti_map[t]
-        console.log("t2i Discrete mapping",res)
+        // console.log("t2i Discrete mapping",res)
         if (res !== undefined) return res
 
         let t0 = this.sub[0][0]
         
         let tN = this.sub[this.sub.length - 1][0]
-        console.log("t2i value",{t0,tN})
+        // console.log("t2i value",{t0,tN})
         // Linear extrapolation
         if (t < t0) {
-            console.log("t2i fall into first if")
+            // console.log("t2i fall into first if")
             return this.ss - (t0 - t) / this.tf
         }
 
         else if (t > tN) {
-            console.log("t2i fall into else if")
+            // console.log("t2i fall into else if")
             let k = this.sub.length - 1
             return this.ss + k - (tN - t) / this.tf
         }
 
         try {
             // Linear Interpolation
-            console.log("t2i fall into fastest nearest ")
+            // console.log("t2i fall into fastest nearest ")
             let i = Utils.fast_nearest(this.sub, t)
             let tk = this.sub[i[0]][0]
             let tk2 = this.sub[i[1]][0]

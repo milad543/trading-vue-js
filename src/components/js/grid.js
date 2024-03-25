@@ -272,7 +272,7 @@ export default class Grid {
     if (layer.name === "crosshair") {
       this.crosshair = layer;
     } else {
-      console.log("layer==>",layer)
+      // console.log("layer==>",layer)
       this.overlays.push(layer);
     }
     this.update();
