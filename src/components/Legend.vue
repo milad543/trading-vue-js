@@ -28,7 +28,7 @@
       <!-- <span  v-if="show_values && !show_CustomProps"> -->
       <span>
           <span style="color: #131722; font-size: 22px; font-weight: 500"
-          >International Business Machines Corporation</span
+          >{{common.title_txt}}</span
           >
         <span v-if="show_values && !show_CustomProps">
             O<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[0] }}</span>
