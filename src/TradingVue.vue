@@ -40,17 +40,17 @@
       :legendDecimal="legendDecimal"
       :enableCrosshair="enableCrosshair"
       :ignoreNegativeIndex="ignoreNegativeIndex"
-      :ignore_OHLC="ignore_OHLC"    
-        :key="reset"
-        ref="chart"
-        v-bind="chart_props"
-        :tv_id="id"
-        :config="chart_config"
-        @custom-event="custom_event"
-        @range-changed="range_changed"
-        @chart_data_changed="chart_data_changed"
-        @sidebar-transform="sidebar_transform"
-        @legend-button-click="legend_button"
+      :ignore_OHLC="ignore_OHLC"
+      :key="reset"
+      ref="chart"
+      v-bind="chart_props"
+      :tv_id="id"
+      :config="chart_config"
+      @custom-event="custom_event"
+      @range-changed="range_changed"
+      @chart_data_changed="chart_data_changed"
+      @sidebar-transform="sidebar_transform"
+      @legend-button-click="legend_button"
     >
     </chart>
     <transition name="tvjs-drift">
@@ -66,7 +66,7 @@ import Toolbar from "./components/Toolbar.vue";
 import Widgets from "./components/Widgets.vue";
 import TheTip from "./components/TheTip.vue";
 import XControl from "./mixins/xcontrol.js";
-import IndexedArray from 'arrayslicer'
+import IndexedArray from "arrayslicer";
 export default {
   name: "TradingVue",
   components: {
@@ -81,9 +81,9 @@ export default {
       type: String,
       default: "TradingVue.js",
     },
-    roundOffVolume:{
-      type:Boolean,
-      default:false
+    roundOffVolume: {
+      type: Boolean,
+      default: false,
     },
     id: {
       type: String,
@@ -100,6 +100,10 @@ export default {
     colorTitle: {
       type: String,
       default: "#42b883",
+    },
+    colorOhlcv:{
+      type: String,
+      default: "#000000"
     },
     colorBack: {
       type: String,
@@ -181,7 +185,7 @@ export default {
     },
     enableSideBarBoxValue: {
       type: Boolean,
-      default:false,
+      default: false,
     },
     // Your overlay classes here
     overlays: {
@@ -204,9 +208,9 @@ export default {
         return [];
       },
     },
-    legendDecimal:{
-      type:Boolean,
-      default:false
+    legendDecimal: {
+      type: Boolean,
+      default: false,
     },
     indexBased: {
       type: Boolean,
@@ -332,29 +336,28 @@ export default {
         ? this.skin_proto.font
         : this.font;
     },
-    auto_y_axis(){
-      return this.$refs.chart?.auto_y_axis || true
-    }
+    auto_y_axis() {
+      return this.$refs.chart?.auto_y_axis || true;
+    },
   },
   beforeDestroy() {
     this.custom_event({ event: "before-destroy" });
     this.ctrl_destroy();
   },
   methods: {
-    chart_data_changed(flag){
+    chart_data_changed(flag) {
       this.$emit("chart_data_changed", flag);
     },
     // TODO: reset extensions?
     resetChart(resetRange = true) {
-      
       this.reset++;
       let range = this.getRange();
       if (!resetRange && range[0] && range[1]) {
         this.$nextTick(() => this.setRange(...range));
       }
-      if(resetRange){
-        let initRange = this.$refs?.chart?.initRange
-        if(initRange && initRange?.[0] && initRange?.[1]){
+      if (resetRange) {
+        let initRange = this.$refs?.chart?.initRange;
+        if (initRange && initRange?.[0] && initRange?.[1]) {
           this.$nextTick(() => this.setRange(...initRange));
         }
       }
@@ -366,13 +369,13 @@ export default {
       );
     },
     updateChart() {
-    //  console.log(" update chart was called")
-    //       this.$nextTick(() =>
-    //         this.custom_event({
-    //           event: "?chart-resize",
-    //           args:[]
-    //         })
-    //       );
+      //  console.log(" update chart was called")
+      //       this.$nextTick(() =>
+      //         this.custom_event({
+      //           event: "?chart-resize",
+      //           args:[]
+      //         })
+      //       );
     },
     goto(t) {
       // TODO: limit goto & setRange (out of data error)
@@ -389,8 +392,8 @@ export default {
         t1 = ti_map.gt2i(t1, ohlcv);
         t2 = ti_map.gt2i(t2, ohlcv);
         // console.log('this.ignoreNegativeIndex and t1',t1, t2,this.ignoreNegativeIndex)
-        if(t1 < 0 && this.ignoreNegativeIndex){
-          t1 = 0
+        if (t1 < 0 && this.ignoreNegativeIndex) {
+          t1 = 0;
         }
       }
       this.$refs.chart.setRange(t1, t2);
@@ -450,18 +453,18 @@ export default {
       }
       if (ctrl) this.post_dc(d);
     },
-    range_changed(r,manualInteraction = false) {
-        if (this.chart_props.ib) {
-          const ti_map = this.$refs.chart.ti_map;
-          r = r.map((x) => ti_map.i2t(x));
+    range_changed(r, manualInteraction = false) {
+      if (this.chart_props.ib) {
+        const ti_map = this.$refs.chart.ti_map;
+        r = r.map((x) => ti_map.i2t(x));
       }
       // update
-      this.$emit("range-changed", r,manualInteraction);
+      this.$emit("range-changed", r, manualInteraction);
       // this.custom_event({ event: "range-changed", args: [r,r2] });
       if (this.onrange) this.onrange(r);
     },
-    sidebar_transform(y_transform){
-      this.$emit('sidebar-transform',y_transform)
+    sidebar_transform(y_transform) {
+      this.$emit("sidebar-transform", y_transform);
     },
     set_loader(dc) {
       this.onrange = (r) => {
@@ -486,32 +489,33 @@ export default {
     mouseleave() {
       this.$refs.chart.activated = false;
     },
-    toggleSideBarYAxis(){
-      this.$refs.chart.toggleSideBarYAxis()
+    toggleSideBarYAxis() {
+      this.$refs.chart.toggleSideBarYAxis();
     },
-    toggleSidebarCustomRange(verticalRange){
-      this.$refs.chart.toggleSidebarCustomRange(verticalRange)
-    }
+    toggleSidebarCustomRange(verticalRange) {
+      this.$refs.chart.toggleSidebarCustomRange(verticalRange);
+    },
   },
-  watch:{
+  watch: {
     decimalPlace(n) {
       const base = this.$props.data;
       // console.log("props:",base);
-      base.merge('chart.settings', {decimalPlace: n})
+      base.merge("chart.settings", { decimalPlace: n });
     },
     enableArrow(n) {
       const base = this.$props.data;
       // console.log("props:",base);
-      base.merge('chart.settings', {isArrow: n})
+      base.merge("chart.settings", { isArrow: n });
     },
   },
   mounted() {
     const base = this.$props.data;
     // console.log("props:",this.$props.enableArrow);
-    base.merge(
-        'chart.settings', {isArrow: this.$props.enableArrow, decimalPlace: this.$props.decimalPlace,}
-    )
-  }
+    base.merge("chart.settings", {
+      isArrow: this.$props.enableArrow,
+      decimalPlace: this.$props.decimalPlace,
+    });
+  },
 };
 </script>
 <style>

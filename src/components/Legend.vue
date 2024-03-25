@@ -22,32 +22,84 @@
         v-if="!show_CustomProps"
         :style="{ color: common.colors.title }"
       >
-        {{common.title_txt}}
+        {{ common.title_txt }}
       </span> -->
       <!--This is my legend -->
-      <span v-if="show_values && !show_CustomProps">
-        <span style="color: #131722; font-size: 22px; font-weight: 500"
-          >International Business Machines Corporation</span
-        >
-        <span class="cs-vue-title">{{ ohlcv[3] }}</span>
-        <span class="cs-vue-title">{{ changeInPrice }}</span>
-        <span class="cs-vue-title">{{ percentageChange }}%</span>
-      </span>
-      <!-- <span  v-if="show_values && !show_CustomProps">
-            O<span style="color: #00977e;" class="t-vue-lspan" >{{ohlcv[0]}}</span>
-            H<span style="color: #00977e;" class="t-vue-lspan" >{{ohlcv[1]}}</span>
-            L<span style="color: #00977e;" class="t-vue-lspan" >{{ohlcv[2]}}</span>
-            C<span style="color: #00977e;" class="t-vue-lspan" >{{ohlcv[3]}}</span>
-            V<span style="color: #00977e;" class="t-vue-lspan" >{{ohlcv[4]}}</span>
+      <div class="mainLeg cs-legend">
+        <div>
+          <span
+            class="t-vue-title"
+            v-if="!show_CustomProps"
+            :style="{ color: common.colors.title }"
+          >
+            {{ common.title_txt }}
+          </span>
+        </div>
+        <div>
+          <span
+            class="cs-ticker"
+            style="color: #131722; font-size: 18px; font-weight: 500"
+            >International Business Machines Corporation</span
+          >
+        </div>
+        <div class="cs-ohlcv">
+          <div class="cs-oh">
+            <span class="ohlcv">O</span>
+            <span
+              style="color: #f23645; font-weight: 400; font-size: 14px"
+              class="t-vue-lspan"
+              >{{ ohlcv[0] }}</span
+            >
+            <span class="ohlcv">H</span>
+            <span
+              style="color: #f23645; font-weight: 400; font-size: 14px"
+              class="t-vue-lspan"
+              >{{ ohlcv[1] }}</span
+            >
+            <span class="ohlcv">L</span>
+            <span
+              style="color: #f23645; font-weight: 400; font-size: 14px"
+              class="t-vue-lspan"
+              >{{ ohlcv[2] }}</span
+            >
+            <span class="ohlcv">C</span>
+            <span
+              style="color: #f23645; font-weight: 400; font-size: 14px"
+              class="t-vue-lspan"
+              >{{ ohlcv[3] }}</span
+            >
+            <span  style="color: #f23645; font-weight: 400; font-size: 14px">{{ changeInPrice }}</span>
+            <span  style="color: #f23645; font-weight: 400; font-size: 14px">({{ percentageChange }}%)</span>
+            <span class="ohlcv">V</span>
+            <span
+              style="color: #f23645; font-weight: 400; font-size: 14px"
+              class="t-vue-lspan"
+              >{{ ohlcv[4] }}</span
+            >
+          </div>
+
+          <!-- <span class="cs-vue-title">{{ ohlcv[3] }}</span>
+          <span class="cs-vue-title">{{ changeInPrice }}</span>
+          <span class="cs-vue-title">{{ percentageChange }}%</span> -->
+        </div>
+        <div></div>
+      </div>
+      <span> </span>
+      <!-- <span v-if="show_values && !show_CustomProps">
+          O<span style="color: #00977e" class="t-vue-lspan">{{ ohlcv[0] }}</span>
+          H<span style="color: #00977e" class="t-vue-lspan">{{ ohlcv[1] }}</span>
+          L<span style="color: #00977e" class="t-vue-lspan">{{ ohlcv[2] }}</span>
+          C<span style="color: #00977e" class="t-vue-lspan">{{ ohlcv[3] }}</span>
+          V<span style="color: #00977e" class="t-vue-lspan">{{ ohlcv[4] }}</span>
         </span> -->
       <br />
-      <div v-if="!show_custom" style="margin-top: 12px">
+      <!-- <div v-if="!show_custom" style="margin-top: 12px">
         <span class="cs-title-1">{{ secondLastData }}</span>
         <span style="padding: 6px">{{
           (lastJsonData - secondLastData).toFixed(2)
         }}</span>
         <span class="cs-title-2">{{ lastJsonData }}</span>
-      </div>
+      </div> -->
       <span
         v-if="!show_values"
         class="t-vue-lspan"
@@ -268,6 +320,10 @@ export default {
     },
   },
   methods: {
+    
+    toFixedNumber(number) {
+      return number.toFixed(2);
+    },
     format(id, values) {
       let meta = this.$props.meta_props[id] || {};
       // Matches Overlay.data_colors with the data values
@@ -325,6 +381,39 @@ export default {
   font-weight: 400;
   color: #0043fc;
   font-size: 16px;
+}
+.cs-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 55%;
+  padding: 2px;
+  border: 1px solid white;
+  border-radius: 10px;
+  -webkit-box-shadow: -15px -17px 127px 64px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: -15px -17px 127px 64px rgba(0, 0, 0, 0.56);
+  box-shadow: -15px -17px 127px 64px rgba(0, 0, 0, 0.1);
+}
+.mainLeg {
+}
+
+.cs-ohlcv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cs-oh {
+  width: 100%;
+}
+
+.ohlcv {
+  color: black;
+  font-weight: 500;
+}
+.cs-ticker {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .cs-title-1 {
   border: 1px solid red;
