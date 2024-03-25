@@ -37,8 +37,8 @@
             C<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[3] }}</span>
             V<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[4] }}</span>
         </span>
-          <span class="cs-vue-title">{{ ohlcv[6]  }}</span>
-          <span class="cs-vue-title">{{ ohlcv[7] }}%</span>
+          <span :style="styleTxt" class="cs-vue-title">{{ ohlcv[6]  }}</span>
+          <span :style="styleTxt" class="cs-vue-title">{{ ohlcv[7] }}%</span>
       </span>
 
       <br/>
@@ -152,7 +152,7 @@ export default {
         return (meta.legend() || []).map((x) => x.value);
       }
       let candleId = this.$props.values.ohlcv[0]
-      let main_data = this.json_data?.[0]?.data;
+      let main_data = this.main_data;
       // let main_data_length = main_data?.length;
       let findIndexId = main_data.findIndex(d => d[0] === candleId);
       let changeInPrice = 0
@@ -267,45 +267,11 @@ export default {
     json_data() {
       return this.$props.common.data;
     },
+    main_data() {
+      return this.$props.common.sub;
+    },
     off_data() {
       return this.$props.common.offchart;
-    },
-    lastJsonData() {
-      console.log(
-          "this json_data last",
-          this.json_data[0].data[this.json_data[0].data.length - 1][2] -
-          this.json_data[0].data[this.json_data[0].data.length - 2][2]
-      );
-      console.log(
-          "this json_data second last",
-          this.json_data[0].data[this.json_data[0].data.length - 1]
-      );
-      return this.json_data[0].data[
-      this.json_data[0].data.length - 1
-          ][3].toFixed(2);
-    },
-    secondLastData() {
-      console.log("this is changing price");
-      return this.json_data[0].data[
-      this.json_data[0].data.length - 2
-          ][3].toFixed(2);
-    },
-    changeInPrice() {
-      const currentPriceClosing =
-          this.json_data[0].data[this.json_data[0].data.length - 1][3];
-      const previousePriceClosing =
-          this.json_data[0].data[this.json_data[0].data.length - 2][3];
-      console.log(
-          "changing",
-          (currentPriceClosing - previousePriceClosing).toFixed(2)
-      );
-      return (currentPriceClosing - previousePriceClosing).toFixed(2);
-    },
-    percentageChange() {
-      // formula (changeinprice / open price) * 100
-      const previousePriceClosing =
-          this.json_data[0].data[this.json_data[0].data.length - 2][3];
-      return ((this.changeInPrice / previousePriceClosing) * 100).toFixed(2);
     },
     main_type() {
       let f = this.common.data.find((x) => x.main);
@@ -372,7 +338,6 @@ export default {
 
 .cs-vue-title {
   font-weight: 400;
-  color: #089981;
   font-size: 16px;
 }
 
