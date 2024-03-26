@@ -154,6 +154,7 @@ export default {
       let candleId = this.$props.values.ohlcv[0]
       let main_data = this.json_data?.[0]?.data;
       // let main_data_length = main_data?.length;
+
       let findIndexId = main_data.findIndex(d => d[0] === candleId);
       let changeInPrice = 0
       let changeInPercent = 0
@@ -163,6 +164,7 @@ export default {
       } else {
         prevData = this.$props.values.ohlcv
       }
+
       if (this.$props.legendDecimal) {
         let open = this.$props.values.ohlcv[1].toFixed(
             this.$props.values.ohlcv[1] < 1 ? 3 : 2
@@ -182,6 +184,7 @@ export default {
         changeInPrice = changeInPrice.toFixed(changeInPrice < 1 ? 3 : 2)
         changeInPercent = (changeInPrice / prevPriceCLosing) * 100;
         changeInPercent = changeInPercent.toFixed(changeInPercent < 1 ? 3 : 2)
+        
         let volume = this.$props.values.ohlcv[5]
             ? Number(this.$props.values.ohlcv[5].toFixed(0)).toLocaleString(
                 "en-AU"

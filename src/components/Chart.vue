@@ -315,6 +315,8 @@ export default {
       this.range_changed([t1, t2])
     },
     cursor_changed(e) {
+      console.log("cursor change mode")
+      console.log("cursor mode==>",typeof this.cursor.mode )
       if (e.mode) this.cursor.mode = e.mode
       if (this.cursor.mode !== 'explore') {
         this.updater.sync(e)

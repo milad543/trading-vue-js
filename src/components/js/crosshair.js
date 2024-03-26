@@ -28,7 +28,7 @@ export default class Crosshair {
         ctx.save()
         ctx.strokeStyle = this.$p.colors.cross
         ctx.beginPath()
-        ctx.setLineDash([5])
+        ctx.setLineDash([3])
 
         // H
         if (this.$p.cursor.grid_id === this.layout.id) {
@@ -39,6 +39,7 @@ export default class Crosshair {
         // V
         ctx.moveTo(this.x, 0)
         ctx.lineTo(this.x, this.layout.height)
+        
 
         if(this.enableCrosshair){
             ctx.stroke()
