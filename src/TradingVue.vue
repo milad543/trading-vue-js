@@ -58,8 +58,8 @@
       @chart_data_changed="chart_data_changed"
       @sidebar-transform="sidebar_transform"
       @legend-button-click="legend_button"
-      :title_txt="'IBM'"
-    >
+      >
+      <!-- :title_txt="'IBM'" -->
     </chart>
     
     <transition name="tvjs-drift">
