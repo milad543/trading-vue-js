@@ -7,7 +7,7 @@
     gap: 20px;
     border-radius: 8px;
     box-shadow: 2px 2px 5px 1px #0000001A;
-    border: 1px solid #F2F2F2
+    border: 1px solid #F2F2F2;
 }
 
 .legend-right-section {
@@ -18,7 +18,7 @@
     font-weight: 800;
     line-height: 16.52px;
     text-align: left;
-    width: 3%;
+    width: 4%;
     /* background-color: crimson; */
 
 }

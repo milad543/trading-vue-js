@@ -79,7 +79,7 @@
 
        <div  class="main-legend legendArea " v-if="common.secondVariant || common.thirdVariant || common.fourthVariant && show_values && !show_CustomProps "> 
           <div class="legend-right-section">
-            <span class="right-title">{{common.title_txt}}</span>
+            <span class="right-title">TSLA</span>
           </div>
           <div class="legend-center-section">
             <p>International Business Machines Corporation</p>

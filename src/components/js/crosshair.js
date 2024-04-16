@@ -1,4 +1,4 @@
-export default class Crosshair {
+    export default class Crosshair {
 
     constructor(comp) {
         this.comp = comp

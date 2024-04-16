@@ -103,8 +103,8 @@ export default {
       watermarkText : "Invest-EDU",
       magnet: false,
       
-      firstVariant: true, // for like yahoo charts
-      secondVariant: false,
+      firstVariant: false, // for like yahoo charts
+      secondVariant: true,
       thirdVariant: false,
       fourthVariant: false
     };

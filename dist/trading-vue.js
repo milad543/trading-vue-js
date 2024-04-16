@@ -457,7 +457,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 662:
+/***/ 466:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -592,7 +592,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(314);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.id, ".main-legend {\r\n    display: flex;\r\n    align-items: center;\r\n    /* background: #847373; */\r\n    padding: 5px 9px;\r\n    width: 53%;\r\n    gap: 20px;\r\n    border-radius: 8px;\r\n    box-shadow: 2px 2px 5px 1px #0000001A;\r\n    border: 1px solid #F2F2F2\r\n}\r\n\r\n.legend-right-section {\r\n    /* background-color: purple;\r\n */\r\n    font-family: \"Inter\", sans-serif;\r\n    font-size: 15px;\r\n    font-weight: 800;\r\n    line-height: 16.52px;\r\n    text-align: left;\r\n    width: 3%;\r\n    /* background-color: crimson; */\r\n\r\n}\r\n\r\n.legend-center-section {\r\n    /* background-color: lightcoral; */\r\n    font-family: \"Inter\", sans-serif;\r\n    font-size: 12px;\r\n    font-weight: 600;\r\n    line-height: 12.1px;\r\n    text-align: left;\r\n    /* background-color: lightgrey; */\r\n\r\n    /* white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n           -webkit-box-orient: vertical;\r\n          -webkit-line-clamp: 5;\r\n          display: -webkit-box; */\r\n}\r\n\r\n.legend-left-section {\r\n    font-family: \"Inter\", sans-serif;\r\n    font-size: 8px;\r\n    font-size: 12px;\r\n    line-height: 9.68px;\r\n    text-align: left;\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    text-align: left;\r\n    /* justify-content: space-between; */\r\n    /* justify-content: space-between; */\r\n    gap: 15px;\r\n    /* background-color: lightyellow; */\r\n\r\n}\r\n\r\n.stx-text, .stx-value{\r\n    flex-basis: 250px;\r\n}\r\n\r\n@media screen and (max-width: 1515px) {\r\n    .main-legend{\r\n      width: 56%;\r\n    }\r\n}\r\n@media screen and (max-width: 1500px) {\r\n    .main-legend{\r\n        width:56%;\r\n        /* background-color: lightgoldenrodyellow; */\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 1263px){\r\n    .main-legend{\r\n        width: 60%;\r\n        /* background-color: purple !important; */\r\n    }\r\n}\r\n@media screen and (max-width: 1000px){\r\n    .main-legend{\r\n        width: 60%;\r\n        /* background-color: lightpink;  */\r\n    }\r\n}\r\n@media screen and (max-width: 1450px){\r\n    .main-legend{\r\n        width: 60%;\r\n    }\r\n}\r\n@media screen and (max-width: 1430px){\r\n    .main-legend{\r\n        width: 55%;\r\n        /* background-color: lightgreen; */\r\n    }\r\n}\r\n@media screen and (max-width: 1440px){\r\n    .main-legend{\r\n        width: 60%;\r\n        /* background-color: lightgreen; */\r\n    }\r\n}\r\n@media screen and (max-width: 1475px) {\r\n    .main-legend{\r\n        width: 58%;\r\n    }\r\n    \r\n}\r\n\r\n/* .legend-last-section > span{\r\n    flex-basis: 200px;\r\n} */\r\n\r\n/* .stx-value {\r\n    color: #F23645;\r\n} */\r\n\r\n.stx-text {\r\n    color: #000000;\r\n}\r\n\r\n.legend-last-section {\r\n    font-family: inter;\r\n    font-size: 12px;\r\n    font-weight: 400;\r\n    line-height: 9.68px;\r\n       text-align: left;\r\n    background-color: ;\r\n}", ""]);
+exports.push([module.id, ".main-legend {\r\n    display: flex;\r\n    align-items: center;\r\n    /* background: #847373; */\r\n    padding: 5px 9px;\r\n    width: 53%;\r\n    gap: 20px;\r\n    border-radius: 8px;\r\n    box-shadow: 2px 2px 5px 1px #0000001A;\r\n    border: 1px solid #F2F2F2;\r\n}\r\n\r\n.legend-right-section {\r\n    /* background-color: purple;\r\n */\r\n    font-family: \"Inter\", sans-serif;\r\n    font-size: 15px;\r\n    font-weight: 800;\r\n    line-height: 16.52px;\r\n    text-align: left;\r\n    width: 4%;\r\n    /* background-color: crimson; */\r\n\r\n}\r\n\r\n.legend-center-section {\r\n    /* background-color: lightcoral; */\r\n    font-family: \"Inter\", sans-serif;\r\n    font-size: 12px;\r\n    font-weight: 600;\r\n    line-height: 12.1px;\r\n    text-align: left;\r\n    /* background-color: lightgrey; */\r\n\r\n    /* white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n           -webkit-box-orient: vertical;\r\n          -webkit-line-clamp: 5;\r\n          display: -webkit-box; */\r\n}\r\n\r\n.legend-left-section {\r\n    font-family: \"Inter\", sans-serif;\r\n    font-size: 8px;\r\n    font-size: 12px;\r\n    line-height: 9.68px;\r\n    text-align: left;\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    text-align: left;\r\n    /* justify-content: space-between; */\r\n    /* justify-content: space-between; */\r\n    gap: 15px;\r\n    /* background-color: lightyellow; */\r\n\r\n}\r\n\r\n.stx-text, .stx-value{\r\n    flex-basis: 250px;\r\n}\r\n\r\n@media screen and (max-width: 1515px) {\r\n    .main-legend{\r\n      width: 56%;\r\n    }\r\n}\r\n@media screen and (max-width: 1500px) {\r\n    .main-legend{\r\n        width:56%;\r\n        /* background-color: lightgoldenrodyellow; */\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 1263px){\r\n    .main-legend{\r\n        width: 60%;\r\n        /* background-color: purple !important; */\r\n    }\r\n}\r\n@media screen and (max-width: 1000px){\r\n    .main-legend{\r\n        width: 60%;\r\n        /* background-color: lightpink;  */\r\n    }\r\n}\r\n@media screen and (max-width: 1450px){\r\n    .main-legend{\r\n        width: 60%;\r\n    }\r\n}\r\n@media screen and (max-width: 1430px){\r\n    .main-legend{\r\n        width: 55%;\r\n        /* background-color: lightgreen; */\r\n    }\r\n}\r\n@media screen and (max-width: 1440px){\r\n    .main-legend{\r\n        width: 60%;\r\n        /* background-color: lightgreen; */\r\n    }\r\n}\r\n@media screen and (max-width: 1475px) {\r\n    .main-legend{\r\n        width: 58%;\r\n    }\r\n    \r\n}\r\n\r\n/* .legend-last-section > span{\r\n    flex-basis: 200px;\r\n} */\r\n\r\n/* .stx-value {\r\n    color: #F23645;\r\n} */\r\n\r\n.stx-text {\r\n    color: #000000;\r\n}\r\n\r\n.legend-last-section {\r\n    font-family: inter;\r\n    font-size: 12px;\r\n    font-weight: 400;\r\n    line-height: 9.68px;\r\n       text-align: left;\r\n    background-color: ;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -4275,19 +4275,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 699:
+/***/ 199:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(662);
+var content = __webpack_require__(466);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("407a0bb3", content, false, {});
+var update = add("048463c3", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -12687,8 +12687,8 @@ var Sidebar_component = normalizeComponent(
 )
 
 /* harmony default export */ const components_Sidebar = (Sidebar_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=14c64647
-var Legendvue_type_template_id_14c64647_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=3c53b719
+var Legendvue_type_template_id_3c53b719_render = function render() {
   var _vm$common;
   var _vm = this,
     _c = _vm._self._c;
@@ -12769,11 +12769,7 @@ var Legendvue_type_template_id_14c64647_render = function render() {
     staticClass: "stx-field-value"
   }, [_vm._v(_vm._s(_vm.ohlcv[7]) + "%")])])]) : _vm._e(), _vm._v(" "), _c("br"), _vm._v(" "), _vm.common.secondVariant || _vm.common.thirdVariant || _vm.common.fourthVariant && _vm.show_values && !_vm.show_CustomProps ? _c("div", {
     staticClass: "main-legend legendArea"
-  }, [_c("div", {
-    staticClass: "legend-right-section"
-  }, [_c("span", {
-    staticClass: "right-title"
-  }, [_vm._v(_vm._s(_vm.common.title_txt))])]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
     staticClass: "legend-left-section"
   }, [_c("span", [_c("span", {
     staticClass: "stx-text",
@@ -12869,16 +12865,24 @@ var Legendvue_type_template_id_14c64647_render = function render() {
     }) : _vm._e()], 1)], 1);
   })], 2);
 };
-var Legendvue_type_template_id_14c64647_staticRenderFns = [function () {
+var Legendvue_type_template_id_3c53b719_staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "legend-right-section"
+  }, [_c("span", {
+    staticClass: "right-title"
+  }, [_vm._v("TSLA")])]);
+}, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "legend-center-section"
   }, [_c("p", [_vm._v("International Business Machines Corporation")])]);
 }];
-Legendvue_type_template_id_14c64647_render._withStripped = true;
+Legendvue_type_template_id_3c53b719_render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=14c64647
+;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=3c53b719
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ButtonGroup.vue?vue&type=template&id=72b6dd45
 var ButtonGroupvue_type_template_id_72b6dd45_render = function render() {
@@ -13333,9 +13337,9 @@ var settingPng = icons_namespaceObject["gear.png"];
 });
 ;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Legendvue_type_script_lang_js = (Legendvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=14c64647&prod&lang=css
-var Legendvue_type_style_index_0_id_14c64647_prod_lang_css = __webpack_require__(699);
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=14c64647&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=3c53b719&prod&lang=css
+var Legendvue_type_style_index_0_id_3c53b719_prod_lang_css = __webpack_require__(199);
+;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=3c53b719&prod&lang=css
 
 ;// CONCATENATED MODULE: ./src/components/Legend.vue
 
@@ -13348,8 +13352,8 @@ var Legendvue_type_style_index_0_id_14c64647_prod_lang_css = __webpack_require__
 
 var Legend_component = normalizeComponent(
   components_Legendvue_type_script_lang_js,
-  Legendvue_type_template_id_14c64647_render,
-  Legendvue_type_template_id_14c64647_staticRenderFns,
+  Legendvue_type_template_id_3c53b719_render,
+  Legendvue_type_template_id_3c53b719_staticRenderFns,
   false,
   null,
   null,
