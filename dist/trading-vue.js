@@ -1,5 +1,5 @@
 /*!
- * TradingVue.JS - v1.0.3 - Tue Mar 26 2024
+ * TradingVue.JS - v1.0.3 - Tue Apr 16 2024
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2019 C451 Code's All Right;
  *     Licensed under the MIT license
@@ -387,14 +387,14 @@ module.exports.isSortableArrayLike = function (o) {
 
 /***/ }),
 
-/***/ 470:
+/***/ 691:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(314);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.id, "\r\n/* Anit-boostrap tactix */\n.trading-vue *,\r\n::after,\r\n::before {\r\n  box-sizing: content-box;\n}\n.trading-vue img {\r\n  vertical-align: initial;\n}\r\n", ""]);
+exports.push([module.id, "\r\n/* Anit-boostrap tactix */\n.trading-vue *,\r\n::after,\r\n::before {\r\n  box-sizing: content-box;\n}\n.trading-vue img {\r\n  vertical-align: initial;\n}\n.mgt{\r\n  display: flex;\r\n  justify-content: end;\r\n  margin-bottom:3px;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -429,6 +429,20 @@ module.exports = exports;
 
 /***/ }),
 
+/***/ 742:
+/***/ ((module, exports, __webpack_require__) => {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(314);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.id, "\n /* Watermark style */\n.watermark[data-v-4473f069] {\n  position: absolute;\n  top: 50%;\n  left: 45%;\n  transform: translate(-50%, -50%);\n  font-size: 30px;\n  font-weight: 600;\n  color: rgba(0, 0, 0, 0.5);\n  opacity: 0.5;\n  pointer-events: none;\n}\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ 937:
 /***/ ((module, exports, __webpack_require__) => {
 
@@ -443,18 +457,16 @@ module.exports = exports;
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 212:
-=======
-/***/ 640:
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+/***/ 662:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(314);
+var ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(787);
 exports = ___CSS_LOADER_API_IMPORT___(false);
+exports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
 // Module
-exports.push([module.id, "\n.trading-vue-legend {\r\n  position: relative;\r\n  z-index: 100;\r\n  font-size: 1.25em;\r\n  margin-left: 10px;\r\n  pointer-events: none;\r\n  text-align: left;\r\n  user-select: none;\r\n  font-weight: 300;\n}\n.cs-vue-title {\r\n  font-weight: 400;\r\n  font-size: 16px;\n}\n.cs-title-1 {\r\n  border: 1px solid red;\r\n  border-radius: 6px;\r\n  font-weight: 400;\r\n  background-color: white;\r\n  color: red;\r\n  padding: 5px 10px 5px 10px;\n}\n.cs-title-2 {\r\n  border: 1px solid blue;\r\n  border-radius: 6px;\r\n  font-weight: 400;\r\n  background-color: white;\r\n  color: #0043fc;\r\n  padding: 5px 10px 5px 10px;\n}\n@media (min-resolution: 2x) {\n.trading-vue-legend {\r\n    font-weight: 400;\n}\n}\n.trading-vue-ohlcv {\r\n  pointer-events: none;\r\n  margin-bottom: 0.5em;\n}\n.t-vue-lspan {\r\n  font-variant-numeric: tabular-nums;\r\n  font-size: 0.95em;\r\n  color: #999999; /* TODO: move => params */\r\n  margin-left: 0.1em;\r\n  margin-right: 0.2em;\n}\n.t-vue-title {\r\n  margin-right: 0.25em;\r\n  font-size: 1.45em;\n}\n.t-vue-ind {\r\n  display: flex;\r\n  margin-left: 0.2em;\r\n  margin-bottom: 0.5em;\r\n  font-size: 1em;\r\n  margin-top: 0.3em;\n}\n.t-vue-ivalue {\r\n  margin-left: 0.5em;\n}\n.t-vue-unknown {\r\n  color: #999999; /* TODO: move => params */\n}\n.tvjs-appear-enter-active,\r\n.tvjs-appear-leave-active {\r\n  transition: all 0.25s ease;\n}\n.tvjs-appear-enter,\r\n.tvjs-appear-leave-to {\r\n  opacity: 0;\n}\r\n", ""]);
+exports.push([module.id, "\r\n/* CSS for secondVariants */\r\n\r\n \r\n/*  */\n.trading-vue-legend {\r\n  position: relative;\r\n  z-index: 100;\r\n  font-size: 1.25em;\r\n  margin-left: 10px;\r\n  pointer-events: none;\r\n  text-align: left;\r\n  user-select: none;\r\n  font-weight: 300;\n}\n.legendArea{\r\n  pointer-events: all;\n}\n.stx-tooltip {\r\n   margin-top: 12px;\r\n   width: 100px;\r\n   height: 110px;\r\n   background-color: #fff;\r\n   box-shadow: 0 0 8px 0 rgba(70,78,86,.25);\r\n   opacity: .9;\r\n   padding: 10px 15px;\r\n   color: #464e56;\r\n   border-radius: 2px;\r\n   font-size: 13px;\r\n   font-weight: 300;\r\n   line-height: 18px;\r\n   position: absolute;\r\n   z-index: 4;\r\n   white-space: nowrap;\n}\n.stx-field-value{\r\n    font-weight: 600;\r\n    background-color: #fff;\r\n    color: #464e56;\r\n    font-size: 13px;\r\n    line-height: 18px;\n}\r\n\r\n/* .stx-tooltip {\r\n    background-color: #fff;\r\n    border-radius: 3px;\r\n    box-shadow: 0 0 8px 0 rgba(70,78,86,.25);\r\n    color: #464e56;\r\n    font-size: 13px;\r\n    left: -1000px;\r\n    line-height: 18px;\r\n    opacity: .9;\r\n    padding: 10px 15px;\r\n    position: absolute;\r\n    white-space: nowrap;\r\n    z-index: 4;\r\n} */\n.stx-tooltip  .close-btn {\r\n    cursor: pointer;\r\n    font-size: 11px;\r\n    opacity: .5;\r\n    position: absolute;\r\n    right: 5px;\r\n    top: 2px;\n}\n.stx-field-name{\r\n    font-weight: 400;\r\n    opacity: .7;\n}\n.stx-panel{\r\n  height: 30px;\r\n  width: 15px;\r\n  background-color: #fff;\r\n  box-shadow: 0 0 8px 0 rgba(70,78,86,.25);\r\n  font-size: 13px;\r\n  color: #464e56;\r\n  font-weight: 500;\r\n  border-radius: 5px;\r\n  padding: 2px 5px 2px 5px;\r\n  align-items: center;\r\n  text-align: center;\r\n  border-left: 5px solid rgb(0, 129, 242);\n}\n.stx-panel > .clr{\r\n    border-bottom-left-radius: 3px;\r\n    border-top-left-radius: 3px;\r\n    height: 100%;\r\n    width: 5px;\n}\n.stx-tooltip .stx-tooltip-field {\r\n    display: flex;\r\n    justify-content: space-between;\n}\n.cs-vue-title {\r\n  font-weight: 400;\r\n  font-size: 16px;\n}\n.cs-title-1 {\r\n  border: 1px solid red;\r\n  border-radius: 6px;\r\n  font-weight: 400;\r\n  background-color: white;\r\n  color: red;\r\n  padding: 5px 10px 5px 10px;\n}\n.cs-title-2 {\r\n  border: 1px solid blue;\r\n  border-radius: 6px;\r\n  font-weight: 400;\r\n  background-color: white;\r\n  color: #0043fc;\r\n  padding: 5px 10px 5px 10px;\n}\n@media (min-resolution: 2x) {\n.trading-vue-legend {\r\n    font-weight: 400;\n}\n}\n.trading-vue-ohlcv {\r\n  pointer-events: none;\r\n  margin-bottom: 0.5em;\n}\n.t-vue-lspan {\r\n  font-variant-numeric: tabular-nums;\r\n  font-size: 0.95em;\r\n  color: #999999; /* TODO: move => params */\r\n  margin-left: 0.1em;\r\n  margin-right: 0.2em;\n}\n.t-vue-title {\r\n  margin-right: 0.25em;\r\n  font-size: 1.45em;\n}\n.t-vue-ind {\r\n  display: flex;\r\n  margin-left: 0.2em;\r\n  margin-bottom: 0.5em;\r\n  font-size: 1em;\r\n  margin-top: 0.3em;\n}\n.magnet{\r\n  /* display: flex;\r\n  justify-content: end; */\r\n  background-color: crimson;\n}\n.t-vue-ivalue {\r\n  margin-left: 0.5em;\n}\n.t-vue-unknown {\r\n  color: #999999; /* TODO: move => params */\n}\n.tvjs-appear-enter-active,\r\n.tvjs-appear-leave-active {\r\n  transition: all 0.25s ease;\n}\n.tvjs-appear-enter,\r\n.tvjs-appear-leave-to {\r\n  opacity: 0;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -475,7 +487,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 706:
+/***/ 250:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -567,6 +579,20 @@ var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(314);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.id, "\n.tvjs-widgets {\r\n    position: absolute;\r\n    z-index: 1000;\r\n    pointer-events: none;\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ 787:
+/***/ ((module, exports, __webpack_require__) => {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(314);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.id, ".main-legend {\r\n    display: flex;\r\n    align-items: center;\r\n    /* background: #847373; */\r\n    padding: 5px 9px;\r\n    width: 53%;\r\n    gap: 20px;\r\n    border-radius: 8px;\r\n    box-shadow: 2px 2px 5px 1px #0000001A;\r\n    border: 1px solid #F2F2F2\r\n}\r\n\r\n.legend-right-section {\r\n    /* background-color: purple;\r\n */\r\n    font-family: \"Inter\", sans-serif;\r\n    font-size: 15px;\r\n    font-weight: 800;\r\n    line-height: 16.52px;\r\n    text-align: left;\r\n    width: 3%;\r\n    /* background-color: crimson; */\r\n\r\n}\r\n\r\n.legend-center-section {\r\n    /* background-color: lightcoral; */\r\n    font-family: \"Inter\", sans-serif;\r\n    font-size: 12px;\r\n    font-weight: 600;\r\n    line-height: 12.1px;\r\n    text-align: left;\r\n    /* background-color: lightgrey; */\r\n\r\n    /* white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n           -webkit-box-orient: vertical;\r\n          -webkit-line-clamp: 5;\r\n          display: -webkit-box; */\r\n}\r\n\r\n.legend-left-section {\r\n    font-family: \"Inter\", sans-serif;\r\n    font-size: 8px;\r\n    font-size: 12px;\r\n    line-height: 9.68px;\r\n    text-align: left;\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    text-align: left;\r\n    /* justify-content: space-between; */\r\n    /* justify-content: space-between; */\r\n    gap: 15px;\r\n    /* background-color: lightyellow; */\r\n\r\n}\r\n\r\n.stx-text, .stx-value{\r\n    flex-basis: 250px;\r\n}\r\n\r\n@media screen and (max-width: 1515px) {\r\n    .main-legend{\r\n      width: 56%;\r\n    }\r\n}\r\n@media screen and (max-width: 1500px) {\r\n    .main-legend{\r\n        width:56%;\r\n        /* background-color: lightgoldenrodyellow; */\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 1263px){\r\n    .main-legend{\r\n        width: 60%;\r\n        /* background-color: purple !important; */\r\n    }\r\n}\r\n@media screen and (max-width: 1000px){\r\n    .main-legend{\r\n        width: 60%;\r\n        /* background-color: lightpink;  */\r\n    }\r\n}\r\n@media screen and (max-width: 1450px){\r\n    .main-legend{\r\n        width: 60%;\r\n    }\r\n}\r\n@media screen and (max-width: 1430px){\r\n    .main-legend{\r\n        width: 55%;\r\n        /* background-color: lightgreen; */\r\n    }\r\n}\r\n@media screen and (max-width: 1440px){\r\n    .main-legend{\r\n        width: 60%;\r\n        /* background-color: lightgreen; */\r\n    }\r\n}\r\n@media screen and (max-width: 1475px) {\r\n    .main-legend{\r\n        width: 58%;\r\n    }\r\n    \r\n}\r\n\r\n/* .legend-last-section > span{\r\n    flex-basis: 200px;\r\n} */\r\n\r\n/* .stx-value {\r\n    color: #F23645;\r\n} */\r\n\r\n.stx-text {\r\n    color: #000000;\r\n}\r\n\r\n.legend-last-section {\r\n    font-family: inter;\r\n    font-size: 12px;\r\n    font-weight: 400;\r\n    line-height: 9.68px;\r\n       text-align: left;\r\n    background-color: ;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -4159,19 +4185,19 @@ if (true) {
 
 /***/ }),
 
-/***/ 125:
+/***/ 132:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(470);
+var content = __webpack_require__(691);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("52012d2c", content, false, {});
+var update = add("79830b63", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -4213,6 +4239,24 @@ if(false) {}
 
 /***/ }),
 
+/***/ 453:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(742);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = (__webpack_require__(534)/* ["default"] */ .A)
+var update = add("6798ecae", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
 /***/ 796:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -4231,31 +4275,19 @@ if(false) {}
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 701:
-=======
-/***/ 765:
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+/***/ 699:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-<<<<<<< HEAD
-var content = __webpack_require__(212);
-=======
-var content = __webpack_require__(640);
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+var content = __webpack_require__(662);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-<<<<<<< HEAD
-var update = add("77a98a66", content, false, {});
-=======
-var update = add("4ec78cbb", content, false, {});
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+var update = add("407a0bb3", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -4279,19 +4311,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 585:
+/***/ 737:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(706);
+var content = __webpack_require__(250);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("43ffac1e", content, false, {});
+var update = add("d1818d2a", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -5111,7 +5143,7 @@ __webpack_require__.d(__webpack_exports__, {
   primitives: () => (/* binding */ primitives)
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=template&id=7019cf8f
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=template&id=4db9151a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -5130,7 +5162,45 @@ var render = function render() {
       mousedown: _vm.mousedown,
       mouseleave: _vm.mouseleave
     }
-  }, [_vm.toolbar ? _c("toolbar", _vm._b({
+  }, [_c("span", {
+    staticClass: "mgt",
+    on: {
+      click: _vm.showMagnet
+    }
+  }, [_c("svg", {
+    attrs: {
+      fill: _vm.magnet ? "green" : "#000000",
+      height: "18",
+      width: "18",
+      version: "1.1",
+      id: "Capa_1",
+      xm: "",
+      lns: "http://www.w3.org/2000/svg",
+      "xmlns:xlink": "http://www.w3.org/1999/xlink",
+      viewBox: "0 0 490 490",
+      "xml:space": "preserve",
+      transform: "rotate(180)"
+    }
+  }, [_c("g", {
+    attrs: {
+      id: "SVGRepo_bgCarrier",
+      "stroke-width": "0"
+    }
+  }), _c("g", {
+    attrs: {
+      id: "SVGRepo_tracerCarrier",
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round"
+    }
+  }), _c("g", {
+    attrs: {
+      id: "SVGRepo_iconCarrier"
+    }
+  }, [_c("g", [_c("path", {
+    attrs: {
+      d: "M245,0C109.8,0,0.5,109.2,0.5,243.4v225.8c0,11.4,9.4,20.8,20.8,20.8h90.5c11.4,0,20.8-9.4,20.8-20.8 c0-0.4,0-225.8,0-225.8c0-62.4,51-112.4,112.4-112.4s112.4,51,112.4,112.4c0,0,0,224.4,0,224.7c0,11.4,9.4,20.8,20.8,20.8h90.5 c11.4,0,20.8-9.4,20.8-19.8V243.4C489.5,109.2,380.2,0,245,0z M41.1,369.3H91v79.1H41.1V369.3z M245,90.5 c-85.3,0-154,68.7-154,152.9v84.3H41.1v-84.3C41.1,131,132.6,40.5,245,40.5S448.9,132,448.9,243.4v84.3H399v-84.3 C399,159.2,330.3,90.5,245,90.5z M399,447.3v-78h49.9v78H399z"
+    }
+  })])])])]), _vm._v(" "), _vm.toolbar ? _c("toolbar", _vm._b({
     ref: "toolbar",
     attrs: {
       config: _vm.chart_config
@@ -5155,6 +5225,7 @@ var render = function render() {
       enableSideBarBoxValue: _vm.enableSideBarBoxValue,
       applyShaders: _vm.applyShaders,
       priceLine: _vm.priceLine,
+      candleBorder: _vm.candleBorder,
       decimalPlace: _vm.decimalPlace,
       roundOffVolume: _vm.roundOffVolume,
       legendDecimal: _vm.legendDecimal,
@@ -5162,7 +5233,8 @@ var render = function render() {
       ignoreNegativeIndex: _vm.ignoreNegativeIndex,
       ignore_OHLC: _vm.ignore_OHLC,
       tv_id: _vm.id,
-      config: _vm.chart_config
+      config: _vm.chart_config,
+      title_txt: "IBM"
     },
     on: {
       "custom-event": _vm.custom_event,
@@ -5189,7 +5261,7 @@ var render = function render() {
 var staticRenderFns = [];
 render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=template&id=7019cf8f
+;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=template&id=4db9151a
 
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
 function _arrayLikeToArray(arr, len) {
@@ -5344,13 +5416,8 @@ var MAP_UNIT = {
   map_unit: MAP_UNIT,
   IB_TF_WARN: IB_TF_WARN
 });
-<<<<<<< HEAD
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Chart.vue?vue&type=template&id=729fffdb
-var Chartvue_type_template_id_729fffdb_render = function render() {
-=======
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Chart.vue?vue&type=template&id=7b3f0679
-var Chartvue_type_template_id_7b3f0679_render = function render() {
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Chart.vue?vue&type=template&id=4473f069&scoped=true
+var Chartvue_type_template_id_4473f069_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
@@ -5373,6 +5440,7 @@ var Chartvue_type_template_id_7b3f0679_render = function render() {
         legendDecimal: _vm.legendDecimal,
         applyShaders: _vm.applyShaders,
         priceLine: _vm.priceLine,
+        candleBorder: _vm.candleBorder,
         enableCrosshair: _vm.enableCrosshair,
         ignore_OHLC: _vm.ignore_OHLC
       },
@@ -5393,19 +5461,14 @@ var Chartvue_type_template_id_7b3f0679_render = function render() {
       shaders: _vm.shaders,
       timezone: _vm.timezone
     }
-  }, "botbar", _vm.botbar_props, false))], 2);
+  }, "botbar", _vm.botbar_props, false)), _vm._v(" "), _c("div", {
+    staticClass: "watermark"
+  }, [_vm._v(_vm._s(_vm.main_section.waterMarkText))])], 2);
 };
-<<<<<<< HEAD
-var Chartvue_type_template_id_729fffdb_staticRenderFns = [];
-Chartvue_type_template_id_729fffdb_render._withStripped = true;
+var Chartvue_type_template_id_4473f069_scoped_true_staticRenderFns = [];
+Chartvue_type_template_id_4473f069_scoped_true_render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/components/Chart.vue?vue&type=template&id=729fffdb
-=======
-var Chartvue_type_template_id_7b3f0679_staticRenderFns = [];
-Chartvue_type_template_id_7b3f0679_render._withStripped = true;
-
-;// CONCATENATED MODULE: ./src/components/Chart.vue?vue&type=template&id=7b3f0679
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+;// CONCATENATED MODULE: ./src/components/Chart.vue?vue&type=template&id=4473f069&scoped=true
 
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
 function _arrayWithHoles(arr) {
@@ -5450,16 +5513,6 @@ function _nonIterableRest() {
 
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
-function typeof_typeof(o) {
-  "@babel/helpers - typeof";
-
-  return typeof_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
-    return typeof o;
-  } : function (o) {
-    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
-  }, typeof_typeof(o);
 }
 ;// CONCATENATED MODULE: ./src/stuff/context.js
 // Canvas context for text measurments
@@ -5962,6 +6015,7 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
     },
     // Time-axis nearest step
     t_magnet: function t_magnet(t) {
+      console.log("magnet");
       if (ib) t = self.ti_map.smth2i(t);
       var cn = self.candles || self.master_grid.candles;
       var arr = cn.map(function (x) {
@@ -5992,9 +6046,34 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
       });
       var i = utils.nearest_a(t, arr)[0];
       return cn[i];
-    },
+    }
     // Nearest data points
-    data_magnet: function data_magnet(t) {/* TODO: implement */}
+    // data_magnet: t => {  /* TODO: implement */ }
+
+    // Nearest data points
+    // Nearest data points
+    // Nearest data points
+
+    // data_magnet: t => {
+    //     const candles = self.candles || self.master_grid.candles;
+
+    //     // Extract the timestamps and closing prices of candles
+    //     const timestamps = candles.map(candle => candle.raw[0]);
+    //     const closingPrices = candles.map(candle => candle.close)
+
+    //     console.log("timestamps==>",timestamps)
+    //     console.log("closingPrices==>",closingPrices)
+
+    //     // Find the index of the nearest candlestick in terms of timestamp
+    //     const nearestIndex = Utils.nearest_a(t, timestamps)[0];
+
+    //     // Retrieve the nearest timestamp and closing price
+    //     const nearestTimestamp = timestamps[nearestIndex];
+    //     const nearestClosingPrice = closingPrices[nearestIndex];
+
+    //     // Return the nearest closing price and its timestamp
+    //     return { timestamp: nearestTimestamp, price: nearestClosingPrice };
+    // }
   });
   return self;
 }
@@ -6737,6 +6816,16 @@ function classCallCheck_classCallCheck(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 }
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
+function typeof_typeof(o) {
+  "@babel/helpers - typeof";
+
+  return typeof_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, typeof_typeof(o);
+}
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toPrimitive.js
 
 function toPrimitive(t, r) {
@@ -6905,8 +6994,8 @@ var CursorUpdater = /*#__PURE__*/function () {
   }]);
 }();
 /* harmony default export */ const updater = (CursorUpdater);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=template&id=524bd745
-var Sectionvue_type_template_id_524bd745_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=template&id=283a17e0
+var Sectionvue_type_template_id_283a17e0_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
@@ -6927,10 +7016,12 @@ var Sectionvue_type_template_id_524bd745_render = function render() {
   }), _vm._v(" "), _c("grid", _vm._b({
     ref: "grid",
     attrs: {
+      common: _vm.legend_props,
       grid_id: _vm.grid_id,
       enableZoom: _vm.enableZoom,
       decimalPlace: _vm.decimalPlace,
       priceLine: _vm.priceLine,
+      candleBorder: _vm.candleBorder,
       enableCrosshair: _vm.enableCrosshair
     },
     on: {
@@ -6960,10 +7051,10 @@ var Sectionvue_type_template_id_524bd745_render = function render() {
     }
   }, "sidebar", _vm.sidebar_props, false))], 1);
 };
-var Sectionvue_type_template_id_524bd745_staticRenderFns = [];
-Sectionvue_type_template_id_524bd745_render._withStripped = true;
+var Sectionvue_type_template_id_283a17e0_staticRenderFns = [];
+Sectionvue_type_template_id_283a17e0_render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=template&id=524bd745
+;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=template&id=283a17e0
 
 ;// CONCATENATED MODULE: ./src/stuff/frame.js
 
@@ -7034,7 +7125,7 @@ var Grid = /*#__PURE__*/function () {
     this.range = this.$p.range;
     this.id = this.$p.grid_id;
     this.layout = this.$p.layout.grids[this.id];
-    console.log("this.layout.grid", this.layout);
+    // console.log("this.layout.grid",this.layout )
     this.interval = this.$p.interval;
     this.cursor = comp.$props.cursor;
     this.offset_x = 0;
@@ -7101,7 +7192,7 @@ var Grid = /*#__PURE__*/function () {
         }
         if (_this.drug) {
           if (_this.$p.enableZoom) {
-            console.log("panmove event if block");
+            // console.log("panmove event if block")
             _this.mousedrag(_this.drug.x + event.deltaX, _this.drug.y + event.deltaY);
             _this.comp.$emit("cursor-changed", {
               grid_id: _this.id,
@@ -7753,7 +7844,16 @@ var Grid = /*#__PURE__*/function () {
     };
   }
 });
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toArray.js
+
+
+
+
+function _toArray(arr) {
+  return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest();
+}
 ;// CONCATENATED MODULE: ./src/components/js/crosshair.js
+
 
 
 var Crosshair = /*#__PURE__*/function () {
@@ -7770,32 +7870,150 @@ var Crosshair = /*#__PURE__*/function () {
   return createClass_createClass(Crosshair, [{
     key: "draw",
     value: function draw(ctx) {
-      // Update reference to the grid
+      var _this$$p$cursor$value;
       this.layout = this.$p.layout;
+      // console.log("common ==>", this.comp.common.magnet)
+
       var cursor = this.comp.$props.cursor;
-      // console.log(this.vis)
+      var candleData = (_this$$p$cursor$value = this.$p.cursor.values[0]) === null || _this$$p$cursor$value === void 0 ? void 0 : _this$$p$cursor$value.Candles_0;
+      var _candleData = _toArray(candleData),
+        open = _candleData[0],
+        high = _candleData[1],
+        low = _candleData[2],
+        close = _candleData[3],
+        volume = _candleData[4],
+        ary = _candleData.slice(5);
+      // console.log("datastructure", open, high, low, close, volume, ary)
+      // console.log("data.row",this.data)
+
       if (!this.visible && cursor.mode === 'explore') return;
-      this.x = this.$p.cursor.x;
-      this.y = this.$p.cursor.y;
+      var closingPriceOfCandle = candleData[4];
+      var openingPriceOfCandle = candleData[1];
+
+      // const bodyTop = Math.max(closingPriceOfCandle, openingPriceOfCandle);
+      // const bodyBottom = Math.min(closingPriceOfCandle, openingPriceOfCandle);
+
+      // if(closingPriceOfCandle === bodyBottom){
+      //     console.log("closing price at the bottom of the red candles")
+      // }else{
+      //     console.log("closing price is at the top of the red candels")
+      // }
+
+      var closingPrice = candleData[4]; // Assuming closing price is at index 4
+      var isOpeningAboveClosing = closingPrice > openingPriceOfCandle; // Check if opening price is above closing price if true red candle
+
+      var yCoord;
+      if (isOpeningAboveClosing) {
+        var candleLow = candleData[4]; // Low price of the candle
+        yCoord = this.$p.layout.$2screen(candleLow); // Convert low price to screen coordinates
+      } else {
+        var candleHigh = candleData[4]; // High price of the candle
+        yCoord = this.$p.layout.$2screen(candleHigh); // Convert high price to screen coordinates
+      }
       ctx.save();
       ctx.strokeStyle = this.$p.colors.cross;
       ctx.beginPath();
       ctx.setLineDash([3]);
 
-      // H
-      if (this.$p.cursor.grid_id === this.layout.id) {
-        ctx.moveTo(0, this.y);
-        ctx.lineTo(this.layout.width - 0.5, this.y);
+      // conditionally check magnet
+      if (this.comp.common.magnet) {
+        ctx.moveTo(0, yCoord);
+        ctx.lineTo(this.layout.width - 0.5, yCoord);
+      } else {
+        ctx.moveTo(0, cursor.y);
+        ctx.lineTo(this.layout.width - 0.5, cursor.y);
       }
-
-      // V
-      ctx.moveTo(this.x, 0);
-      ctx.lineTo(this.x, this.layout.height);
+      ctx.moveTo(cursor.x, 0);
+      ctx.lineTo(cursor.x, this.layout.height);
       if (this.enableCrosshair) {
         ctx.stroke();
       }
       ctx.restore();
     }
+
+    // draw(ctx) {
+    //     this.layout = this.$p.layout;
+
+    //     const cursor = this.comp.$props.cursor;
+    //     const candleData = this.$p.cursor.values[0].Candles_0;
+    //     console.log("candleData", candleData)
+
+    //     if (!this.visible && cursor.mode === 'explore') return;
+
+    //     const closingPrice = candleData[4]; // Assuming closing price is at index 4
+    //     const isGreenCandle = closingPrice > candleData[1]; // Compare closing price with opening price
+
+    //     let yCoord;
+
+    //     if (isGreenCandle) {
+    //         const candleHigh = candleData[2]; // High price of the candle
+    //         yCoord = this.$p.layout.screen2$(candleHigh); // Convert high price to screen coordinates
+    //     } else {
+    //         const candleLow = candleData[3]; // Low price of the candle
+    //         yCoord = this.$p.layout.screen2$(candleLow); // Convert low price to screen coordinates
+    //     }
+
+    //     ctx.save();
+    //     ctx.strokeStyle = this.$p.colors.cross;
+    //     ctx.beginPath();
+    //     ctx.setLineDash([3]);
+
+    //     ctx.moveTo(0, yCoord);
+    //     ctx.lineTo(this.layout.width - 0.5, yCoord);
+
+    //     ctx.moveTo(cursor.x, 0);
+    //     ctx.lineTo(cursor.x, this.layout.height);
+
+    //     if (this.enableCrosshair) {
+    //         ctx.stroke();
+    //     }
+
+    //     ctx.restore();
+    // }
+
+    // draw(ctx) {
+    //     this.layout = this.$p.layout;
+
+    //     const cursor = this.comp.$props.cursor;
+    //     const candleData = this.$p.cursor.values[0].Candles_0;
+    //     console.log("candle data", candleData)
+
+    //     if (!this.visible && cursor.mode === 'explore') return;
+
+    //     const closingPrice = candleData[4]; // Assuming closing price is at index 4
+    //     console.log("closing price", closingPrice)
+
+    //     const isGreenCandle = closingPrice > candleData[1]; // Compare closing price with opening price
+
+    //     console.log("isGreenCandle", isGreenCandle)
+
+    //     let yCoord;
+
+    //     if (isGreenCandle) {
+    //         const candleHigh = candleData[2]; // High price of the candle
+    //         yCoord = this.$p.layout.screen2$(candleHigh); // Convert high price to screen coordinates
+    //     } else {
+    //         const candleLow = candleData[3]; // Low price of the candle
+    //         yCoord = this.$p.layout.screen2$(candleLow) + 5; // Adjust the offset as needed
+    //     }
+
+    //     ctx.save();
+    //     ctx.strokeStyle = this.$p.colors.cross;
+    //     ctx.beginPath();
+    //     ctx.setLineDash([3]);
+
+    //     ctx.moveTo(0, yCoord);
+    //     ctx.lineTo(this.layout.width - 0.5, yCoord);
+
+    //     ctx.moveTo(cursor.x, 0);
+    //     ctx.lineTo(cursor.x, this.layout.height);
+
+    //     if (this.enableCrosshair) {
+    //         ctx.stroke();
+    //     }
+
+    //     ctx.restore();
+    // }
   }, {
     key: "hide",
     value: function hide() {
@@ -7812,20 +8030,372 @@ var Crosshair = /*#__PURE__*/function () {
       this._visible = val;
     }
   }]);
-}();
+}(); // draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout
+//     const cursor = this.comp.$props.cursor
+//     // console.log(this.vis)
+//     if (!this.visible && cursor.mode === 'explore') return
+//     this.x = this.$p.cursor.x
+//     this.y = this.$p.cursor.values[0].ohlcv[4]
+//     // this.y = this.$p.cursor.y
+//     console.log("this is y coordinate", this.y)
+//     ctx.save()
+//     ctx.strokeStyle = this.$p.colors.cross
+//     ctx.beginPath()
+//     ctx.setLineDash([3])
+//     // Horizontally
+//     if (this.$p.cursor.grid_id === this.layout.id) {
+//         ctx.moveTo(0, this.y)
+//         ctx.lineTo(this.layout.width - 0.5, this.y)
+//     }
+//     // Vertically
+//     ctx.moveTo(this.x, 0)
+//     ctx.lineTo(this.x, this.layout.height)
+//     if(this.enableCrosshair){
+//         ctx.stroke()
+//     }
+//     ctx.restore()
+// }
+// draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout
+//     const cursor = this.comp.$props.cursor;
+//     const candles = this.comp.$props?.layout?.candles; // Access the candles array
+//     if (!this.visible && cursor.mode === 'explore') return;
+//     let y = undefined; // Initialize y-coordinate to undefined
+//     // Check if candles data is available and not empty
+//     if (candles && candles.length > 0) {
+//         // Get the closing price from the last candle
+//         const lastCandle = candles[candles.length - 1];
+//         y = lastCandle.close;
+//     }
+//     this.y = y; // Set the y-coordinate
+//     ctx.save();
+//     ctx.strokeStyle = this.$p.colors.cross;
+//     ctx.beginPath();
+//     ctx.setLineDash([3]);
+//     // Horizontally
+//     if (this.$p.cursor.grid_id === this.layout.id && typeof this.y === 'number') {
+//         ctx.moveTo(0, this.$p.layout.screen2$(this.y)); // Convert y-coordinate to screen coordinates
+//         ctx.lineTo(this.layout.width - 0.5, this.$p.layout.screen2$(this.y)); // Convert y-coordinate to screen coordinates
+//     }
+//     // Vertically
+//     ctx.moveTo(this.$p.cursor.x, 0);
+//     ctx.lineTo(this.$p.cursor.x, this.layout.height);
+//     if (this.enableCrosshair) {
+//         ctx.stroke();
+//     }
+//     ctx.restore();
+// }
+// draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout;
+//     const cursor = this.comp.$props.cursor;
+//     const data = this.comp.$data.ch?.data; // Access the data array
+//     // const data = this.$p.cursor.values[0].Candles_0[4]
+//     console.log("data from ctx part", data[data.length - 1][3])
+//     if (!this.visible && cursor.mode === 'explore') return;
+//     let lastCandle = null;
+//     let y = undefined; // Initialize y-coordinate to undefined
+//     // Check if data array is available and not empty
+//     if (data && data.length > 0) {
+//         // Get the last candle data from the data array
+//         lastCandle = data[data.length - 1];
+//         // Extract the closing price from the candle data
+//         y = lastCandle[3]; // Assuming the closing price is at index 4
+//     }
+//     this.y = y; // Set the y-coordinate
+//     ctx.save();
+//     ctx.strokeStyle = this.$p.colors.cross;
+//     ctx.beginPath();
+//     ctx.setLineDash([3]);
+//     // Horizontally
+//     if (this.$p.cursor.grid_id === this.layout.id && typeof this.y === 'number') {
+//         ctx.moveTo(0, this.y); // Convert y-coordinate to screen coordinates
+//         ctx.lineTo(this.layout.width - 0.5, this.$p.layout.screen2$(this.y)); // Convert y-coordinate to screen coordinates
+//     }
+//     // Vertically
+//     ctx.moveTo(this.$p.cursor.x, 0);
+//     ctx.lineTo(this.$p.cursor.x, this.layout.height);
+//     if (this.enableCrosshair) {
+//         ctx.stroke();
+//     }
+//     ctx.restore();
+// }
+// draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout;
+//     const cursor = this.comp.$props.cursor;
+//     const data = this.comp.$props?.sub
+//     console.log("data from ctx", data)
+//     if (!this.visible && cursor.mode === 'explore') return;
+//     let y = undefined; // Initialize y-coordinate to undefined
+//     // Check if data array is available and not empty
+//     if (data && data?.length > 0) {
+//         // Get the last candle data from the data array
+//         const lastCandle = data[data?.length - 1];
+//         // Extract the closing price from the candle data
+//         // Replace the index '4' with the correct index for closing price in your data structure
+//         y = lastCandle[3]; // Assuming the closing price is available as 'close' property
+//     }
+//     // Convert the closing price to screen coordinates
+//     const yCoord = this.$p.layout.screen2$(y);
+//     ctx.save();
+//     ctx.strokeStyle = this.$p.colors.cross;
+//     ctx.beginPath();
+//     ctx.setLineDash([3]);
+//     // Horizontally
+//     if (this.$p.cursor.grid_id === this.layout.id) {
+//         ctx.moveTo(0, yCoord);
+//         ctx.lineTo(this.layout.width - 0.5, yCoord);
+//     }
+//     // Vertically
+//     ctx.moveTo(this.$p.cursor.x, 0);
+//     ctx.lineTo(this.$p.cursor.x, this.layout.height);
+//     if (this.enableCrosshair) {
+//         ctx.stroke();
+//     }
+//     ctx.restore();
+// }
+// draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout;
+//     const cursor = this.comp.$props.cursor;
+//     if (!this.visible && cursor.mode === 'explore') return;
+//     const y = this.$p.cursor.values[0].Candles_0[4] // Get the closing price from the props
+//     console.log("y is here", y)
+//     ctx.save();
+//     ctx.strokeStyle = this.$p.colors.cross;
+//     ctx.beginPath();
+//     ctx.setLineDash([3]);
+//     // Horizontally
+//     if (typeof y === 'number') {
+//         const yCoord = this.$p.layout.screen2$(y); // Convert closing price to screen coordinates
+//         ctx.moveTo(0, yCoord);
+//         ctx.lineTo(this.layout.width - 0.5, yCoord);
+//     }
+//     // Vertically
+//     ctx.moveTo(cursor.x, 0);
+//     ctx.lineTo(cursor.x, this.layout.height);
+//     if (this.enableCrosshair) {
+//         ctx.stroke();
+//     }
+//     ctx.restore();
+// }
+// draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout;
+//     const cursor = this.comp.$props.cursor;
+//     const y = this.$p.cursor.values[0].Candles_0[4]; 
+//     console.log("this is y",y)// Closing price from cursor data
+//     ctx.save();
+//     ctx.strokeStyle = this.$p.colors.cross;
+//     ctx.beginPath();
+//     ctx.setLineDash([3]);
+//     // Calculate screen coordinates for the closing price
+//     const yCoord = this.$p.layout.screen2$(y);
+//     // Horizontally
+//     if (this.$p.cursor.grid_id === this.layout.id && typeof y === 'number') {
+//         ctx.moveTo(0, yCoord);
+//         ctx.lineTo(this.layout.width - 0.5, yCoord);
+//     }
+//     // Vertically
+//     ctx.moveTo(cursor.x, 0);
+//     ctx.lineTo(cursor.x, this.layout.height);
+//     if (this.enableCrosshair) {
+//         ctx.stroke();
+//     }
+//     ctx.restore();
+// }
+// draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout;
+//     const cursor = this.comp.$props.cursor;
+//     const data = this.$p.cursor.values[0].Candles_0[4]; 
+//     if (!this.visible && cursor.mode === 'explore') return;
+//     let y = undefined; // Initialize y-coordinate to undefined
+//     // Check if data array is available and not empty
+//     if (data && data.length > 0) {
+//         // Get the last candle data from the data array
+//         const lastCandle = data[data.length - 1];
+//         // Extract the closing price from the candle data
+//         y = lastCandle.close; // Assuming the closing price is available as 'close' property
+//         // Determine if the candle is green or red
+//         const isGreenCandle = lastCandle.close > lastCandle.open;
+//         // Adjust the position of the crosshair line based on candle color
+//         if (isGreenCandle) {
+//             y += 0.1; // Move the crosshair line slightly above the green candle
+//         } else {
+//             y -= 0.1; // Move the crosshair line slightly below the red candle
+//         }
+//     }
+//     // Convert the closing price to screen coordinates
+//     const yCoord = this.$p.layout.screen2$(y);
+//     ctx.save();
+//     ctx.strokeStyle = this.$p.colors.cross;
+//     ctx.beginPath();
+//     ctx.setLineDash([3]);
+//     // Horizontally
+//     if (typeof y === 'number') {
+//         ctx.moveTo(0, yCoord);
+//         ctx.lineTo(this.layout.width - 0.5, yCoord);
+//     }
+//     // Vertically
+//     ctx.moveTo(cursor.x, 0);
+//     ctx.lineTo(cursor.x, this.layout.height);
+//     if (this.enableCrosshair) {
+//         ctx.stroke();
+//     }
+//     ctx.restore();
+// }
+// draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout;
+//     const cursor = this.comp.$props.cursor;
+//     const candleData = this.$p.cursor.values[0].Candles_0;
+//     if (!this.visible && cursor.mode === 'explore') return;
+//     // Extract the closing price from the candle data
+//     const closingPrice = candleData[4]; // Assuming closing price is at index 4
+//     console.log("closing price", closingPrice)
+//     // Convert closing price to screen coordinates
+//     const yCoord = this.$p.layout.screen2$(closingPrice);
+//     ctx.save();
+//     ctx.strokeStyle = this.$p.colors.cross;
+//     ctx.beginPath();
+//     ctx.setLineDash([3]);
+//     // Draw the horizontal line at the calculated screen coordinates
+//     ctx.moveTo(0, yCoord);
+//     ctx.lineTo(this.layout.width - 0.5, yCoord);
+//     // Draw the vertical line based on the cursor position
+//     ctx.moveTo(cursor.x, 0);
+//     ctx.lineTo(cursor.x, this.layout.height);
+//     if (this.enableCrosshair) {
+//         ctx.stroke();
+//     }
+//     ctx.restore();
+// }
+// draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout;
+//     const cursor = this.comp.$props.cursor;
+//     const candleData = this.$p.cursor.values[0].Candles_0;
+//     if (!this.visible && cursor.mode === 'explore') return;
+//     // Extract the closing price from the candle data
+//     const closingPrice = candleData[4]; // Assuming closing price is at index 4
+//     console.log("Closing Price:", closingPrice); // Log the closing price
+//     // Convert closing price to screen coordinates
+//     const yCoord = this.$p.layout.screen2$(closingPrice);
+//     console.log("ycoordinate", yCoord)
+//     ctx.save();
+//     ctx.strokeStyle = this.$p.colors.cross;
+//     ctx.beginPath();
+//     ctx.setLineDash([3]);
+//     // Draw the horizontal line at the calculated screen coordinates
+//     ctx.moveTo(0, yCoord);
+//     ctx.lineTo(this.layout.width - 0.5, yCoord);
+//     // Draw the vertical line based on the cursor position
+//     ctx.moveTo(cursor.x, 0);
+//     ctx.lineTo(cursor.x, this.layout.height);
+//     if (this.enableCrosshair) {
+//         ctx.stroke();
+//     }
+//     ctx.restore();
+// }
+// draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout;
+//     const cursor = this.comp.$props.cursor;
+//     const candleData = this.$p.cursor.values[0].Candles_0;
+//     if (!this.visible && cursor.mode === 'explore') return;
+//     // Extract the closing price from the candle data
+//     const closingPrice = candleData[4]; // Assuming closing price is at index 4
+//     const openPrice = candleData[1]
+//     const closePrice = candleData[4]
+//     const highPrice = candleData[2]
+//     const lowPrice = candleData[3]
+//     console.log("ohlcv===>", openPrice, closePrice, highPrice, lowPrice)
+//     // Determine if the current candle is green or red
+//     const isGreenCandle = closePrice > openPrice; // Compare closing price with opening price
+//     // Calculate the y-coordinate for the crosshair line based on candle color
+//     let yCoord = this.$p.layout.screen2$(closingPrice); // Convert closing price to screen coordinates
+//     if (isGreenCandle) {
+//         // For green candles, align the crosshair line with the top-center of the candle
+//         const candleTop = this.$p.layout.screen2$(highPrice); // High price
+//         yCoord = candleTop;
+//     } else {
+//         // For red candles, align the crosshair line slightly below the candle
+//         const candleBottom = this.$p.layout.screen2$(lowPrice); // Low price
+//         yCoord = candleBottom + 5; // Adjust the offset as needed
+//     }
+//     console.log("ycoordinates", yCoord)
+//     ctx.save();
+//     ctx.strokeStyle = this.$p.colors.cross;
+//     ctx.beginPath();
+//     ctx.setLineDash([3]);
+//     // Draw the horizontal line at the calculated screen coordinates
+//     ctx.moveTo(0, yCoord );
+//     ctx.lineTo(this.layout.width - 0.5, yCoord);
+//     // Draw the vertical line based on the cursor position
+//     ctx.moveTo(cursor.x, 0);
+//     ctx.lineTo(cursor.x, this.layout.height);
+//     if (this.enableCrosshair) {
+//         ctx.stroke();
+//     }
+//     ctx.restore();
+// }
+// draw(ctx) {
+//     // Update reference to the grid
+//     this.layout = this.$p.layout;
+//     const cursor = this.comp.$props.cursor;
+//     const candleData = this.$p.cursor.values[0].Candles_0;
+//     if (!this.visible && cursor.mode === 'explore') return;
+//     // Extract the closing price from the candle data
+//     const closingPrice = candleData[4]; // Assuming closing price is at index 4
+//     // Determine if the candle is green or red
+//     const isGreenCandle = closingPrice > candleData[1]; // Compare closing price with opening price
+//     // Calculate the y-coordinate for the crosshair line based on candle color
+//     let yCoord;
+//     if (isGreenCandle) {
+//         // For green candles, align the crosshair line with the top-center of the candle
+//         const candleHigh = candleData[2]; // High price of the candle
+//         yCoord = this.$p.layout.screen2$(candleHigh); // Convert high price to screen coordinates
+//     } else {
+//         // For red candles, align the crosshair line slightly below the candle
+//         const candleLow = candleData[3]; // Low price of the candle
+//         yCoord = this.$p.layout.screen2$(candleLow) + 5; // Adjust the offset as needed
+//     }
+//     ctx.save();
+//     ctx.strokeStyle = this.$p.colors.cross;
+//     ctx.beginPath();
+//     ctx.setLineDash([3]);
+//     // Draw the horizontal line at the calculated screen coordinates
+//     ctx.moveTo(0, yCoord);
+//     ctx.lineTo(this.layout.width - 0.5, yCoord);
+//     // Draw the vertical line based on the cursor position
+//     ctx.moveTo(cursor.x, 0);
+//     ctx.lineTo(cursor.x, this.layout.height);
+//     if (this.enableCrosshair) {
+//         ctx.stroke();
+//     }
+//     ctx.restore();
+// }
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Crosshair.vue?vue&type=script&lang=js
 
 
 /* harmony default export */ const Crosshairvue_type_script_lang_js = ({
   name: 'Crosshair',
-  props: ['cursor', 'colors', 'layout', 'sub', 'enableCrosshair'],
+  props: ['cursor', 'colors', 'layout', 'sub', 'enableCrosshair', 'common'],
+  data: function data() {
+    return {
+      ch: null
+    };
+  },
   watch: {
     cursor: {
       handler: function handler() {
         if (!this.ch) this.create();
-
-        // Explore = default mode on mobile
         var cursor = this.$props.cursor;
         var explore = cursor.mode === 'explore';
         if (!cursor.x || !cursor.y) {
@@ -7838,14 +8408,24 @@ var Crosshair = /*#__PURE__*/function () {
       deep: true
     },
     enableCrosshair: {
-      handler: function handler(n) {
+      handler: function handler() {
         this.create();
-      }
+      },
+      immediate: true
+    }
+  },
+  computed: {
+    magnet: function magnet() {
+      return this.$props.common;
     }
   },
   methods: {
     create: function create() {
       this.ch = new Crosshair(this);
+
+      // console.log("crosshair vue.js==>", this.common)
+
+      // console.log("this keyword from crosshair", this.common)
 
       // New grid overlay-renderer descriptor.
       // Should implement draw() (see Spline.vue)
@@ -7854,9 +8434,6 @@ var Crosshair = /*#__PURE__*/function () {
         renderer: this.ch
       });
     }
-  },
-  render: function render(h) {
-    return h();
   }
 });
 ;// CONCATENATED MODULE: ./src/components/Crosshair.vue?vue&type=script&lang=js
@@ -8457,7 +9034,7 @@ var Mouse = /*#__PURE__*/function () {
 
 
 /* harmony default export */ const overlay = ({
-  props: ['id', 'num', 'interval', 'cursor', 'colors', 'layout', 'sub', 'data', 'settings', 'grid_id', 'font', 'config', 'meta', 'tf', 'i0', 'last'],
+  props: ['id', 'num', 'interval', 'cursor', 'colors', 'layout', 'sub', 'data', 'settings', 'grid_id', 'font', 'config', 'meta', 'tf', 'i0', 'last', 'candleBorder'],
   mounted: function mounted() {
     // TODO(1): when hot reloading, dynamicaly changed mixins
     // dissapear (cuz it's a hack), the only way for now
@@ -9483,204 +10060,11 @@ var CandleExt = /*#__PURE__*/function () {
     this.style = data.raw[6] || this.self;
     this.draw(data);
   }
-
-  // draw(data) {
-  //     const green = data.raw[4] >= data.raw[1]
-  //     const body_color = green ?
-  //         this.style.colorCandleUp :
-  //         this.style.colorCandleDw
-
-  //     const wick_color = green ?
-  //         this.style.colorWickUp :
-  //         this.style.colorWickDw
-
-  //     let w = Math.max(data.w, 1)
-  //     let hw = Math.max(Math.floor(w * 0.5), 1)
-  //     let h = Math.abs(data.o - data.c)
-  //     let max_h = data.c === data.o ? 1 : 2
-  //     let x05 = Math.floor(data.x) - 0.5
-
-  //     this.ctx.strokeStyle = wick_color
-
-  //     this.ctx.beginPath()
-  //     this.ctx.moveTo(x05, Math.floor(data.h))
-  //     this.ctx.lineTo(x05, Math.floor(data.l))
-
-  //     this.ctx.stroke()
-
-  //     if (data.w > 1.5) {
-
-  //         this.ctx.fillStyle = body_color
-  //         // TODO: Move common calculations to layout.js
-  //         let s = green ? 1 : -1
-  //         this.ctx.fillRect(
-  //             Math.floor(data.x - hw -1),
-  //             data.c,
-  //             Math.floor(hw * 2 + 1),
-  //             s * Math.max(h, max_h),
-  //         )
-
-  //     } else {
-
-  //         this.ctx.strokeStyle = body_color
-
-  //         this.ctx.beginPath()
-  //         this.ctx.moveTo(
-  //             x05,
-  //             Math.floor(Math.min(data.o, data.c)),
-  //         )
-  //         this.ctx.lineTo(
-  //             x05,
-  //             Math.floor(Math.max(data.o, data.c)) +
-  //                 (data.o === data.c ? 1 : 0)
-  //         )
-
-  //         this.ctx.stroke()
-
-  //     }
-
-  // }
-
-  // draw(data) {
-  //     const green = data.raw[4] >= data.raw[1];
-  //     const body_color = green ?
-  //         this.style.colorCandleUp :
-  //         this.style.colorCandleDw;
-
-  //     const wick_color = green ?
-  //         this.style.colorWickUp :
-  //         this.style.colorWickDw;
-
-  //     const border_color = this.style.borderColor || 'black'; // Define border color
-
-  //     let w = Math.max(data.w, 1);
-  //     let hw = Math.max(Math.floor(w * 0.5), 1);
-  //     let h = Math.abs(data.o - data.c);
-  //     let max_h = data.c === data.o ? 1 : 2;
-  //     let x05 = Math.floor(data.x) - 0.5;
-
-  //     this.ctx.strokeStyle = wick_color;
-  //     this.ctx.beginPath();
-  //     this.ctx.moveTo(x05, Math.floor(data.h));
-  //     this.ctx.lineTo(x05, Math.floor(data.l));
-  //     this.ctx.stroke();
-
-  //     if (data.w > 1.5) {
-  //         // Draw candlestick body with border
-  //         this.ctx.fillStyle = border_color; // Set border color
-  //         let s = green ? 1 : -1;
-  //         this.ctx.fillRect(
-  //             Math.floor(data.x - hw - 1),
-  //             data.c,
-  //             Math.floor(hw * 2 + 1),
-  //             s * Math.max(h, max_h)
-  //         );
-
-  //         // Draw inner candlestick body
-  //         this.ctx.fillStyle = body_color;
-  //         this.ctx.fillRect(
-  //             Math.floor(data.x - hw),
-  //             data.c + 1, // Adjust for border thickness
-  //             Math.floor(hw * 2 - 1),
-  //             s * Math.max(h, max_h) - 2 // Adjust for border thickness
-  //         );
-  //     } else {
-  //         // Draw candlestick with border
-  //         this.ctx.strokeStyle = border_color; // Set border color
-  //         this.ctx.beginPath();
-  //         this.ctx.moveTo(
-  //             x05,
-  //             Math.floor(Math.min(data.o, data.c))
-  //         );
-  //         this.ctx.lineTo(
-  //             x05,
-  //             Math.floor(Math.max(data.o, data.c)) +
-  //             (data.o === data.c ? 1 : 0)
-  //         );
-  //         this.ctx.stroke();
-
-  //         // Draw inner candlestick
-  //         this.ctx.fillStyle = body_color;
-  //         this.ctx.fillRect(
-  //             Math.floor(data.x - hw),
-  //             Math.min(data.o, data.c) + 1, // Adjust for border thickness
-  //             Math.floor(hw * 2 - 1),
-  //             Math.abs(data.o - data.c) - 2 // Adjust for border thickness
-  //         );
-  //     }
-  // }
-
-  // draw(data) {
-  //     const green = data.raw[4] >= data.raw[1];
-  //     const body_color = green ?
-  //         this.style.colorCandleUp :
-  //         this.style.colorCandleDw;
-
-  //     const wick_color = green ?
-  //         this.style.colorWickUp :
-  //         this.style.colorWickDw;
-
-  //     const border_color = this.style.borderColor || 'black'; // Define border color
-
-  //     let w = Math.max(data.w, 1);
-  //     let hw = Math.max(Math.floor(w * 0.5), 1);
-  //     let h = Math.abs(data.o - data.c);
-  //     let max_h = data.c === data.o ? 1 : 2;
-  //     let x05 = Math.floor(data.x) - 0.5;
-
-  //     this.ctx.strokeStyle = wick_color;
-  //     this.ctx.beginPath();
-  //     this.ctx.moveTo(x05, Math.floor(data.h));
-  //     this.ctx.lineTo(x05, Math.floor(data.l));
-  //     this.ctx.stroke();
-
-  //     if (data.w > 1.5) {
-  //         // Draw candlestick body with border
-  //         this.ctx.fillStyle = border_color; // Set border color
-  //         let s = green ? 1 : -1;
-  //         this.ctx.fillRect(
-  //             Math.floor(data.x - hw - 1),
-  //             data.c,
-  //             Math.floor(hw * 2 + 1),
-  //             s * Math.max(h, max_h)
-  //         );
-
-  //         // Draw inner candlestick body
-  //         this.ctx.fillStyle = body_color;
-  //         this.ctx.fillRect(
-  //             Math.floor(data.x - hw),
-  //             data.c + 1, // Adjust for border thickness
-  //             Math.floor(hw * 2 - 1),
-  //             s * Math.max(h, max_h) - 2 // Adjust for border thickness
-  //         );
-  //     } else {
-  //         // Draw candlestick with border
-  //         this.ctx.strokeStyle = border_color; // Set border color
-  //         this.ctx.beginPath();
-  //         this.ctx.moveTo(
-  //             x05,
-  //             Math.floor(Math.min(data.o, data.c))
-  //         );
-  //         this.ctx.lineTo(
-  //             x05,
-  //             Math.floor(Math.max(data.o, data.c)) +
-  //             (data.o === data.c ? 1 : 0)
-  //         );
-  //         this.ctx.stroke();
-
-  //         // Draw inner candlestick
-  //         this.ctx.fillStyle = body_color;
-  //         this.ctx.fillRect(
-  //             Math.floor(data.x - hw),
-  //             Math.min(data.o, data.c) + 1, // Adjust for border thickness
-  //             Math.floor(hw * 2 - 1),
-  //             Math.abs(data.o - data.c) - 2 // Adjust for border thickness
-  //         );
-  //     }
-  // }
   return createClass_createClass(CandleExt, [{
     key: "draw",
     value: function draw(data) {
+      // console.log("candle overlay", this.self);
+      // if closing price > closing price then will show the green candle if not show red candles
       var green = data.raw[4] >= data.raw[1];
       var body_color = green ? this.style.colorCandleUp : this.style.colorCandleDw;
       var wick_color = green ? this.style.colorWickUp : this.style.colorWickDw;
@@ -9705,30 +10089,198 @@ var CandleExt = /*#__PURE__*/function () {
         this.ctx.fillRect(Math.floor(data.x - hw), Math.floor(data.c), Math.floor(w), Math.floor(h));
 
         // Draw the border around all four sides of the candlestick body
-        this.ctx.beginPath();
-        this.ctx.moveTo(Math.floor(data.x - hw), Math.floor(data.c));
-        this.ctx.lineTo(Math.floor(data.x - hw), Math.floor(data.c + h));
-        this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(data.c + h));
-        this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(data.c));
-        this.ctx.closePath();
-        this.ctx.stroke();
+        if (this.self.candle_border) {
+          this.ctx.beginPath();
+          this.ctx.moveTo(Math.floor(data.x - hw), Math.floor(data.c));
+          this.ctx.lineTo(Math.floor(data.x - hw), Math.floor(data.c + h));
+          this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(data.c + h));
+          this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(data.c));
+          this.ctx.closePath();
+          this.ctx.stroke();
+        }
       } else {
         // Draw candlestick with border
         this.ctx.fillStyle = body_color;
         this.ctx.fillRect(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c)), Math.floor(w), Math.floor(h) + (data.o === data.c ? 1 : 0));
 
         // Draw the border around all four sides of the candlestick body
-        this.ctx.beginPath();
-        this.ctx.moveTo(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c)));
-        this.ctx.lineTo(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c) + h));
-        this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(Math.min(data.o, data.c) + h));
-        this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(Math.min(data.o, data.c)));
-        this.ctx.closePath();
-        this.ctx.stroke();
+        if (this.self.candle_border) {
+          this.ctx.beginPath();
+          this.ctx.moveTo(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c)));
+          this.ctx.lineTo(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c) + h));
+          this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(Math.min(data.o, data.c) + h));
+          this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(Math.min(data.o, data.c)));
+          this.ctx.closePath();
+          this.ctx.stroke();
+        }
       }
     }
   }]);
-}();
+}(); // draw(data) {
+//     const green = data.raw[4] >= data.raw[1]
+//     const body_color = green ?
+//         this.style.colorCandleUp :
+//         this.style.colorCandleDw
+//     const wick_color = green ?
+//         this.style.colorWickUp :
+//         this.style.colorWickDw
+//     let w = Math.max(data.w, 1)
+//     let hw = Math.max(Math.floor(w * 0.5), 1)
+//     let h = Math.abs(data.o - data.c)
+//     let max_h = data.c === data.o ? 1 : 2
+//     let x05 = Math.floor(data.x) - 0.5
+//     this.ctx.strokeStyle = wick_color
+//     this.ctx.beginPath()
+//     this.ctx.moveTo(x05, Math.floor(data.h))
+//     this.ctx.lineTo(x05, Math.floor(data.l))
+//     this.ctx.stroke()
+//     if (data.w > 1.5) {
+//         this.ctx.fillStyle = body_color
+//         // TODO: Move common calculations to layout.js
+//         let s = green ? 1 : -1
+//         this.ctx.fillRect(
+//             Math.floor(data.x - hw -1),
+//             data.c,
+//             Math.floor(hw * 2 + 1),
+//             s * Math.max(h, max_h),
+//         )
+//     } else {
+//         this.ctx.strokeStyle = body_color
+//         this.ctx.beginPath()
+//         this.ctx.moveTo(
+//             x05,
+//             Math.floor(Math.min(data.o, data.c)),
+//         )
+//         this.ctx.lineTo(
+//             x05,
+//             Math.floor(Math.max(data.o, data.c)) +
+//                 (data.o === data.c ? 1 : 0)
+//         )
+//         this.ctx.stroke()
+//     }
+// }
+// draw(data) {
+//     const green = data.raw[4] >= data.raw[1];
+//     const body_color = green ?
+//         this.style.colorCandleUp :
+//         this.style.colorCandleDw;
+//     const wick_color = green ?
+//         this.style.colorWickUp :
+//         this.style.colorWickDw;
+//     const border_color = this.style.borderColor || 'black'; // Define border color
+//     let w = Math.max(data.w, 1);
+//     let hw = Math.max(Math.floor(w * 0.5), 1);
+//     let h = Math.abs(data.o - data.c);
+//     let max_h = data.c === data.o ? 1 : 2;
+//     let x05 = Math.floor(data.x) - 0.5;
+//     this.ctx.strokeStyle = wick_color;
+//     this.ctx.beginPath();
+//     this.ctx.moveTo(x05, Math.floor(data.h));
+//     this.ctx.lineTo(x05, Math.floor(data.l));
+//     this.ctx.stroke();
+//     if (data.w > 1.5) {
+//         // Draw candlestick body with border
+//         this.ctx.fillStyle = border_color; // Set border color
+//         let s = green ? 1 : -1;
+//         this.ctx.fillRect(
+//             Math.floor(data.x - hw - 1),
+//             data.c,
+//             Math.floor(hw * 2 + 1),
+//             s * Math.max(h, max_h)
+//         );
+//         // Draw inner candlestick body
+//         this.ctx.fillStyle = body_color;
+//         this.ctx.fillRect(
+//             Math.floor(data.x - hw),
+//             data.c + 1, // Adjust for border thickness
+//             Math.floor(hw * 2 - 1),
+//             s * Math.max(h, max_h) - 2 // Adjust for border thickness
+//         );
+//     } else {
+//         // Draw candlestick with border
+//         this.ctx.strokeStyle = border_color; // Set border color
+//         this.ctx.beginPath();
+//         this.ctx.moveTo(
+//             x05,
+//             Math.floor(Math.min(data.o, data.c))
+//         );
+//         this.ctx.lineTo(
+//             x05,
+//             Math.floor(Math.max(data.o, data.c)) +
+//             (data.o === data.c ? 1 : 0)
+//         );
+//         this.ctx.stroke();
+//         // Draw inner candlestick
+//         this.ctx.fillStyle = body_color;
+//         this.ctx.fillRect(
+//             Math.floor(data.x - hw),
+//             Math.min(data.o, data.c) + 1, // Adjust for border thickness
+//             Math.floor(hw * 2 - 1),
+//             Math.abs(data.o - data.c) - 2 // Adjust for border thickness
+//         );
+//     }
+// }
+// draw(data) {
+//     const green = data.raw[4] >= data.raw[1];
+//     const body_color = green ?
+//         this.style.colorCandleUp :
+//         this.style.colorCandleDw;
+//     const wick_color = green ?
+//         this.style.colorWickUp :
+//         this.style.colorWickDw;
+//     const border_color = this.style.borderColor || 'black'; // Define border color
+//     let w = Math.max(data.w, 1);
+//     let hw = Math.max(Math.floor(w * 0.5), 1);
+//     let h = Math.abs(data.o - data.c);
+//     let max_h = data.c === data.o ? 1 : 2;
+//     let x05 = Math.floor(data.x) - 0.5;
+//     this.ctx.strokeStyle = wick_color;
+//     this.ctx.beginPath();
+//     this.ctx.moveTo(x05, Math.floor(data.h));
+//     this.ctx.lineTo(x05, Math.floor(data.l));
+//     this.ctx.stroke();
+//     if (data.w > 1.5) {
+//         // Draw candlestick body with border
+//         this.ctx.fillStyle = border_color; // Set border color
+//         let s = green ? 1 : -1;
+//         this.ctx.fillRect(
+//             Math.floor(data.x - hw - 1),
+//             data.c,
+//             Math.floor(hw * 2 + 1),
+//             s * Math.max(h, max_h)
+//         );
+//         // Draw inner candlestick body
+//         this.ctx.fillStyle = body_color;
+//         this.ctx.fillRect(
+//             Math.floor(data.x - hw),
+//             data.c + 1, // Adjust for border thickness
+//             Math.floor(hw * 2 - 1),
+//             s * Math.max(h, max_h) - 2 // Adjust for border thickness
+//         );
+//     } else {
+//         // Draw candlestick with border
+//         this.ctx.strokeStyle = border_color; // Set border color
+//         this.ctx.beginPath();
+//         this.ctx.moveTo(
+//             x05,
+//             Math.floor(Math.min(data.o, data.c))
+//         );
+//         this.ctx.lineTo(
+//             x05,
+//             Math.floor(Math.max(data.o, data.c)) +
+//             (data.o === data.c ? 1 : 0)
+//         );
+//         this.ctx.stroke();
+//         // Draw inner candlestick
+//         this.ctx.fillStyle = body_color;
+//         this.ctx.fillRect(
+//             Math.floor(data.x - hw),
+//             Math.min(data.o, data.c) + 1, // Adjust for border thickness
+//             Math.floor(hw * 2 - 1),
+//             Math.abs(data.o - data.c) - 2 // Adjust for border thickness
+//         );
+//     }
+// }
 
 ;// CONCATENATED MODULE: ./src/components/primitives/volbar.js
 
@@ -9977,6 +10529,9 @@ var Price = /*#__PURE__*/function () {
     price_line: function price_line() {
       return "priceLine" in this.sett ? this.sett.priceLine : true;
     },
+    candle_border: function candle_border() {
+      return this.candleBorder;
+    },
     colorCandleUp: function colorCandleUp() {
       return this.sett.colorCandleUp || this.$props.colors.candleUp;
     },
@@ -10067,7 +10622,7 @@ var Price = /*#__PURE__*/function () {
   watch: {
     isArrow: {
       handler: function handler(value) {
-        //console.log("candles isArrows",value,this.price)
+        // console.log("candles isArrows",value,this.price)
         this.price = new Price(this);
       }
     }
@@ -11352,7 +11907,7 @@ function Gridvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
     KeyboardListener: KeyboardListener
   },
   mixins: [canvas, uxlist],
-  props: ["sub", "layout", "range", "interval", "cursor", "colors", "overlays", "width", "height", "data", "grid_id", "y_transform", "font", "tv_id", "config", "meta", "shaders", "enableZoom", "priceLine", "decimalPlace", "enableCrosshair"],
+  props: ["common", "sub", "layout", "range", "interval", "cursor", "colors", "overlays", "width", "height", "data", "grid_id", "y_transform", "font", "tv_id", "config", "meta", "shaders", "enableZoom", "priceLine", "candleBorder", "decimalPlace", "enableCrosshair"],
   data: function data() {
     var _this = this;
     return {
@@ -11396,6 +11951,9 @@ function Gridvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
   computed: {
     is_active: function is_active() {
       return this.$props.cursor.t !== undefined && this.$props.cursor.grid_id === this.$props.grid_id;
+    },
+    commonFunction: function commonFunction() {
+      return this.$props.common;
     }
   },
   watch: {
@@ -11504,6 +12062,7 @@ function Gridvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
   mounted: function mounted() {
     var _this4 = this;
     //  console.log("props:",this.priceLine);
+    // console.log("props:==>", this.candleBorder);
     var el = this.$refs["canvas"];
     this.renderer = new Grid(el, this);
     this.setup();
@@ -11600,7 +12159,9 @@ function Gridvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
         sub: this.$props.sub,
         font: this.$props.font,
         config: this.$props.config,
-        priceLine: this.$props.priceLine
+        priceLine: this.$props.priceLine,
+        candleBorder: this.$props.candleBorder,
+        common: this.$props.common
       };
     },
     emit_ux_event: function emit_ux_event(e) {
@@ -11713,16 +12274,16 @@ var Sidebar = /*#__PURE__*/function () {
     this.calc_range_function = this.calc_range_by_layout;
     this.listeners();
   }
+
+  // calc_range_by_layout() {
+  //   return [this.layout.$_hi, this.layout.$_lo]
+  // }
   return createClass_createClass(Sidebar, [{
-    key: "calc_range_by_layout",
-    value: function calc_range_by_layout() {
-      return [this.layout.$_hi, this.layout.$_lo];
-    }
-  }, {
     key: "listeners",
     value: function listeners() {
       var _this = this;
       var mc = this.mc = new hammer.Manager(this.canvas);
+      // console.log("MC",mc);
       mc.add(new hammer.Pan({
         direction: hammer.DIRECTION_VERTICAL,
         threshold: 0
@@ -11837,7 +12398,7 @@ var Sidebar = /*#__PURE__*/function () {
           this.ctx.moveTo(x1, p[0] - 0.5);
           this.ctx.lineTo(x2, p[0] - 0.5);
           var offst = side === "left" ? -10 : 10;
-          this.ctx.textAlign = side === "left" ? "end" : "start";
+          this.ctx.textAlign = side === "left" ? "end" : "left";
           var offChartOverlay = (_this$$p = this.$p) === null || _this$$p === void 0 || (_this$$p = _this$$p.common) === null || _this$$p === void 0 ? void 0 : _this$$p.data;
           if (((_offChartOverlay = offChartOverlay[this.$p.grid_id - 1]) === null || _offChartOverlay === void 0 ? void 0 : _offChartOverlay.name) == 'Volume') {
             this.ctx.fillText(p[1], x1 + offst, p[0] + 4);
@@ -11895,12 +12456,14 @@ var Sidebar = /*#__PURE__*/function () {
     key: "panel",
     value: function panel() {
       var _this$$p2, _offChartOverlay2, _this$$p3;
+      // console.log("this is panel", this.$p);
       if (this.$p.cursor.grid_id !== this.layout.id) {
         return;
       }
 
       //let lbl = this.$p.cursor.y$.toFixed(this.layout.prec)
       // console.log("this.$p.cursor.y$", this.$p.enableSideBarBoxValue);
+      // console.log("closingPrice with Sidebar", this.$p);
       var lbl = this.$p.cursor.y$.toFixed(3);
       if (this.$p.enableSideBarBoxValue) {
         var roundOffValue = this.$p.cursor.y$ < 1.00 ? 3 : this.$p.cursor.y$ < 0.01 ? 4 : 2;
@@ -11915,8 +12478,30 @@ var Sidebar = /*#__PURE__*/function () {
       //    lbl = this.$p.cursor.y$.toFixed(2);
       // }
       // let lbl = this.$p.cursor.y$.toFixed(this.$p.decimalPlace);
-      this.ctx.fillStyle = this.$p.colors.panel;
+      var isCurrentCandle = this.$p.cursor.values[0].Candles_0[4] > this.$p.cursor.values[0].Candles_0[1];
+      console.log("isCurrentCandle", this.$p.cursor.values[0].Candles_0[4] > this.$p.cursor.values[0].Candles_0[1]);
+
+      // Determine the fill color of the sidebar based on whether the cursor is on the current candle
+      // const sidebarColor = isCurrentCandle
+      var array = this.$p.cursor.values[0].Candles_0;
+      // Set the fill style for the panel background
+
+      for (var i = 0; i < this.$p.cursor.values[0].Candles_0.length; i++) {
+        var element = this.$p.cursor.values[0].Candles_0[i];
+        console.log("candle element", element);
+      }
+      console.log("singleCandleCheck", this.$p.cursor.values[0].Candles_0[4]);
+      console.log("cursorY", this.$p.cursor.y);
+      this.ctx.fillStyle = isCurrentCandle ? 'blue' : 'red';
+      // this.ctx.fillStyle = this.$p.colors.panel;
+
       var panwidth = this.layout.sb + 1;
+
+      // console.log("cursor panel", this.$p.cursor.values[0].Candles_0[4]);
+      // console.log("cursor", this.$p.cursor.y);
+      // console.log("panHeight", PANHEIGHT);
+
+      var closingPrice = this.$p.cursor.values[0].Candles_0[3];
       var x = -0.5;
       var y = this.$p.cursor.y - PANHEIGHT * 0.5 - 0.5;
       var a = 7;
@@ -12103,13 +12688,8 @@ var Sidebar_component = normalizeComponent(
 )
 
 /* harmony default export */ const components_Sidebar = (Sidebar_component.exports);
-<<<<<<< HEAD
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=08e0e5d6
-var Legendvue_type_template_id_08e0e5d6_render = function render() {
-=======
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=c8356bcc
-var Legendvue_type_template_id_c8356bcc_render = function render() {
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=14c64647
+var Legendvue_type_template_id_14c64647_render = function render() {
   var _vm$common;
   var _vm = this,
     _c = _vm._self._c;
@@ -12129,47 +12709,107 @@ var Legendvue_type_template_id_c8356bcc_render = function render() {
     return _c("span", {
       key: i,
       style: n.style
-    }, [_vm._v(_vm._s(n.name) + " ")]);
-  }) : _vm._e(), _vm._v(" "), _c("span", [_c("span", {
-    staticStyle: {
-      color: "#131722",
-      "font-size": "22px",
-      "font-weight": "500"
-    }
-  }, [_vm._v(_vm._s(_vm.common.title_txt))]), _vm._v(" "), _vm.show_values && !_vm.show_CustomProps ? _c("span", [_vm._v("\n          O"), _c("span", {
-    staticClass: "t-vue-lspan",
-    style: _vm.styleTxt
-  }, [_vm._v(_vm._s(_vm.ohlcv[0]))]), _vm._v("\n          H"), _c("span", {
-    staticClass: "t-vue-lspan",
-    style: _vm.styleTxt
-  }, [_vm._v(_vm._s(_vm.ohlcv[1]))]), _vm._v("\n          L"), _c("span", {
-    staticClass: "t-vue-lspan",
-    style: _vm.styleTxt
-  }, [_vm._v(_vm._s(_vm.ohlcv[2]))]), _vm._v("\n          C"), _c("span", {
-    staticClass: "t-vue-lspan",
-    style: _vm.styleTxt
-  }, [_vm._v(_vm._s(_vm.ohlcv[3]))]), _vm._v("\n          V"), _c("span", {
-    staticClass: "t-vue-lspan",
-    style: _vm.styleTxt
-  }, [_vm._v(_vm._s(_vm.ohlcv[4]))])]) : _vm._e(), _vm._v(" "), _c("span", {
-    staticClass: "cs-vue-title",
-    style: _vm.styleTxt
-  }, [_vm._v(_vm._s(_vm.ohlcv[6]))]), _vm._v(" "), _c("span", {
-    staticClass: "cs-vue-title",
-    style: _vm.styleTxt
-  }, [_vm._v(_vm._s(_vm.ohlcv[7]) + "%")])]), _vm._v(" "), _c("br"), _vm._v(" "), _c("div", {
-    staticStyle: {
-      "margin-top": "12px"
+    }, [_vm._v("\n        " + _vm._s(n.name) + " \n      ")]);
+  }) : _vm._e(), _vm._v(" "), _vm.show_values && !_vm.show_CustomProps && _vm.common.firstVariant ? _c("span", {
+    staticClass: "stx-panel legendArea",
+    on: {
+      click: _vm.openModal
     }
   }, [_c("span", {
-    staticClass: "cs-title-1"
-  }, [_vm._v(_vm._s(_vm.ohlcv[5]))]), _vm._v(" "), _c("span", {
-    staticStyle: {
-      padding: "6px"
+    staticClass: "clr"
+  }), _vm._v(" "), _c("span", {
+    staticClass: "stx-info"
+  }, [_c("span", {
+    staticClass: "stx-sym"
+  }, [_vm._v(_vm._s(_vm.common.title_txt))]), _vm._v(" "), _c("span", {
+    staticClass: "stx-price"
+  }, [_vm._v(_vm._s(_vm.ohlcv[3]))])])]) : _vm._e(), _vm._v(" "), _vm.common.firstVariant && _vm.show_values && !_vm.show_CustomProps && _vm.showModal ? _c("div", {
+    staticClass: "stx-tooltip legendArea"
+  }, [_c("div", {
+    staticClass: "close-btn legendArea",
+    on: {
+      click: function click($event) {
+        _vm.showModal = false;
+      }
     }
-  }, [_vm._v(_vm._s(_vm.ohlcv[6]))]), _vm._v(" "), _c("span", {
-    staticClass: "cs-title-2"
-  }, [_vm._v(_vm._s(_vm.ohlcv[3]))])]), _vm._v(" "), !_vm.show_values ? _c("span", {
+  }, [_vm._v("X")]), _vm._v(" "), _c("div", {
+    staticClass: "stx-tooltip-field auto"
+  }, [_c("div", {
+    staticClass: "stx-field-name"
+  }, [_vm._v("Open")]), _vm._v(" "), _c("div", {
+    staticClass: "stx-field-value"
+  }, [_vm._v(_vm._s(_vm.ohlcv[0]))])]), _vm._v(" "), _c("div", {
+    staticClass: "stx-tooltip-field auto"
+  }, [_c("div", {
+    staticClass: "stx-field-name"
+  }, [_vm._v("High")]), _vm._v(" "), _c("div", {
+    staticClass: "stx-field-value"
+  }, [_vm._v(_vm._s(_vm.ohlcv[1]))])]), _vm._v(" "), _c("div", {
+    staticClass: "stx-tooltip-field auto"
+  }, [_c("div", {
+    staticClass: "stx-field-name"
+  }, [_vm._v("Low")]), _vm._v(" "), _c("div", {
+    staticClass: "stx-field-value"
+  }, [_vm._v(_vm._s(_vm.ohlcv[2]))])]), _vm._v(" "), _c("div", {
+    staticClass: "stx-tooltip-field auto"
+  }, [_c("div", {
+    staticClass: "stx-field-name"
+  }, [_vm._v("Close")]), _vm._v(" "), _c("div", {
+    staticClass: "stx-field-value"
+  }, [_vm._v(_vm._s(_vm.ohlcv[3]))])]), _vm._v(" "), _c("div", {
+    staticClass: "stx-tooltip-field auto"
+  }, [_c("div", {
+    staticClass: "stx-field-name"
+  }, [_vm._v("Volume")]), _vm._v(" "), _c("div", {
+    staticClass: "stx-field-value"
+  }, [_vm._v(_vm._s(_vm.formatVolume(_vm.ohlcv[4])))])]), _vm._v(" "), _c("div", {
+    staticClass: "stx-tooltip-field auto"
+  }, [_c("div", {
+    staticClass: "stx-field-name"
+  }, [_vm._v("% Change")]), _vm._v(" "), _c("div", {
+    staticClass: "stx-field-value"
+  }, [_vm._v(_vm._s(_vm.ohlcv[7]) + "%")])])]) : _vm._e(), _vm._v(" "), _c("br"), _vm._v(" "), _vm.common.secondVariant || _vm.common.thirdVariant || _vm.common.fourthVariant && _vm.show_values && !_vm.show_CustomProps ? _c("div", {
+    staticClass: "main-legend legendArea"
+  }, [_c("div", {
+    staticClass: "legend-right-section"
+  }, [_c("span", {
+    staticClass: "right-title"
+  }, [_vm._v(_vm._s(_vm.common.title_txt))])]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "legend-left-section"
+  }, [_c("span", [_c("span", {
+    staticClass: "stx-text",
+    attrs: {
+      id: "flex"
+    }
+  }, [_vm._v("O")]), _vm._v(" "), _c("span", {
+    staticClass: "stx-value",
+    style: _vm.getStyle()
+  }, [_vm._v(_vm._s(_vm.ohlcv[0]))])]), _vm._v(" "), _c("span", [_c("span", {
+    staticClass: "stx-text"
+  }, [_vm._v("H")]), _vm._v(" "), _c("span", {
+    staticClass: "stx-value",
+    style: _vm.getStyle()
+  }, [_vm._v(_vm._s(_vm.ohlcv[1]))])]), _vm._v(" "), _c("span", [_c("span", {
+    staticClass: "stx-text"
+  }, [_vm._v("L")]), _vm._v(" "), _c("span", {
+    staticClass: "stx-value",
+    style: _vm.getStyle()
+  }, [_vm._v(" " + _vm._s(_vm.ohlcv[2]))])]), _vm._v(" "), _c("span", [_c("span", {
+    staticClass: "stx-text"
+  }, [_vm._v("C")]), _vm._v(" "), _c("span", {
+    staticClass: "stx-value",
+    style: _vm.getStyle()
+  }, [_vm._v(" " + _vm._s(_vm.ohlcv[3]))])]), _vm._v(" "), _c("span", [_c("span", {
+    staticClass: "stx-value",
+    style: _vm.getStyle()
+  }, [_vm._v(_vm._s(_vm.ohlcv[6]) + " (" + _vm._s(_vm.ohlcv[7]) + "%)")])]), _vm._v(" "), _c("span", [_c("span", {
+    staticClass: "stx-text"
+  }, [_vm._v("Vol")]), _vm._v(" "), _c("span", {
+    staticClass: "stx-value",
+    style: _vm.getStyle()
+  }, [_vm._v(_vm._s(_vm.formatVolume(_vm.ohlcv[4])))])])]), _vm._v(" "), _c("div", {
+    staticClass: "legend-last-section"
+  })]) : _vm._e(), _vm._v(" "), !_vm.show_values ? _c("span", {
     staticClass: "t-vue-lspan",
     style: {
       color: _vm.common.colors.text
@@ -12230,17 +12870,16 @@ var Legendvue_type_template_id_c8356bcc_render = function render() {
     }) : _vm._e()], 1)], 1);
   })], 2);
 };
-<<<<<<< HEAD
-var Legendvue_type_template_id_08e0e5d6_staticRenderFns = [];
-Legendvue_type_template_id_08e0e5d6_render._withStripped = true;
+var Legendvue_type_template_id_14c64647_staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "legend-center-section"
+  }, [_c("p", [_vm._v("International Business Machines Corporation")])]);
+}];
+Legendvue_type_template_id_14c64647_render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=08e0e5d6
-=======
-var Legendvue_type_template_id_c8356bcc_staticRenderFns = [];
-Legendvue_type_template_id_c8356bcc_render._withStripped = true;
-
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=c8356bcc
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=14c64647
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ButtonGroup.vue?vue&type=template&id=72b6dd45
 var ButtonGroupvue_type_template_id_72b6dd45_render = function render() {
@@ -12472,6 +13111,11 @@ var settingPng = icons_namespaceObject["gear.png"];
     Spinner: Spinner
   },
   props: ["common", "values", "decimalPlace", "grid_id", "meta_props", "legendDecimal"],
+  data: function data() {
+    return {
+      showModal: true
+    };
+  },
   computed: {
     styleTxt: function styleTxt() {
       var _this$common;
@@ -12531,9 +13175,9 @@ var settingPng = icons_namespaceObject["gear.png"];
         var close = this.$props.values.ohlcv[4].toFixed(this.$props.values.ohlcv[4] < 1 ? 3 : 2);
         var prevPriceCLosing = prevData[4];
         changeInPrice = close - prevPriceCLosing;
-        changeInPrice = changeInPrice.toFixed(changeInPrice < 1 ? 3 : 2);
+        changeInPrice = changeInPrice.toFixed(changeInPrice < 1 ? 2 : 2);
         changeInPercent = changeInPrice / prevPriceCLosing * 100;
-        changeInPercent = changeInPercent.toFixed(changeInPercent < 1 ? 3 : 2);
+        changeInPercent = changeInPercent.toFixed(changeInPercent < 1 ? 2 : 2);
         var volume = this.$props.values.ohlcv[5] ? Number(this.$props.values.ohlcv[5].toFixed(0)).toLocaleString("en-AU") : "n/a";
         return [open, high, low, close, volume,
         // findIndexId,
@@ -12609,6 +13253,42 @@ var settingPng = icons_namespaceObject["gear.png"];
     }
   },
   methods: {
+    getStyle: function getStyle() {
+      if (this.ohlcv[3] > this.ohlcv[0]) {
+        return {
+          color: '#089981'
+        };
+      } else {
+        return {
+          color: '#F23645'
+        };
+      }
+    },
+    openModal: function openModal() {
+      this.showModal = true;
+    },
+    formatVolume: function formatVolume(volume) {
+      // Remove commas from the string and convert it to a number
+      var volumeNumber = parseFloat(volume.replace(/,/g, ''));
+      if (!isNaN(volumeNumber)) {
+        // Convert volume to millions and round to 2 decimal places
+        var volumeInMillions = (volumeNumber / 1e6).toFixed(2);
+        // Append "M" to the formatted volume
+        return volumeInMillions + "M";
+      } else {
+        return volume; // Return the original value if conversion fails
+      }
+    },
+    //      formatNumberToMillions(number) {
+    //     if (Math.abs(number) >= 1e6) {
+    //         // Divide the number by 1 million and round to one decimal place
+    //         var formattedNumber = (number / 1e6).toFixed(1) + 'M';
+    //         return formattedNumber;
+    //     } else {
+    //         // If the number is less than a million, just return it as is
+    //         return number.toString();
+    //     }
+    // },
     format: function format(id, values) {
       var meta = this.$props.meta_props[id] || {};
       // Matches Overlay.data_colors with the data values
@@ -12639,6 +13319,7 @@ var settingPng = icons_namespaceObject["gear.png"];
     }
   },
   mounted: function mounted() {
+    // console.log("ohlcv is here", this.ohlcv)
     // console.log("math calculation",this.ohlcv)
     // const open = Number(this.$props?.values?.ohlcv[0]);
     // const close = Number(this.$props?.values?.ohlcv[3])
@@ -12653,15 +13334,9 @@ var settingPng = icons_namespaceObject["gear.png"];
 });
 ;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Legendvue_type_script_lang_js = (Legendvue_type_script_lang_js); 
-<<<<<<< HEAD
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=08e0e5d6&prod&lang=css
-var Legendvue_type_style_index_0_id_08e0e5d6_prod_lang_css = __webpack_require__(701);
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=08e0e5d6&prod&lang=css
-=======
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=c8356bcc&prod&lang=css
-var Legendvue_type_style_index_0_id_c8356bcc_prod_lang_css = __webpack_require__(765);
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=c8356bcc&prod&lang=css
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=14c64647&prod&lang=css
+var Legendvue_type_style_index_0_id_14c64647_prod_lang_css = __webpack_require__(699);
+;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=14c64647&prod&lang=css
 
 ;// CONCATENATED MODULE: ./src/components/Legend.vue
 
@@ -12674,13 +13349,8 @@ var Legendvue_type_style_index_0_id_c8356bcc_prod_lang_css = __webpack_require__
 
 var Legend_component = normalizeComponent(
   components_Legendvue_type_script_lang_js,
-<<<<<<< HEAD
-  Legendvue_type_template_id_08e0e5d6_render,
-  Legendvue_type_template_id_08e0e5d6_staticRenderFns,
-=======
-  Legendvue_type_template_id_c8356bcc_render,
-  Legendvue_type_template_id_c8356bcc_staticRenderFns,
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+  Legendvue_type_template_id_14c64647_render,
+  Legendvue_type_template_id_14c64647_staticRenderFns,
   false,
   null,
   null,
@@ -12753,15 +13423,17 @@ function shaders_arrayLikeToArray(arr, len) { if (len == null || len > arr.lengt
 
 
 
+
 /* harmony default export */ const Sectionvue_type_script_lang_js = ({
   name: "GridSection",
   components: {
     Grid: components_Grid,
     Sidebar: components_Sidebar,
-    ChartLegend: Legend
+    ChartLegend: Legend,
+    Crosshair: components_Crosshair
   },
   mixins: [shaders],
-  props: ["common", "grid_id", 'enableSideBarBoxValue', "enableZoom", "decimalPlace", "priceLine", "enableCrosshair", "applyShaders", "ignore_OHLC", "legendDecimal", "roundOffVolume"],
+  props: ["common", "grid_id", 'enableSideBarBoxValue', "enableZoom", "decimalPlace", "priceLine", "candleBorder", "enableCrosshair", "applyShaders", "ignore_OHLC", "legendDecimal", "roundOffVolume"],
   data: function data() {
     return {
       meta_props: {},
@@ -12925,7 +13597,7 @@ function shaders_arrayLikeToArray(arr, len) { if (len == null || len > arr.lengt
       if (manualInteraction === void 0) {
         manualInteraction = false;
       }
-      console.log("range_changed", r);
+      // console.log("range_changed",r)
       this.$emit("range-changed", r, manualInteraction);
     },
     cursor_changed: function cursor_changed(c) {
@@ -12939,7 +13611,7 @@ function shaders_arrayLikeToArray(arr, len) { if (len == null || len > arr.lengt
       this.$emit("sidebar-transform", s);
     },
     emit_meta_props: function emit_meta_props(d) {
-      console.log("layer-meta-props section.vue ", d);
+      // console.log("layer-meta-props section.vue ",d)
       this.$set(this.meta_props, d.layer_id, d);
       this.$emit("layer-meta-props", d);
     },
@@ -12975,9 +13647,9 @@ function shaders_arrayLikeToArray(arr, len) { if (len == null || len > arr.lengt
 });
 ;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Sectionvue_type_script_lang_js = (Sectionvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=style&index=0&id=524bd745&prod&lang=css
-var Sectionvue_type_style_index_0_id_524bd745_prod_lang_css = __webpack_require__(585);
-;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=style&index=0&id=524bd745&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Section.vue?vue&type=style&index=0&id=283a17e0&prod&lang=css
+var Sectionvue_type_style_index_0_id_283a17e0_prod_lang_css = __webpack_require__(737);
+;// CONCATENATED MODULE: ./src/components/Section.vue?vue&type=style&index=0&id=283a17e0&prod&lang=css
 
 ;// CONCATENATED MODULE: ./src/components/Section.vue
 
@@ -12990,8 +13662,8 @@ var Sectionvue_type_style_index_0_id_524bd745_prod_lang_css = __webpack_require_
 
 var Section_component = normalizeComponent(
   components_Sectionvue_type_script_lang_js,
-  Sectionvue_type_template_id_524bd745_render,
-  Sectionvue_type_template_id_524bd745_staticRenderFns,
+  Sectionvue_type_template_id_283a17e0_render,
+  Sectionvue_type_template_id_283a17e0_staticRenderFns,
   false,
   null,
   null,
@@ -13691,7 +14363,6 @@ var TI = /*#__PURE__*/function () {
 
 
 
-
 /* harmony default export */ const Chartvue_type_script_lang_js = ({
   name: 'Chart',
   components: {
@@ -13700,7 +14371,7 @@ var TI = /*#__PURE__*/function () {
     Keyboard: Keyboard
   },
   mixins: [shaders, datatrack],
-  props: ['title_txt', 'data', 'width', 'height', 'font', 'colors', 'legend_txt_color', 'overlays', 'tv_id', 'config', 'buttons', 'toolbar', 'ib', 'applyShaders', 'skin', 'timezone', 'enableZoom', 'enableSideBarBoxValue', 'decimalPlace', 'ignore_OHLC', 'priceLine', 'ignoreNegativeIndex', 'enableCrosshair', 'legendDecimal', 'showSettingsButton', 'roundOffVolume'],
+  props: ['title_txt', 'data', 'width', 'height', 'font', 'colors', 'legend_txt_color', 'waterMarkText', 'magnet', 'firstVariant', 'secondVariant', 'thirdVariant', 'fourthVariant', 'overlays', 'tv_id', 'config', 'buttons', 'toolbar', 'ib', 'applyShaders', 'skin', 'timezone', 'enableZoom', 'enableSideBarBoxValue', 'decimalPlace', 'ignore_OHLC', 'priceLine', 'candleBorder', 'ignoreNegativeIndex', 'enableCrosshair', 'legendDecimal', 'showSettingsButton', 'roundOffVolume'],
   data: function data() {
     return {
       // Current data slice
@@ -13958,8 +14629,8 @@ var TI = /*#__PURE__*/function () {
       this.range_changed([t1, t2]);
     },
     cursor_changed: function cursor_changed(e) {
-      console.log("cursor change mode");
-      console.log("cursor mode==>", typeof_typeof(this.cursor.mode));
+      // console.log("cursor change mode")
+      // console.log("cursor mode==>",typeof this.cursor.mode )
       if (e.mode) this.cursor.mode = e.mode;
       if (this.cursor.mode !== 'explore') {
         this.updater.sync(e);
@@ -14050,6 +14721,12 @@ var TI = /*#__PURE__*/function () {
       return {
         title_txt: this.chart.name || this.$props.title_txt,
         legend_txt_color: this.$props.legend_txt_color,
+        waterMarkText: this.$props.waterMarkText,
+        magnet: this.$props.magnet,
+        firstVariant: this.$props.firstVariant,
+        secondVariant: this.$props.secondVariant,
+        thirdVariant: this.$props.thirdVariant,
+        fourthVariant: this.$props.fourthVariant,
         layout: this._layout,
         sub: this.sub,
         range: this.range,
@@ -14218,31 +14895,32 @@ var TI = /*#__PURE__*/function () {
     }
   },
   mounted: function mounted() {
-    console.log("layout==>", this._layout.grids);
+    // console.log("layout==>",this._layout.grids)
+    // console.log("this is layout from charts", this._layout)
   }
 });
 ;// CONCATENATED MODULE: ./src/components/Chart.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Chartvue_type_script_lang_js = (Chartvue_type_script_lang_js); 
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Chart.vue?vue&type=style&index=0&id=4473f069&prod&scoped=true&lang=css
+var Chartvue_type_style_index_0_id_4473f069_prod_scoped_true_lang_css = __webpack_require__(453);
+;// CONCATENATED MODULE: ./src/components/Chart.vue?vue&type=style&index=0&id=4473f069&prod&scoped=true&lang=css
+
 ;// CONCATENATED MODULE: ./src/components/Chart.vue
 
 
 
+;
 
 
 /* normalize component */
-;
+
 var Chart_component = normalizeComponent(
   components_Chartvue_type_script_lang_js,
-<<<<<<< HEAD
-  Chartvue_type_template_id_729fffdb_render,
-  Chartvue_type_template_id_729fffdb_staticRenderFns,
-=======
-  Chartvue_type_template_id_7b3f0679_render,
-  Chartvue_type_template_id_7b3f0679_staticRenderFns,
->>>>>>> e7015ca113182832d6962318eb53eec2bbb0d0f4
+  Chartvue_type_template_id_4473f069_scoped_true_render,
+  Chartvue_type_template_id_4473f069_scoped_true_staticRenderFns,
   false,
   null,
-  null,
+  "4473f069",
   null
   
 )
@@ -15081,6 +15759,34 @@ function TradingVuevue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
       type: String,
       "default": "#00977e"
     },
+    magnet: {
+      type: Boolean,
+      "default": false
+    },
+    waterMarkText: {
+      type: String,
+      "default": "Water Mark"
+    },
+    candleBorder: {
+      type: Boolean,
+      deafault: false
+    },
+    firstVariant: {
+      type: Boolean,
+      deafault: false
+    },
+    secondVariant: {
+      type: Boolean,
+      deafault: false
+    },
+    thirdVariant: {
+      type: Boolean,
+      deafault: false
+    },
+    fourthVariant: {
+      type: Boolean,
+      deafault: false
+    },
     roundOffVolume: {
       type: Boolean,
       "default": false
@@ -15289,6 +15995,12 @@ function TradingVuevue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
       var chart_props = {
         title_txt: this.$props.titleTxt,
         legend_txt_color: this.$props.legendTxtColor,
+        waterMarkText: this.$props.waterMarkText,
+        magnet: this.$props.magnet,
+        firstVariant: this.$props.firstVariant,
+        secondVariant: this.$props.secondVariant,
+        thirdVariant: this.$props.thirdVariant,
+        fourthVariant: this.$props.fourthVariant,
         overlays: this.$props.overlays.concat(this.mod_ovs),
         data: this.decubed,
         width: this.$props.width - offset,
@@ -15358,6 +16070,9 @@ function TradingVuevue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
     this.ctrl_destroy();
   },
   methods: {
+    showMagnet: function showMagnet() {
+      this.$emit('showMagnetOnChart');
+    },
     chart_data_changed: function chart_data_changed(flag) {
       this.$emit("chart_data_changed", flag);
     },
@@ -15559,9 +16274,9 @@ function TradingVuevue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
 });
 ;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=script&lang=js
  /* harmony default export */ const src_TradingVuevue_type_script_lang_js = (TradingVuevue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=style&index=0&id=7019cf8f&prod&lang=css
-var TradingVuevue_type_style_index_0_id_7019cf8f_prod_lang_css = __webpack_require__(125);
-;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=style&index=0&id=7019cf8f&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=style&index=0&id=4db9151a&prod&lang=css
+var TradingVuevue_type_style_index_0_id_4db9151a_prod_lang_css = __webpack_require__(132);
+;// CONCATENATED MODULE: ./src/TradingVue.vue?vue&type=style&index=0&id=4db9151a&prod&lang=css
 
 ;// CONCATENATED MODULE: ./src/TradingVue.vue
 
