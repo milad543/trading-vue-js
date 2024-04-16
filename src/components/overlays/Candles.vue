@@ -27,6 +27,9 @@ export default {
     price_line() {
       return "priceLine" in this.sett ? this.sett.priceLine : true;
     },
+    candle_border() {
+      return this.candleBorder
+    },
     colorCandleUp() {
       return this.sett.colorCandleUp || this.$props.colors.candleUp;
     },
@@ -75,7 +78,6 @@ export default {
         cnv = layout_cnv(this);
       }
 
-
       // if (false) {
       //   var cv = cnv.volume;
       //   for (var i = 0, n = cv.length; i < n; i++) {
@@ -118,7 +120,7 @@ export default {
   watch:{
     isArrow:{
       handler:function(value){
-        //console.log("candles isArrows",value,this.price)
+        // console.log("candles isArrows",value,this.price)
         this.price = new Price(this);
       }
     }

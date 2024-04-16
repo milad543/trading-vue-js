@@ -13,13 +13,16 @@
     >
     </chart-legend>
 
+
     <grid
       v-bind="grid_props"
       ref="grid"
+      :common="legend_props"
       :grid_id="grid_id"
       :enableZoom="enableZoom"
       :decimalPlace="decimalPlace"
       :priceLine="priceLine"
+      :candleBorder="candleBorder"
       :enableCrosshair="enableCrosshair"
       @register-kb-listener="register_kb"
       @remove-kb-listener="remove_kb"
@@ -32,9 +35,10 @@
       @rezoom-range="rezoom_range"
     >
     </grid>
+    
     <sidebar
       :ref="'sb-' + grid_id"
-      v-bind="sidebar_props"
+       v-bind="sidebar_props"
       :grid_id="grid_id"
       :rerender="rerender"
       @sidebar-transform="sidebar_transform"
@@ -45,6 +49,7 @@
       :enableSideBarBoxValue="enableSideBarBoxValue"
     >
     </sidebar>
+
   </div>
 </template>
 
@@ -53,6 +58,7 @@ import Grid from "./Grid.vue";
 import Sidebar from "./Sidebar.vue";
 import ChartLegend from "./Legend.vue";
 import Shaders from "../mixins/shaders.js";
+import Crosshair from "./Crosshair.vue";
 
 export default {
   name: "GridSection",
@@ -60,9 +66,10 @@ export default {
     Grid,
     Sidebar,
     ChartLegend,
+    Crosshair
   },
   mixins: [Shaders],
-  props: ["common", "grid_id",'enableSideBarBoxValue', "enableZoom","decimalPlace","priceLine","enableCrosshair","applyShaders","ignore_OHLC","legendDecimal","roundOffVolume"],
+  props: ["common", "grid_id",'enableSideBarBoxValue', "enableZoom","decimalPlace","priceLine","candleBorder","enableCrosshair","applyShaders","ignore_OHLC","legendDecimal","roundOffVolume"],
   data() {
     return {
       meta_props: {},
@@ -148,7 +155,7 @@ export default {
         p.legendTxtConfig = res
         p.chartType = chartType
         p.show_CustomProps = show_CustomProps
-          p.showSettingsMain = showSettingsMain
+        p.showSettingsMain = showSettingsMain
         // console.log(JSON.stringify({a:p.show_CustomProps,b:p.legendTxtConfig,mainType}))
       }
       return p;
@@ -194,7 +201,7 @@ export default {
   },
   mounted() {
     this.init_shaders(this.$props.common.skin);
-    console.log('common.data',this.meta_props)
+    // console.log('common.data',this.meta_props)
   },
   methods: {
     hasGridId(single){
@@ -206,7 +213,7 @@ export default {
       return false;
     },
     range_changed(r,manualInteraction = false) {
-      console.log("range_changed",r)
+      // console.log("range_changed",r)
       this.$emit("range-changed", r,manualInteraction);
     },
     cursor_changed(c) {
@@ -220,7 +227,7 @@ export default {
       this.$emit("sidebar-transform", s);
     },
     emit_meta_props(d) {
-      console.log("layer-meta-props section.vue ",d)
+      // console.log("layer-meta-props section.vue ",d)
       this.$set(this.meta_props, d.layer_id, d);
       this.$emit("layer-meta-props", d);
     },

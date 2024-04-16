@@ -22,11 +22,12 @@ export default class Sidebar {
     this.listeners();
   }
 
-  calc_range_by_layout() {
-    return [this.layout.$_hi, this.layout.$_lo]
-  }
+  // calc_range_by_layout() {
+  //   return [this.layout.$_hi, this.layout.$_lo]
+  // }
   listeners() {
     let mc = (this.mc = new Hammer.Manager(this.canvas));
+    // console.log("MC",mc);
     mc.add(
       new Hammer.Pan({
         direction: Hammer.DIRECTION_VERTICAL,
@@ -155,9 +156,9 @@ export default class Sidebar {
       this.ctx.lineTo(x2, p[0] - 0.5);
 
       var offst = side === "left" ? -10 : 10;
-      this.ctx.textAlign = side === "left" ? "end" : "start";
-    const offChartOverlay = this.$p?.common?.data
-
+      this.ctx.textAlign = side === "left" ? "end" : "left";
+      const offChartOverlay = this.$p?.common?.data
+ 
      if(offChartOverlay[this.$p.grid_id-1]?.name == 'Volume') {
       this.ctx.fillText(
         p[1],
@@ -206,12 +207,14 @@ export default class Sidebar {
 
   // A gray bar behind the current price
   panel() {
+    // console.log("this is panel", this.$p);
     if (this.$p.cursor.grid_id !== this.layout.id) {
       return;
     }
 
     //let lbl = this.$p.cursor.y$.toFixed(this.layout.prec)
     // console.log("this.$p.cursor.y$", this.$p.enableSideBarBoxValue);
+    // console.log("closingPrice with Sidebar", this.$p);
     let lbl = this.$p.cursor.y$.toFixed(3);
     if (this.$p.enableSideBarBoxValue) {
        let roundOffValue= this.$p.cursor.y$ < 1.00 ? 3 : this.$p.cursor.y$ < 0.01 ? 4 : 2
@@ -223,16 +226,36 @@ export default class Sidebar {
       lbl = Math.round(lbl)  
     }   
 
-  
-
     // else {
     //    lbl = this.$p.cursor.y$.toFixed(2);
     // }
     // let lbl = this.$p.cursor.y$.toFixed(this.$p.decimalPlace);
-    this.ctx.fillStyle = this.$p.colors.panel;
+    const isCurrentCandle = this.$p.cursor.values[0].Candles_0[4] > this.$p.cursor.values[0].Candles_0[1];
+    console.log("isCurrentCandle",this.$p.cursor.values[0].Candles_0[4] > this.$p.cursor.values[0].Candles_0[1]) ;
+
+  // Determine the fill color of the sidebar based on whether the cursor is on the current candle
+  // const sidebarColor = isCurrentCandle
+    const array =  this.$p.cursor.values[0].Candles_0;
+  // Set the fill style for the panel background
+
+    for (let i = 0; i < this.$p.cursor.values[0].Candles_0.length; i++) {
+      const element = this.$p.cursor.values[0].Candles_0[i];
+
+      console.log("candle element", element);
+    }
+
+    console.log("singleCandleCheck",this.$p.cursor.values[0].Candles_0[4]);
+    console.log("cursorY", this.$p.cursor.y);
+    this.ctx.fillStyle = isCurrentCandle ? 'blue' : 'red';
+    // this.ctx.fillStyle = this.$p.colors.panel;
 
     let panwidth = this.layout.sb + 1;
 
+    // console.log("cursor panel", this.$p.cursor.values[0].Candles_0[4]);
+    // console.log("cursor", this.$p.cursor.y);
+    // console.log("panHeight", PANHEIGHT);
+
+    const closingPrice = this.$p.cursor.values[0].Candles_0[3]
     let x = -0.5;
     let y = this.$p.cursor.y - PANHEIGHT * 0.5 - 0.5;
     let a = 7;

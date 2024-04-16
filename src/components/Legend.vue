@@ -1,21 +1,21 @@
 <template>
   <div class="trading-vue-legend" :style="calc_style">
+  
     <div
         v-if="grid_id === 0"
         class="trading-vue-ohlcv"
         :style="{ 'max-width': common.width + 'px' }"
     >
-      <template
-          v-if="common?.showLegendPropsData && common.showLegendPropsData.length"
-      >
+      <template v-if="common?.showLegendPropsData && common.showLegendPropsData.length">
         <b v-for="(n, i) in common.showLegendPropsData" :key="i"
         >{{ n.k }} : {{ n.v }}&nbsp;</b
         ><br/>
       </template>
-      <template v-if="show_CustomProps"
-      ><span v-for="(n, i) in legendTxtConfig" :key="i" :style="n.style"
-      >{{ n.name }}&nbsp;</span
-      ></template
+      <template  v-if="show_CustomProps">
+        <span v-for="(n, i) in legendTxtConfig" :key="i" :style="n.style">
+          {{ n.name }}&nbsp;
+        </span>
+      </template
       >
       <!-- <span
         class="t-vue-title"
@@ -26,30 +26,104 @@
       </span> -->
       <!-- Old legend -->
       <!-- <span  v-if="show_values && !show_CustomProps"> -->
-      <span>
-          <span style="color: #131722; font-size: 22px; font-weight: 500"
-          >International Business Machines Corporation</span
-          >
-        <span v-if="show_values && !show_CustomProps">
+        <span @click="openModal"  class="stx-panel legendArea " v-if="show_values && !show_CustomProps && common.firstVariant"> 
+          <span class="clr"></span>
+          <span class="stx-info">
+            <span class="stx-sym">{{common.title_txt}}</span>
+            <span class="stx-price">{{ ohlcv[3] }}</span>
+          </span>
+
+          <!-- <span v-if="show_values && !show_CustomProps">
             O<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[0] }}</span>
             H<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[1] }}</span>
             L<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[2] }}</span>
             C<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[3] }}</span>
             V<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[4] }}</span>
-        </span>
-          <span class="cs-vue-title">{{ ohlcv[6]  }}</span>
-          <span class="cs-vue-title">{{ ohlcv[7] }}%</span>
-      </span>
+         </span>
+          <span :style="styleTxt" class="cs-vue-title">{{ ohlcv[6]  }}</span>
+          <span :style="styleTxt" class="cs-vue-title">{{ ohlcv[7] }}%</span> -->
+       </span>
 
-      <br/>
-      <!-- <div v-if="!show_custom" style="margin-top: 12px"> -->
-      <div style="margin-top: 12px">
-        <span class="cs-title-1">{{ ohlcv[5] }}</span>
-        <span style="padding: 6px">{{
-            ohlcv[6]
-          }}</span>
-        <span class="cs-title-2">{{ ohlcv[3] }}</span>
+       <!-- //TODO: work for firstvariant of charts -->
+
+       <div v-if="common.firstVariant && show_values && !show_CustomProps && showModal" class="stx-tooltip legendArea">
+        <div class="close-btn legendArea" @click="showModal = false">X</div>
+        <div class="stx-tooltip-field auto">
+          <div class="stx-field-name">Open</div>
+          <div class="stx-field-value">{{ ohlcv[0] }}</div>
+        </div>
+        <div class="stx-tooltip-field auto">
+          <div class="stx-field-name">High</div>
+          <div class="stx-field-value">{{ ohlcv[1] }}</div>
+        </div>
+        <div class="stx-tooltip-field auto">
+          <div class="stx-field-name">Low</div>
+          <div class="stx-field-value">{{ ohlcv[2] }}</div>
+        </div>
+        <div class="stx-tooltip-field auto">
+          <div class="stx-field-name">Close</div>
+          <div class="stx-field-value">{{ ohlcv[3] }}</div>
+        </div>
+        <div class="stx-tooltip-field auto">
+          <div class="stx-field-name">Volume</div>
+          <div class="stx-field-value">{{ formatVolume(ohlcv[4]) }}</div>
+        </div>
+        <div class="stx-tooltip-field auto">
+          <div class="stx-field-name">% Change</div>
+          <div class="stx-field-value">{{ ohlcv[7] }}%</div>
+        </div>
       </div>
+      <br/>
+
+      <!-- TODO: work for secondVariants, thirdVariant and fourthVariant of charts -->
+
+       <div  class="main-legend legendArea " v-if="common.secondVariant || common.thirdVariant || common.fourthVariant && show_values && !show_CustomProps "> 
+          <div class="legend-right-section">
+            <span class="right-title">{{common.title_txt}}</span>
+          </div>
+          <div class="legend-center-section">
+            <p>International Business Machines Corporation</p>
+          </div>
+          <div class="legend-left-section">
+            <span>
+              <span id="flex" class="stx-text">O</span>
+              <span :style="getStyle()" class="stx-value">{{ ohlcv[0] }}</span>
+            </span>
+            <span>
+              <span class="stx-text">H</span>
+              <span  :style="getStyle()" class="stx-value">{{ ohlcv[1] }}</span>
+            </span>
+            <span>
+              <span class="stx-text">L</span>
+              <span :style="getStyle()"  class="stx-value"> {{ ohlcv[2] }}</span>
+            </span>
+            <span>
+              <span class="stx-text">C</span>
+              <span  :style="getStyle()" class="stx-value"> {{ ohlcv[3] }}</span>
+            </span>
+            <span>
+              <span :style="getStyle()" class="stx-value">{{ ohlcv[6] }} ({{ ohlcv[7] }}%)</span>
+            </span>
+            <span>
+              <span class="stx-text">Vol</span>
+              <span :style="getStyle()" class="stx-value">{{ formatVolume(ohlcv[4]) }}</span>
+            </span>
+          </div>
+          <div class="legend-last-section">
+            
+          </div>
+       </div>
+
+       <!-- <p v-if="common.magnet" style="position: absolute; right: 0;">Magnet</p> -->
+
+      <!-- changin in new legend -->
+     
+      <!-- <div v-if="!show_custom" style="margin-top: 12px"> -->
+      <!-- <div style="margin-top: 12px">
+        <span class="cs-title-1">{{ ohlcv[5] }}</span>
+        <span style="padding: 6px">{{ohlcv[6]}}</span>
+        <span class="cs-title-2">{{ ohlcv[3] }}%</span>
+      </div> -->
       <span
           v-if="!show_values"
           class="t-vue-lspan"
@@ -120,7 +194,14 @@ export default {
     "meta_props",
     "legendDecimal",
   ],
+  data(){
+    return {
+      showModal: true
+    }
+  },
+
   computed: {
+    
     styleTxt() {
       return {
         color: this?.common?.legend_txt_color
@@ -152,7 +233,7 @@ export default {
         return (meta.legend() || []).map((x) => x.value);
       }
       let candleId = this.$props.values.ohlcv[0]
-      let main_data = this.json_data?.[0]?.data;
+      let main_data = this.main_data;
       // let main_data_length = main_data?.length;
 
       let findIndexId = main_data.findIndex(d => d[0] === candleId);
@@ -181,9 +262,9 @@ export default {
 
         const prevPriceCLosing = prevData[4];
         changeInPrice = close - prevPriceCLosing;
-        changeInPrice = changeInPrice.toFixed(changeInPrice < 1 ? 3 : 2)
+        changeInPrice = changeInPrice.toFixed(changeInPrice < 1 ? 2 : 2)
         changeInPercent = (changeInPrice / prevPriceCLosing) * 100;
-        changeInPercent = changeInPercent.toFixed(changeInPercent < 1 ? 3 : 2)
+        changeInPercent = changeInPercent.toFixed(changeInPercent < 1 ? 2 : 2)
         
         let volume = this.$props.values.ohlcv[5]
             ? Number(this.$props.values.ohlcv[5].toFixed(0)).toLocaleString(
@@ -270,45 +351,11 @@ export default {
     json_data() {
       return this.$props.common.data;
     },
+    main_data() {
+      return this.$props.common.sub;
+    },
     off_data() {
       return this.$props.common.offchart;
-    },
-    lastJsonData() {
-      console.log(
-          "this json_data last",
-          this.json_data[0].data[this.json_data[0].data.length - 1][2] -
-          this.json_data[0].data[this.json_data[0].data.length - 2][2]
-      );
-      console.log(
-          "this json_data second last",
-          this.json_data[0].data[this.json_data[0].data.length - 1]
-      );
-      return this.json_data[0].data[
-      this.json_data[0].data.length - 1
-          ][3].toFixed(2);
-    },
-    secondLastData() {
-      console.log("this is changing price");
-      return this.json_data[0].data[
-      this.json_data[0].data.length - 2
-          ][3].toFixed(2);
-    },
-    changeInPrice() {
-      const currentPriceClosing =
-          this.json_data[0].data[this.json_data[0].data.length - 1][3];
-      const previousePriceClosing =
-          this.json_data[0].data[this.json_data[0].data.length - 2][3];
-      console.log(
-          "changing",
-          (currentPriceClosing - previousePriceClosing).toFixed(2)
-      );
-      return (currentPriceClosing - previousePriceClosing).toFixed(2);
-    },
-    percentageChange() {
-      // formula (changeinprice / open price) * 100
-      const previousePriceClosing =
-          this.json_data[0].data[this.json_data[0].data.length - 2][3];
-      return ((this.changeInPrice / previousePriceClosing) * 100).toFixed(2);
     },
     main_type() {
       let f = this.common.data.find((x) => x.main);
@@ -319,6 +366,38 @@ export default {
     },
   },
   methods: {
+    getStyle(){
+      if(this.ohlcv[3] > this.ohlcv[0]){
+        return {color: '#089981'}
+      }else{
+        return {color: '#F23645'}
+      }
+    },
+    openModal(){
+        this.showModal = true
+    },
+     formatVolume(volume) {
+    // Remove commas from the string and convert it to a number
+    var volumeNumber = parseFloat(volume.replace(/,/g, ''));
+    if (!isNaN(volumeNumber)) {
+        // Convert volume to millions and round to 2 decimal places
+        var volumeInMillions = (volumeNumber / 1e6).toFixed(2);
+        // Append "M" to the formatted volume
+        return volumeInMillions + "M";
+    } else {
+        return volume; // Return the original value if conversion fails
+    }
+},
+//      formatNumberToMillions(number) {
+//     if (Math.abs(number) >= 1e6) {
+//         // Divide the number by 1 million and round to one decimal place
+//         var formattedNumber = (number / 1e6).toFixed(1) + 'M';
+//         return formattedNumber;
+//     } else {
+//         // If the number is less than a million, just return it as is
+//         return number.toString();
+//     }
+// },
     format(id, values) {
       let meta = this.$props.meta_props[id] || {};
       // Matches Overlay.data_colors with the data values
@@ -340,6 +419,7 @@ export default {
         };
       });
     },
+
     n_a(len) {
       return Array(len).fill({value: "n/a"});
     },
@@ -347,7 +427,9 @@ export default {
       this.$emit("legend-button-click", event);
     },
   },
+  
   mounted() {
+    // console.log("ohlcv is here", this.ohlcv)
     // console.log("math calculation",this.ohlcv)
     // const open = Number(this.$props?.values?.ohlcv[0]);
     // const close = Number(this.$props?.values?.ohlcv[3])
@@ -362,6 +444,11 @@ export default {
 };
 </script>
 <style>
+/* CSS for secondVariants */
+@import '../../src/variants2.css';
+
+ 
+/*  */
 .trading-vue-legend {
   position: relative;
   z-index: 100;
@@ -372,10 +459,95 @@ export default {
   user-select: none;
   font-weight: 300;
 }
+.legendArea{
+  pointer-events: all;
+}
+.stx-tooltip {
+   margin-top: 12px;
+   width: 100px;
+   height: 110px;
+   background-color: #fff;
+   box-shadow: 0 0 8px 0 rgba(70,78,86,.25);
+   opacity: .9;
+   padding: 10px 15px;
+   color: #464e56;
+   border-radius: 2px;
+   font-size: 13px;
+   font-weight: 300;
+   line-height: 18px;
+   position: absolute;
+   z-index: 4;
+   white-space: nowrap;
+}
+
+.stx-field-value{
+    font-weight: 600;
+    background-color: #fff;
+    color: #464e56;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+/* .stx-tooltip {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 8px 0 rgba(70,78,86,.25);
+    color: #464e56;
+    font-size: 13px;
+    left: -1000px;
+    line-height: 18px;
+    opacity: .9;
+    padding: 10px 15px;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 4;
+} */
+
+.stx-tooltip  .close-btn {
+    cursor: pointer;
+    font-size: 11px;
+    opacity: .5;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+}
+
+.stx-field-name{
+    font-weight: 400;
+    opacity: .7;
+}
+
+
+
+.stx-panel{
+  height: 30px;
+  width: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 8px 0 rgba(70,78,86,.25);
+  font-size: 13px;
+  color: #464e56;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  align-items: center;
+  text-align: center;
+  border-left: 5px solid rgb(0, 129, 242);;
+}
+
+.stx-panel > .clr{
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    height: 100%;
+    width: 5px;
+}
+
+.stx-tooltip .stx-tooltip-field {
+    display: flex;
+    justify-content: space-between;
+}
 
 .cs-vue-title {
   font-weight: 400;
-  color: #089981;
   font-size: 16px;
 }
 
@@ -428,6 +600,13 @@ export default {
   font-size: 1em;
   margin-top: 0.3em;
 }
+
+.magnet{
+  /* display: flex;
+  justify-content: end; */
+  background-color: crimson;
+}
+
 
 .t-vue-ivalue {
   margin-left: 0.5em;

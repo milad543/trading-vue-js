@@ -1,0 +1,130 @@
+.main-legend {
+    display: flex;
+    align-items: center;
+    /* background: #847373; */
+    padding: 5px 9px;
+    width: 53%;
+    gap: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 1px #0000001A;
+    border: 1px solid #F2F2F2
+}
+
+.legend-right-section {
+    /* background-color: purple;
+ */
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 16.52px;
+    text-align: left;
+    width: 3%;
+    /* background-color: crimson; */
+
+}
+
+.legend-center-section {
+    /* background-color: lightcoral; */
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12.1px;
+    text-align: left;
+    /* background-color: lightgrey; */
+
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+           -webkit-box-orient: vertical;
+          -webkit-line-clamp: 5;
+          display: -webkit-box; */
+}
+
+.legend-left-section {
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+    font-size: 12px;
+    line-height: 9.68px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    /* justify-content: space-between; */
+    /* justify-content: space-between; */
+    gap: 15px;
+    /* background-color: lightyellow; */
+
+}
+
+.stx-text, .stx-value{
+    flex-basis: 250px;
+}
+
+@media screen and (max-width: 1515px) {
+    .main-legend{
+      width: 56%;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .main-legend{
+        width:56%;
+        /* background-color: lightgoldenrodyellow; */
+    }
+}
+
+@media screen and (max-width: 1263px){
+    .main-legend{
+        width: 60%;
+        /* background-color: purple !important; */
+    }
+}
+@media screen and (max-width: 1000px){
+    .main-legend{
+        width: 60%;
+        /* background-color: lightpink;  */
+    }
+}
+@media screen and (max-width: 1450px){
+    .main-legend{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 1430px){
+    .main-legend{
+        width: 55%;
+        /* background-color: lightgreen; */
+    }
+}
+@media screen and (max-width: 1440px){
+    .main-legend{
+        width: 60%;
+        /* background-color: lightgreen; */
+    }
+}
+@media screen and (max-width: 1475px) {
+    .main-legend{
+        width: 58%;
+    }
+    
+}
+
+/* .legend-last-section > span{
+    flex-basis: 200px;
+} */
+
+/* .stx-value {
+    color: #F23645;
+} */
+
+.stx-text {
+    color: #000000;
+}
+
+.legend-last-section {
+    font-family: inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 9.68px;
+       text-align: left;
+    background-color: ;
+}

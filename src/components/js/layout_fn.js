@@ -23,6 +23,7 @@ export default function(self, range) {
         },
         // Time-axis nearest step
         t_magnet: t => {
+            console.log("magnet")
             if (ib) t = self.ti_map.smth2i(t)
             const cn = self.candles || self.master_grid.candles
             const arr = cn.map(x => x.raw[0])
@@ -51,7 +52,35 @@ export default function(self, range) {
             return cn[i]
         },
         // Nearest data points
-        data_magnet: t => {  /* TODO: implement */ }
+        // data_magnet: t => {  /* TODO: implement */ }
+
+        // Nearest data points
+        // Nearest data points
+        // Nearest data points
+
+    // data_magnet: t => {
+    //     const candles = self.candles || self.master_grid.candles;
+        
+    //     // Extract the timestamps and closing prices of candles
+    //     const timestamps = candles.map(candle => candle.raw[0]);
+    //     const closingPrices = candles.map(candle => candle.close)
+        
+    //     console.log("timestamps==>",timestamps)
+    //     console.log("closingPrices==>",closingPrices)
+        
+    //     // Find the index of the nearest candlestick in terms of timestamp
+    //     const nearestIndex = Utils.nearest_a(t, timestamps)[0];
+        
+    //     // Retrieve the nearest timestamp and closing price
+    //     const nearestTimestamp = timestamps[nearestIndex];
+    //     const nearestClosingPrice = closingPrices[nearestIndex];
+        
+    //     // Return the nearest closing price and its timestamp
+    //     return { timestamp: nearestTimestamp, price: nearestClosingPrice };
+    // }
+
+
+
     })
 
     return self

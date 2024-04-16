@@ -3,33 +3,35 @@
   <div class="trading-vue-chart" :style="styles">
     <keyboard ref="keyboard"></keyboard>
     <grid-section v-for="(grid, i) in this._layout.grids"
-                  :key="grid.id" ref="sec"
-                  :common="section_props(i)"
-                  :grid_id="i"
-                  @register-kb-listener="register_kb"
-                  @remove-kb-listener="remove_kb"
-                  @range-changed="range_changed"
-                  @cursor-changed="cursor_changed"
-                  @cursor-locked="cursor_locked"
-                  @sidebar-transform="set_ytransform"
-                  @layer-meta-props="layer_meta_props"
-                  @custom-event="emit_custom_event"
-                  @legend-button-click="legend_button_click"
-                  :enableZoom="enableZoom"
-                  :enableSideBarBoxValue="enableSideBarBoxValue"
-                  :decimalPlace="decimalPlace"
-                  :roundOffVolume="roundOffVolume"
-                  :legendDecimal="legendDecimal"
-                  :applyShaders="applyShaders"
-                  :priceLine="priceLine"
-                  :enableCrosshair="enableCrosshair"
-                  :ignore_OHLC="ignore_OHLC"
-
+            :key="grid.id" ref="sec"
+            :common="section_props(i)"
+            :grid_id="i"
+            @register-kb-listener="register_kb"
+            @remove-kb-listener="remove_kb"
+            @range-changed="range_changed"
+            @cursor-changed="cursor_changed"
+            @cursor-locked="cursor_locked"
+            @sidebar-transform="set_ytransform"
+            @layer-meta-props="layer_meta_props"
+            @custom-event="emit_custom_event"
+            @legend-button-click="legend_button_click"
+            :enableZoom="enableZoom"
+            :enableSideBarBoxValue="enableSideBarBoxValue"
+            :decimalPlace="decimalPlace"
+            :roundOffVolume="roundOffVolume"
+            :legendDecimal="legendDecimal"
+            :applyShaders="applyShaders"
+            :priceLine="priceLine"
+            :candleBorder="candleBorder"
+            :enableCrosshair="enableCrosshair"
+            :ignore_OHLC="ignore_OHLC"
     >
     </grid-section>
     <botbar v-bind="botbar_props"
             :shaders="shaders" :timezone="timezone">
     </botbar>
+
+    <div class="watermark">{{ main_section.waterMarkText}}</div>
   </div>
 </template>
 
@@ -57,9 +59,9 @@ export default {
   },
   mixins: [Shaders, DataTrack],
   props: [
-    'title_txt', 'data', 'width', 'height', 'font', 'colors','legend_txt_color',
+    'title_txt', 'data', 'width', 'height', 'font', 'colors','legend_txt_color','waterMarkText', 'magnet','firstVariant','secondVariant','thirdVariant','fourthVariant',
     'overlays', 'tv_id', 'config', 'buttons', 'toolbar', 'ib', 'applyShaders',
-    'skin', 'timezone', 'enableZoom', 'enableSideBarBoxValue', 'decimalPlace', 'ignore_OHLC', 'priceLine', 'ignoreNegativeIndex', 'enableCrosshair', 'legendDecimal',
+    'skin', 'timezone', 'enableZoom', 'enableSideBarBoxValue', 'decimalPlace', 'ignore_OHLC', 'priceLine','candleBorder','ignoreNegativeIndex', 'enableCrosshair', 'legendDecimal',
     'showSettingsButton','roundOffVolume'
   ],
   data() {
@@ -152,7 +154,7 @@ export default {
       return this.$props.data.onchart || []
     },
     offchart() {
-      console.log("this.$props.data.offchart",this.$props.data.offchart)
+      // console.log("this.$props.data.offchart",this.$props.data.offchart)
       return this.$props.data.offchart || []
     },
     filter() {
@@ -315,8 +317,8 @@ export default {
       this.range_changed([t1, t2])
     },
     cursor_changed(e) {
-      console.log("cursor change mode")
-      console.log("cursor mode==>",typeof this.cursor.mode )
+      // console.log("cursor change mode")
+      // console.log("cursor mode==>",typeof this.cursor.mode )
       if (e.mode) this.cursor.mode = e.mode
       if (this.cursor.mode !== 'explore') {
         this.updater.sync(e)
@@ -334,12 +336,12 @@ export default {
       if (this.ohlcv.length < 2 && !tf) return
       this.interval_ms = tf || Utils.detect_interval(this.ohlcv)
       this.interval = this.$props.ib ? 1 : this.interval_ms
-      console.log("calc_interval",{
+      /*console.log("calc_interval",{
         interval:this.interval,
         interval_ms:this.interval_ms,
         forced_tf:this.forced_tf,
         caller
-      })
+      })*/
       Utils.warn(
           () => this.$props.ib && !this.chart.tf,
           Const.IB_TF_WARN, Const.SECOND
@@ -377,7 +379,7 @@ export default {
           s - this.interval * d,
           l + this.interval * ml
         ];
-        console.log("this.forced_initRange",this.forced_initRange)
+        // console.log("this.forced_initRange",this.forced_initRange)
         if(this.forced_initRange){
           newArr = this.forced_initRange
         }else{
@@ -386,7 +388,7 @@ export default {
           }  
         }
         
-        console.log("searchResults Library Data",newArr,this.chart?.initRange,this.forced_initRange)
+        // console.log("searchResults Library Data",newArr,this.chart?.initRange,this.forced_initRange)
         Utils.overwrite(this.range, newArr)
       }
     },
@@ -413,6 +415,12 @@ export default {
       return {
         title_txt: this.chart.name || this.$props.title_txt,
         legend_txt_color: this.$props.legend_txt_color,
+        waterMarkText: this.$props.waterMarkText,
+        magnet: this.$props.magnet,
+        firstVariant: this.$props.firstVariant,
+        secondVariant: this.$props.secondVariant,
+        thirdVariant: this.$props.thirdVariant,
+        fourthVariant: this.$props.fourthVariant,
         layout: this._layout,
         sub: this.sub,
         range: this.range,
@@ -578,8 +586,24 @@ export default {
     }
   },
   mounted() {
-    console.log("layout==>",this._layout.grids)
+    // console.log("layout==>",this._layout.grids)
+    // console.log("this is layout from charts", this._layout)
   }
 }
 
 </script>
+
+<style scoped>
+   /* Watermark style */
+   .watermark {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+</style>

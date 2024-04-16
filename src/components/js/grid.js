@@ -24,7 +24,7 @@ export default class Grid {
     this.range = this.$p.range;
     this.id = this.$p.grid_id;
     this.layout = this.$p.layout.grids[this.id];
-    console.log("this.layout.grid",this.layout )
+    // console.log("this.layout.grid",this.layout )
     this.interval = this.$p.interval;
     this.cursor = comp.$props.cursor;
     this.offset_x = 0;
@@ -85,7 +85,7 @@ export default class Grid {
       }
         if (this.drug) {
           if(this.$p.enableZoom){
-        console.log("panmove event if block")
+        // console.log("panmove event if block")
         this.mousedrag(this.drug.x + event.deltaX, this.drug.y + event.deltaY);
         this.comp.$emit("cursor-changed", {
           grid_id: this.id,
@@ -272,7 +272,7 @@ export default class Grid {
     if (layer.name === "crosshair") {
       this.crosshair = layer;
     } else {
-      console.log("layer==>",layer)
+      // console.log("layer==>",layer)
       this.overlays.push(layer);
     }
     this.update();

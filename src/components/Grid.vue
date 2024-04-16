@@ -20,11 +20,13 @@ import Splitters from "./overlays/Splitters.vue";
 import LineTool from "./overlays/LineTool.vue";
 import RangeTool from "./overlays/RangeTool.vue";
 
+
 export default {
   name: "Grid",
   components: { Crosshair, KeyboardListener },
   mixins: [Canvas, UxList],
   props: [
+    "common",
     "sub",
     "layout",
     "range",
@@ -44,6 +46,7 @@ export default {
     "shaders",
     "enableZoom",
     "priceLine",
+    "candleBorder",
     "decimalPlace",
     "enableCrosshair"
   ],
@@ -89,6 +92,9 @@ export default {
         this.$props.cursor.grid_id === this.$props.grid_id
       );
     },
+    commonFunction(){
+      return this.$props.common
+    }
   },
   watch: {
     enableZoom() {
@@ -184,6 +190,7 @@ export default {
   },
   mounted() {
     //  console.log("props:",this.priceLine);
+    // console.log("props:==>", this.candleBorder);
     const el = this.$refs["canvas"];
     this.renderer = new Grid(el, this);
     this.setup();
@@ -266,7 +273,9 @@ export default {
         sub: this.$props.sub,
         font: this.$props.font,
         config: this.$props.config,
-        priceLine: this.$props.priceLine
+        priceLine: this.$props.priceLine,
+        candleBorder: this.$props.candleBorder,
+        common: this.$props.common
       };
     },
     emit_ux_event(e) {

@@ -10,7 +10,83 @@ export default class CandleExt {
         this.draw(data)
     }
 
-    // draw(data) {
+    draw(data) {
+
+        // console.log("candle overlay", this.self);
+        // if closing price > closing price then will show the green candle if not show red candles
+        const green = data.raw[4] >= data.raw[1];
+        const body_color = green ?
+            this.style.colorCandleUp :
+            this.style.colorCandleDw;
+    
+        const wick_color = green ?
+            this.style.colorWickUp :
+            this.style.colorWickDw;
+    
+        const border_color = this.style.borderColor || 'black'; // Define border color
+    
+        let w = Math.max(data.w, 1);
+        let hw = Math.max(Math.floor(w * 0.5), 1);
+        let h = Math.abs(data.o - data.c);
+        let max_h = data.c === data.o ? 1 : 2;
+        let x05 = Math.floor(data.x) - 0.5;
+    
+        this.ctx.strokeStyle = wick_color;
+        this.ctx.beginPath();
+        this.ctx.moveTo(x05, Math.floor(data.h));
+        this.ctx.lineTo(x05, Math.floor(data.l));
+        this.ctx.stroke();
+    
+        // Set the border color for the candlestick body
+        this.ctx.strokeStyle = border_color;
+    
+        if (data.w > 1.5) {
+            // Draw candlestick body with border
+            this.ctx.fillStyle = body_color;
+            this.ctx.fillRect(
+                Math.floor(data.x - hw),
+                Math.floor(data.c),
+                Math.floor(w),
+                Math.floor(h)
+            );
+            
+            // Draw the border around all four sides of the candlestick body
+            if(this.self.candle_border){
+            this.ctx.beginPath();
+            this.ctx.moveTo(Math.floor(data.x - hw), Math.floor(data.c));
+            this.ctx.lineTo(Math.floor(data.x - hw), Math.floor(data.c + h));
+            this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(data.c + h));
+            this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(data.c));
+            this.ctx.closePath();
+            this.ctx.stroke();
+            }
+            
+        } else {
+            // Draw candlestick with border
+            this.ctx.fillStyle = body_color;
+            this.ctx.fillRect(
+                Math.floor(data.x - hw),
+                Math.floor(Math.min(data.o, data.c)),
+                Math.floor(w),
+                Math.floor(h) + (data.o === data.c ? 1 : 0)
+            );
+            
+            // Draw the border around all four sides of the candlestick body
+          if(this.self.candle_border){
+              this.ctx.beginPath();
+            this.ctx.moveTo(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c)));
+            this.ctx.lineTo(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c) + h));
+            this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(Math.min(data.o, data.c) + h));
+            this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(Math.min(data.o, data.c)));
+            this.ctx.closePath();
+            this.ctx.stroke();
+          }
+        }
+    }    
+}
+
+
+ // draw(data) {
     //     const green = data.raw[4] >= data.raw[1]
     //     const body_color = green ?
     //         this.style.colorCandleUp :
@@ -204,70 +280,3 @@ export default class CandleExt {
     //         );
     //     }
     // }
-
-    draw(data) {
-        const green = data.raw[4] >= data.raw[1];
-        const body_color = green ?
-            this.style.colorCandleUp :
-            this.style.colorCandleDw;
-    
-        const wick_color = green ?
-            this.style.colorWickUp :
-            this.style.colorWickDw;
-    
-        const border_color = this.style.borderColor || 'black'; // Define border color
-    
-        let w = Math.max(data.w, 1);
-        let hw = Math.max(Math.floor(w * 0.5), 1);
-        let h = Math.abs(data.o - data.c);
-        let max_h = data.c === data.o ? 1 : 2;
-        let x05 = Math.floor(data.x) - 0.5;
-    
-        this.ctx.strokeStyle = wick_color;
-        this.ctx.beginPath();
-        this.ctx.moveTo(x05, Math.floor(data.h));
-        this.ctx.lineTo(x05, Math.floor(data.l));
-        this.ctx.stroke();
-    
-        // Set the border color for the candlestick body
-        this.ctx.strokeStyle = border_color;
-    
-        if (data.w > 1.5) {
-            // Draw candlestick body with border
-            this.ctx.fillStyle = body_color;
-            this.ctx.fillRect(
-                Math.floor(data.x - hw),
-                Math.floor(data.c),
-                Math.floor(w),
-                Math.floor(h)
-            );
-            
-            // Draw the border around all four sides of the candlestick body
-            this.ctx.beginPath();
-            this.ctx.moveTo(Math.floor(data.x - hw), Math.floor(data.c));
-            this.ctx.lineTo(Math.floor(data.x - hw), Math.floor(data.c + h));
-            this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(data.c + h));
-            this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(data.c));
-            this.ctx.closePath();
-            this.ctx.stroke();
-        } else {
-            // Draw candlestick with border
-            this.ctx.fillStyle = body_color;
-            this.ctx.fillRect(
-                Math.floor(data.x - hw),
-                Math.floor(Math.min(data.o, data.c)),
-                Math.floor(w),
-                Math.floor(h) + (data.o === data.c ? 1 : 0)
-            );
-            
-            // Draw the border around all four sides of the candlestick body
-            this.ctx.beginPath();
-            this.ctx.moveTo(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c)));
-            this.ctx.lineTo(Math.floor(data.x - hw), Math.floor(Math.min(data.o, data.c) + h));
-            this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(Math.min(data.o, data.c) + h));
-            this.ctx.lineTo(Math.floor(data.x + hw), Math.floor(Math.min(data.o, data.c)));
-            this.ctx.closePath();
-            this.ctx.stroke();
-        }
-    }    
-}

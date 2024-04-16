@@ -30,9 +30,6 @@
       :data="chart"
       :width="this.width"
       :height="this.height"
-      :color-back="colors.colorBack"
-      :color-grid="colors.colorGrid"
-      :color-text="colors.colorText"
       :roundOffVolume="roundOffVolume"
       :legend-buttons="buttons"
       :ignore_OHLC="['Spline']"
@@ -40,8 +37,25 @@
       :indexBased="true"
       :ignoreNegativeIndex="true"
       ref="tradeRef"
+      :waterMarkText="'incometradercharts.com'"
+      :color-back="colors.colorBack"
+      :color-grid="colors.colorGrid"
+      :color-text="colors.colorText"
+      :colorWickUp="'black'"
+      :colorWickDw="'black'"
+      :colorCandleUp="candleColorUp()"
+      :colorCandleDw="candleColorDw()"
+      :magnet="magnet"
+      :candleBorder="candleBorder"
+      @showMagnetOnChart="toggleMagnet"
+      :firstVariant="firstVariant" 
+      :secondVariant="secondVariant"
+      :thirdVariant="thirdVariant"
+      :fourthVariant="fourthVariant"
+      :colorPanel="'blue'"
     >
     </trading-vue>
+    
   </div>
 </template>
 
@@ -65,10 +79,11 @@ export default {
       max: 200,
       min: 100,
       decimalPlace: 3,
-      legendDecimal: false,
+      legendDecimal: true,
       roundOffVolume: false,
       chartType: "Candle",
       priceLine: true,
+      candleBorder: true,
       enableSideBarBoxValue: false,
       applyShaders: true,
       enableCrosshair: true,
@@ -83,6 +98,15 @@ export default {
         colorGrid: "#eee",
         colorText: "#333",
       },
+      // colorCandleUp: "candleColorUp",
+      // colorCandleDw: "candleColorDw",
+      watermarkText : "Invest-EDU",
+      magnet: false,
+      
+      firstVariant: true, // for like yahoo charts
+      secondVariant: false,
+      thirdVariant: false,
+      fourthVariant: false
     };
   },
   mounted() {
@@ -105,6 +129,57 @@ export default {
   },
   computed: {},
   methods: {
+    // candleColorUp and candleColorDw
+    candleColorUp(){
+      if(this.firstVariant){
+        this.candleBorder = false
+        return "#00B061"
+      }else if(this.secondVariant){
+        return "#16B195"
+      }else if(this.thirdVariant){
+        return "#7D7E7E"
+      }else if(this.fourthVariant) {
+        return "#0D66CE"
+      }
+    },
+    candleColorDw(){
+      if(this.firstVariant){
+        return "#F23645"
+      }else if(this.secondVariant){
+        return "#F23645"
+      }else if(this.thirdVariant){
+        return "#FCFCFC"
+      }
+      else if(this.fourthVariant) {
+        return "#F23645"
+      }
+    },
+    candleVolumeUp(){
+      if(this.firstVariant){
+        return "#4cc790"
+      }else if(this.secondVariant){
+        return "#16B195"
+      }else if(this.thirdVariant){
+        return "#7D7E7E"
+      }else if(this.fourthVariant) {
+        return "#0D66CE"
+      }
+    },
+    candleVolumeDw(){
+      if(this.firstVariant){
+        return "#fc6d72"
+      }else if(this.secondVariant){
+        return "#F23645 "
+      }else if(this.thirdVariant){
+        return "#D3D3D3"
+      }else if(this.fourthVariant) {
+        return "#F23645"
+      }
+    },
+    toggleMagnet(){
+      console.log("this is magnet", this.magnet)
+      this.magnet =  !this.magnet
+    },
     handleChangeRange() {
       this.$refs?.tradeRef?.toggleSidebarCustomRange([this.max, this.min]);
     },
