@@ -1,13 +1,22 @@
 .main-legend {
     display: flex;
+}
+
+.sub-main-legend{
+    display: flex;
     align-items: center;
     /* background: #847373; */
-    padding: 5px 9px;
-    width: 53%;
+    /* padding: 5px 9px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     gap: 20px;
     border-radius: 8px;
     box-shadow: 2px 2px 5px 1px #0000001A;
     border: 1px solid #F2F2F2;
+    /* background-color: lightblue; */
+    flex-shrink: 0;
 }
 
 .legend-right-section {
@@ -18,7 +27,8 @@
     font-weight: 800;
     line-height: 16.52px;
     text-align: left;
-    width: 4%;
+    /* background-color: lightcoral; */
+    /* width: 4%; */
     /* background-color: crimson; */
 
 }
@@ -30,6 +40,7 @@
     font-weight: 600;
     line-height: 12.1px;
     text-align: left;
+    /* background-color: lightcyan; */
     /* background-color: lightgrey; */
 
     /* white-space: nowrap;
@@ -47,6 +58,7 @@
     line-height: 9.68px;
     text-align: left;
     display: flex;
+    /* background-color: lightgray; */
     justify-content: flex-start;
     text-align: left;
     /* justify-content: space-between; */
@@ -62,48 +74,48 @@
 
 @media screen and (max-width: 1515px) {
     .main-legend{
-      width: 56%;
+      /* width: 56%; */
     }
 }
 @media screen and (max-width: 1500px) {
     .main-legend{
-        width:56%;
+        /* width:56%; */
         /* background-color: lightgoldenrodyellow; */
     }
 }
 
 @media screen and (max-width: 1263px){
     .main-legend{
-        width: 60%;
+        /* width: 60%; */
         /* background-color: purple !important; */
     }
 }
 @media screen and (max-width: 1000px){
     .main-legend{
-        width: 60%;
+        /* width: 60%; */
         /* background-color: lightpink;  */
     }
 }
 @media screen and (max-width: 1450px){
     .main-legend{
-        width: 60%;
+        /* width: 60%; */
     }
 }
 @media screen and (max-width: 1430px){
     .main-legend{
-        width: 55%;
+        /* width: 55%; */
         /* background-color: lightgreen; */
     }
 }
 @media screen and (max-width: 1440px){
     .main-legend{
-        width: 60%;
+        /* width: 60%; */
         /* background-color: lightgreen; */
     }
 }
 @media screen and (max-width: 1475px) {
     .main-legend{
-        width: 58%;
+        /* width: 58%; */
     }
     
 }
@@ -126,5 +138,5 @@
     font-weight: 400;
     line-height: 9.68px;
        text-align: left;
-    background-color: ;
+    background-color: red ;
 }

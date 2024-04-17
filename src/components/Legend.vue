@@ -78,13 +78,14 @@
       <!-- TODO: work for secondVariants, thirdVariant and fourthVariant of charts -->
 
        <div  class="main-legend legendArea " v-if="common.secondVariant || common.thirdVariant || common.fourthVariant && show_values && !show_CustomProps "> 
-          <div class="legend-right-section">
+          <div class="sub-main-legend">
+            <div class="legend-right-section">
             <span class="right-title">{{common.title_txt}}</span>
-          </div>
-          <div class="legend-center-section">
+            </div>
+            <div class="legend-center-section">
             <p>International Business Machines Corporation</p>
-          </div>
-          <div class="legend-left-section">
+           </div>
+           <div class="legend-left-section">
             <span>
               <span id="flex" class="stx-text">O</span>
               <span :style="getStyle()" class="stx-value">{{ ohlcv[0] }}</span>
@@ -110,7 +111,7 @@
             </span>
           </div>
           <div class="legend-last-section">
-            
+          </div>
           </div>
        </div>
 
