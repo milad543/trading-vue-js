@@ -146,6 +146,7 @@
       </legend-button>
     </div>
     <div v-for="ind in this.indicators" class="t-vue-ind">
+     <div class="t-vue-ind-sub">
       <span class="t-vue-iname">{{ ind.name }}</span>
       <button-group
           v-if="ind.showLegendButtons"
@@ -174,6 +175,7 @@
         <spinner v-if="ind.loading" :colors="common.colors"></spinner>
       </transition>
     </div>
+     </div>
   </div>
 </template>
 <script>
@@ -599,14 +601,23 @@ export default {
   margin-bottom: 0.5em;
   font-size: 1em;
   margin-top: 0.3em;
-  /* border: 1px solid rgba(242, 242, 242, 1);
+  
+  
+}
+
+.t-vue-ind-sub{
+  display: flex;  
+  justify-content: center;
+  text-align: center;
+  border: 1px solid rgba(242, 242, 242, 1);
   border-radius: 8px;
   box-shadow: 2px 2px 5px 1px #0000001A;
   border: 1px solid #F2F2F2;
   color: rgba(0, 0, 0, 1);
   padding: 5px 9px;
-  font-weight: 400; */
-  
+  font-weight: 500;
+  text-align: center;
+  font-size: 13px;
 }
 
 .magnet{
