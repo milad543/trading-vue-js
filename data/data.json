@@ -20007,6 +20007,7 @@
             "type": "VolumeOBV",
             "name": "Volume",
             "settings": {
+                "hideLegend": true,
                 "legend": true,
                 "legendButtons": true,
                 "hideBarValues": true,
