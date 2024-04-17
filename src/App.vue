@@ -53,6 +53,7 @@
       :thirdVariant="thirdVariant"
       :fourthVariant="fourthVariant"
       :colorPanel="'blue'"
+      :title-txt="'IBM'"
     >
     </trading-vue>
     
@@ -102,6 +103,7 @@ export default {
       // colorCandleDw: "candleColorDw",
       watermarkText : "Invest-EDU",
       magnet: false,
+      
       
       firstVariant: false, // for like yahoo charts
       secondVariant: true,

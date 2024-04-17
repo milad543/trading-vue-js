@@ -79,7 +79,7 @@
 
        <div  class="main-legend legendArea " v-if="common.secondVariant || common.thirdVariant || common.fourthVariant && show_values && !show_CustomProps "> 
           <div class="legend-right-section">
-            <span class="right-title">TSLA</span>
+            <span class="right-title">{{common.title_txt}}</span>
           </div>
           <div class="legend-center-section">
             <p>International Business Machines Corporation</p>
@@ -599,6 +599,14 @@ export default {
   margin-bottom: 0.5em;
   font-size: 1em;
   margin-top: 0.3em;
+  /* border: 1px solid rgba(242, 242, 242, 1);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px 1px #0000001A;
+  border: 1px solid #F2F2F2;
+  color: rgba(0, 0, 0, 1);
+  padding: 5px 9px;
+  font-weight: 400; */
+  
 }
 
 .magnet{

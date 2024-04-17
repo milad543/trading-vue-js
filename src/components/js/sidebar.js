@@ -246,8 +246,8 @@ export default class Sidebar {
 
     console.log("singleCandleCheck",this.$p.cursor.values[0].Candles_0[4]);
     console.log("cursorY", this.$p.cursor.y);
-    this.ctx.fillStyle = isCurrentCandle ? 'blue' : 'red';
-    // this.ctx.fillStyle = this.$p.colors.panel;
+    // this.ctx.fillStyle = isCurrentCandle ? 'blue' : 'red';
+    this.ctx.fillStyle = this.$p.colors.panel;
 
     let panwidth = this.layout.sb + 1;
 
