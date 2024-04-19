@@ -594,16 +594,18 @@ export default {
 </script>
 
 <style scoped>
+@import url(https://db.onlinewebfonts.com/c/557602b15207c6d67bbdda171a4157dd?family=Yahoo+Sans+Medium+Regular);
    /* Watermark style */
    .watermark {
     position: absolute;
     top: 50%;
     left: 45%;
     transform: translate(-50%, -50%);
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.5);
-    opacity: 0.5;
+    opacity: 0.2;
     pointer-events: none;
+    font-family: "Yahoo Sans Medium Regular";
   }
 </style>

@@ -16,7 +16,8 @@
     box-shadow: 2px 2px 5px 1px #0000001A;
     border: 1px solid #F2F2F2;
     /* background-color: lightblue; */
-    flex-shrink: 0;
+    background-color: #fff;
+    /* flex-shrink: 0; */
 }
 
 .legend-right-section {
