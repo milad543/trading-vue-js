@@ -1,9 +1,6 @@
-
-
-export default class Crosshair {
+    export default class Crosshair {
 
     constructor(comp) {
-
         this.comp = comp
         this.$p = comp.$props
         this.data = this.$p.sub
@@ -11,20 +8,15 @@ export default class Crosshair {
         this.locked = false
         this.layout = this.$p.layout
         this.enableCrosshair = this.$p.enableCrosshair
-
     }
-
+    
     draw(ctx) {
-        // Update reference to the grid
-        this.layout = this.$p.layout
-
-        const cursor = this.comp.$props.cursor
+        this.layout = this.$p.layout;
+    
+        const cursor = this.comp.$props.cursor;
         const candleData = this.$p.cursor.values[0]?.Candles_0;
-        // console.log(this.vis)
-        if (!this.visible && cursor.mode === 'explore') return
 
-        this.x = this.$p.cursor.x
-        this.y = this.$p.cursor.y
+        if (!this.visible && cursor.mode === 'explore') return;
 
         const closingPriceOfCandle = candleData[4];
         const openingPriceOfCandle = candleData[1];
@@ -42,33 +34,29 @@ export default class Crosshair {
             yCoord = this.$p.layout.$2screen(candleHigh); // Convert high price to screen coordinates
         }
     
-
-        ctx.save()
-        ctx.strokeStyle = this.$p.colors.cross
-        ctx.beginPath()
-        ctx.setLineDash([3])
-
-        // H
-        if(this.comp.common.magnet && this.$p.cursor.grid_id === this.layout.id){
+        ctx.save();
+        ctx.strokeStyle = this.$p.colors.cross;
+        ctx.beginPath();
+        ctx.setLineDash([3]);
+    
+        // conditionally check magnet
+        if(this.comp.common.magnet){
             ctx.moveTo(0,yCoord);
             ctx.lineTo(this.layout.width - 0.5, yCoord);
+        }else{
+
+            ctx.moveTo(0, cursor.y);
+            ctx.lineTo(this.layout.width - 0.5, cursor.y);
         }
-       else if (this.$p.cursor.grid_id === this.layout.id) {
-            ctx.moveTo(0, this.y)
-            ctx.lineTo(this.layout.width - 0.5, this.y)
+    
+        ctx.moveTo(cursor.x, 0);
+        ctx.lineTo(cursor.x, this.layout.height);
+    
+        if (this.enableCrosshair) {
+            ctx.stroke();
         }
-
-
-        // V
-        ctx.moveTo(this.x, 0)
-        ctx.lineTo(this.x, this.layout.height)
-
-        if(this.enableCrosshair){
-            ctx.stroke()
-        }
-        
-        ctx.restore()
-
+    
+        ctx.restore();
     }
 
     hide() {
@@ -87,7 +75,7 @@ export default class Crosshair {
 
 }
 
-   // draw(ctx) {
+  // draw(ctx) {
     //     // Update reference to the grid
     //     this.layout = this.$p.layout
 

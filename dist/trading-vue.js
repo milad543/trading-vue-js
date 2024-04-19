@@ -458,7 +458,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 498:
+/***/ 307:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -467,7 +467,7 @@ var ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(787);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 exports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
 // Module
-exports.push([module.id, "\r\n/* CSS for secondVariants */\r\n\r\n \r\n/*  */\n.trading-vue-legend {\r\n  position: relative;\r\n  z-index: 100;\r\n  font-size: 1.25em;\r\n  margin-left: 10px;\r\n  pointer-events: none;\r\n  text-align: left;\r\n  user-select: none;\r\n  font-weight: 300;\n}\n.legendArea{\r\n  pointer-events: all;\n}\n.stx-tooltip {\r\n   margin-top: 12px;\r\n   width: 100px;\r\n   height: 110px;\r\n   background-color: #fff;\r\n   box-shadow: 0 0 8px 0 rgba(70,78,86,.25);\r\n   opacity: .9;\r\n   padding: 10px 15px;\r\n   color: #464e56;\r\n   border-radius: 2px;\r\n   font-size: 13px;\r\n   font-weight: 300;\r\n   line-height: 18px;\r\n   position: absolute;\r\n   z-index: 4;\r\n   white-space: nowrap;\n}\n.stx-field-value{\r\n    font-weight: 600;\r\n    background-color: #fff;\r\n    color: #464e56;\r\n    font-size: 13px;\r\n    line-height: 18px;\n}\r\n\r\n/* .stx-tooltip {\r\n    background-color: #fff;\r\n    border-radius: 3px;\r\n    box-shadow: 0 0 8px 0 rgba(70,78,86,.25);\r\n    color: #464e56;\r\n    font-size: 13px;\r\n    left: -1000px;\r\n    line-height: 18px;\r\n    opacity: .9;\r\n    padding: 10px 15px;\r\n    position: absolute;\r\n    white-space: nowrap;\r\n    z-index: 4;\r\n} */\n.stx-tooltip  .close-btn {\r\n    cursor: pointer;\r\n    font-size: 11px;\r\n    opacity: .5;\r\n    position: absolute;\r\n    right: 5px;\r\n    top: 2px;\n}\n.stx-field-name{\r\n    font-weight: 400;\r\n    opacity: .7;\n}\n.stx-panel{\r\n  height: 30px;\r\n  width: 15px;\r\n  background-color: #fff;\r\n  box-shadow: 0 0 8px 0 rgba(70,78,86,.25);\r\n  font-size: 13px;\r\n  color: #464e56;\r\n  font-weight: 500;\r\n  border-radius: 5px;\r\n  padding: 2px 5px 2px 5px;\r\n  align-items: center;\r\n  text-align: center;\r\n  border-left: 5px solid rgb(0, 129, 242);\n}\n.stx-panel > .clr{\r\n    border-bottom-left-radius: 3px;\r\n    border-top-left-radius: 3px;\r\n    height: 100%;\r\n    width: 5px;\n}\n.stx-tooltip .stx-tooltip-field {\r\n    display: flex;\r\n    justify-content: space-between;\n}\n.cs-vue-title {\r\n  font-weight: 400;\r\n  font-size: 16px;\n}\n.cs-title-1 {\r\n  border: 1px solid red;\r\n  border-radius: 6px;\r\n  font-weight: 400;\r\n  background-color: white;\r\n  color: red;\r\n  padding: 5px 10px 5px 10px;\n}\n.cs-title-2 {\r\n  border: 1px solid blue;\r\n  border-radius: 6px;\r\n  font-weight: 400;\r\n  background-color: white;\r\n  color: #0043fc;\r\n  padding: 5px 10px 5px 10px;\n}\n@media (min-resolution: 2x) {\n.trading-vue-legend {\r\n    font-weight: 400;\n}\n}\n.trading-vue-ohlcv {\r\n  pointer-events: none;\r\n  margin-bottom: 0.5em;\n}\n.t-vue-lspan {\r\n  font-variant-numeric: tabular-nums;\r\n  font-size: 0.95em;\r\n  color: #999999; /* TODO: move => params */\r\n  margin-left: 0.1em;\r\n  margin-right: 0.2em;\n}\n.t-vue-title {\r\n  margin-right: 0.25em;\r\n  font-size: 1.45em;\n}\n.t-vue-ind {\r\n  display: flex;\r\n  margin-left: 0.2em;\r\n  margin-bottom: 0.5em;\r\n  font-size: 1em;\r\n  margin-top: 0.3em;\n}\n.t-vue-ind-sub{\r\n  display: flex;  \r\n  justify-content: center;\r\n  text-align: center;\r\n  border: 1px solid rgba(242, 242, 242, 1);\r\n  border-radius: 8px;\r\n  box-shadow: 2px 2px 5px 1px #0000001A;\r\n  border: 1px solid #F2F2F2;\r\n  color: rgba(0, 0, 0, 1);\r\n  /* added back */\r\n  background-color: #fff;\r\n  padding: 5px 9px;\r\n  font-weight: 500;\r\n  text-align: center;\r\n  font-size: 13px;\n}\n.magnet{\r\n  /* display: flex;\r\n  justify-content: end; */\r\n  background-color: crimson;\n}\n.t-vue-ivalue {\r\n  margin-left: 0.5em;\r\n  /* color: #000000; */\n}\n.t-vue-unknown {\r\n  color: #999999; /* TODO: move => params */\n}\n.tvjs-appear-enter-active,\r\n.tvjs-appear-leave-active {\r\n  transition: all 0.25s ease;\n}\n.tvjs-appear-enter,\r\n.tvjs-appear-leave-to {\r\n  opacity: 0;\n}\r\n", ""]);
+exports.push([module.id, "\r\n/* CSS for secondVariants */\r\n\r\n \r\n/*  */\n.trading-vue-legend {\r\n  position: relative;\r\n  z-index: 100;\r\n  font-size: 1.25em;\r\n  margin-left: 10px;\r\n  pointer-events: none;\r\n  text-align: left;\r\n  user-select: none;\r\n  font-weight: 300;\n}\n.legendArea{\r\n  pointer-events: all;\n}\n.stx-tooltip {\r\n   margin-top: 12px;\r\n   width: 100px;\r\n   height: 110px;\r\n   background-color: #fff;\r\n   box-shadow: 0 0 8px 0 rgba(70,78,86,.25);\r\n   opacity: .9;\r\n   padding: 10px 15px;\r\n   color: #464e56;\r\n   border-radius: 2px;\r\n   font-size: 13px;\r\n   font-weight: 300;\r\n   line-height: 18px;\r\n   position: absolute;\r\n   z-index: 4;\r\n   white-space: nowrap;\n}\n.stx-field-value{\r\n    font-weight: 600;\r\n    background-color: #fff;\r\n    color: #464e56;\r\n    font-size: 13px;\r\n    line-height: 18px;\n}\r\n\r\n/* .stx-tooltip {\r\n    background-color: #fff;\r\n    border-radius: 3px;\r\n    box-shadow: 0 0 8px 0 rgba(70,78,86,.25);\r\n    color: #464e56;\r\n    font-size: 13px;\r\n    left: -1000px;\r\n    line-height: 18px;\r\n    opacity: .9;\r\n    padding: 10px 15px;\r\n    position: absolute;\r\n    white-space: nowrap;\r\n    z-index: 4;\r\n} */\n.stx-tooltip  .close-btn {\r\n    cursor: pointer;\r\n    font-size: 11px;\r\n    opacity: .5;\r\n    position: absolute;\r\n    right: 5px;\r\n    top: 2px;\n}\n.stx-field-name{\r\n    font-weight: 400;\r\n    opacity: .7;\n}\n.stx-panel{\r\n  height: 30px;\r\n  width: 15px;\r\n  background-color: #fff;\r\n  box-shadow: 0 0 8px 0 rgba(70,78,86,.25);\r\n  font-size: 13px;\r\n  color: #464e56;\r\n  font-weight: 500;\r\n  border-radius: 5px;\r\n  padding: 2px 5px 2px 5px;\r\n  align-items: center;\r\n  text-align: center;\r\n  border-left: 5px solid rgb(0, 129, 242);\n}\n.stx-panel > .clr{\r\n    border-bottom-left-radius: 3px;\r\n    border-top-left-radius: 3px;\r\n    height: 100%;\r\n    width: 5px;\n}\n.stx-tooltip .stx-tooltip-field {\r\n    display: flex;\r\n    justify-content: space-between;\n}\n.cs-vue-title {\r\n  font-weight: 400;\r\n  font-size: 16px;\n}\n.cs-title-1 {\r\n  border: 1px solid red;\r\n  border-radius: 6px;\r\n  font-weight: 400;\r\n  background-color: white;\r\n  color: red;\r\n  padding: 5px 10px 5px 10px;\n}\n.cs-title-2 {\r\n  border: 1px solid blue;\r\n  border-radius: 6px;\r\n  font-weight: 400;\r\n  background-color: white;\r\n  color: #0043fc;\r\n  padding: 5px 10px 5px 10px;\n}\n@media (min-resolution: 2x) {\n.trading-vue-legend {\r\n    font-weight: 400;\n}\n}\n.trading-vue-ohlcv {\r\n  pointer-events: none;\r\n  margin-bottom: 0.5em;\n}\n.t-vue-lspan {\r\n  font-variant-numeric: tabular-nums;\r\n  font-size: 0.95em;\r\n  color: #999999; /* TODO: move => params */\r\n  margin-left: 0.1em;\r\n  margin-right: 0.2em;\n}\n.t-vue-title {\r\n  margin-right: 0.25em;\r\n  font-size: 1.45em;\n}\n.t-vue-ind {\r\n  display: flex;\r\n  margin-left: 0.2em;\r\n  margin-bottom: 0.5em;\r\n  font-size: 1em;\r\n  margin-top: 0.3em;\n}\n.t-vue-ind-sub{\r\n  display: flex;  \r\n  justify-content: center;\r\n  text-align: center;\r\n  border: 1px solid rgba(242, 242, 242, 1);\r\n  border-radius: 8px;\r\n  box-shadow: 2px 2px 5px 1px #0000001A;\r\n  border: 1px solid #F2F2F2;\r\n  color: rgba(0, 0, 0, 1);\r\n  /* added background_color */\r\n  background-color: #fff;\r\n  padding: 5px 9px;\r\n  font-weight: 500;\r\n  text-align: center;\r\n  font-size: 13px;\n}\n.magnet{\r\n  /* display: flex;\r\n  justify-content: end; */\r\n  background-color: crimson;\n}\n.t-vue-ivalue {\r\n  margin-left: 0.5em;\r\n  /* color: #000000; */\n}\n.t-vue-unknown {\r\n  color: #999999; /* TODO: move => params */\n}\n.tvjs-appear-enter-active,\r\n.tvjs-appear-leave-active {\r\n  transition: all 0.25s ease;\n}\n.tvjs-appear-enter,\r\n.tvjs-appear-leave-to {\r\n  opacity: 0;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -4276,19 +4276,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 663:
+/***/ 614:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(498);
+var content = __webpack_require__(307);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("748e4999", content, false, {});
+var update = add("77c52220", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -7844,16 +7844,7 @@ var Grid = /*#__PURE__*/function () {
     };
   }
 });
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toArray.js
-
-
-
-
-function _toArray(arr) {
-  return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest();
-}
 ;// CONCATENATED MODULE: ./src/components/js/crosshair.js
-
 
 
 var Crosshair = /*#__PURE__*/function () {
@@ -7871,34 +7862,16 @@ var Crosshair = /*#__PURE__*/function () {
     key: "draw",
     value: function draw(ctx) {
       var _this$$p$cursor$value;
+      // Update reference to the grid
       this.layout = this.$p.layout;
-      // console.log("common ==>", this.comp.common.magnet)
-
       var cursor = this.comp.$props.cursor;
       var candleData = (_this$$p$cursor$value = this.$p.cursor.values[0]) === null || _this$$p$cursor$value === void 0 ? void 0 : _this$$p$cursor$value.Candles_0;
-      var _candleData = _toArray(candleData),
-        open = _candleData[0],
-        high = _candleData[1],
-        low = _candleData[2],
-        close = _candleData[3],
-        volume = _candleData[4],
-        ary = _candleData.slice(5);
-      // console.log("datastructure", open, high, low, close, volume, ary)
-      // console.log("data.row",this.data)
-
+      // console.log(this.vis)
       if (!this.visible && cursor.mode === 'explore') return;
+      this.x = this.$p.cursor.x;
+      this.y = this.$p.cursor.y;
       var closingPriceOfCandle = candleData[4];
       var openingPriceOfCandle = candleData[1];
-
-      // const bodyTop = Math.max(closingPriceOfCandle, openingPriceOfCandle);
-      // const bodyBottom = Math.min(closingPriceOfCandle, openingPriceOfCandle);
-
-      // if(closingPriceOfCandle === bodyBottom){
-      //     console.log("closing price at the bottom of the red candles")
-      // }else{
-      //     console.log("closing price is at the top of the red candels")
-      // }
-
       var closingPrice = candleData[4]; // Assuming closing price is at index 4
       var isOpeningAboveClosing = closingPrice > openingPriceOfCandle; // Check if opening price is above closing price if true red candle
 
@@ -7915,105 +7888,23 @@ var Crosshair = /*#__PURE__*/function () {
       ctx.beginPath();
       ctx.setLineDash([3]);
 
-      // conditionally check magnet
-      if (this.comp.common.magnet) {
+      // H
+      if (this.comp.common.magnet && this.$p.cursor.grid_id === this.layout.id) {
         ctx.moveTo(0, yCoord);
         ctx.lineTo(this.layout.width - 0.5, yCoord);
-      } else {
-        ctx.moveTo(0, cursor.y);
-        ctx.lineTo(this.layout.width - 0.5, cursor.y);
+      } else if (this.$p.cursor.grid_id === this.layout.id) {
+        ctx.moveTo(0, this.y);
+        ctx.lineTo(this.layout.width - 0.5, this.y);
       }
-      ctx.moveTo(cursor.x, 0);
-      ctx.lineTo(cursor.x, this.layout.height);
+
+      // V
+      ctx.moveTo(this.x, 0);
+      ctx.lineTo(this.x, this.layout.height);
       if (this.enableCrosshair) {
         ctx.stroke();
       }
       ctx.restore();
     }
-
-    // draw(ctx) {
-    //     this.layout = this.$p.layout;
-
-    //     const cursor = this.comp.$props.cursor;
-    //     const candleData = this.$p.cursor.values[0].Candles_0;
-    //     console.log("candleData", candleData)
-
-    //     if (!this.visible && cursor.mode === 'explore') return;
-
-    //     const closingPrice = candleData[4]; // Assuming closing price is at index 4
-    //     const isGreenCandle = closingPrice > candleData[1]; // Compare closing price with opening price
-
-    //     let yCoord;
-
-    //     if (isGreenCandle) {
-    //         const candleHigh = candleData[2]; // High price of the candle
-    //         yCoord = this.$p.layout.screen2$(candleHigh); // Convert high price to screen coordinates
-    //     } else {
-    //         const candleLow = candleData[3]; // Low price of the candle
-    //         yCoord = this.$p.layout.screen2$(candleLow); // Convert low price to screen coordinates
-    //     }
-
-    //     ctx.save();
-    //     ctx.strokeStyle = this.$p.colors.cross;
-    //     ctx.beginPath();
-    //     ctx.setLineDash([3]);
-
-    //     ctx.moveTo(0, yCoord);
-    //     ctx.lineTo(this.layout.width - 0.5, yCoord);
-
-    //     ctx.moveTo(cursor.x, 0);
-    //     ctx.lineTo(cursor.x, this.layout.height);
-
-    //     if (this.enableCrosshair) {
-    //         ctx.stroke();
-    //     }
-
-    //     ctx.restore();
-    // }
-
-    // draw(ctx) {
-    //     this.layout = this.$p.layout;
-
-    //     const cursor = this.comp.$props.cursor;
-    //     const candleData = this.$p.cursor.values[0].Candles_0;
-    //     console.log("candle data", candleData)
-
-    //     if (!this.visible && cursor.mode === 'explore') return;
-
-    //     const closingPrice = candleData[4]; // Assuming closing price is at index 4
-    //     console.log("closing price", closingPrice)
-
-    //     const isGreenCandle = closingPrice > candleData[1]; // Compare closing price with opening price
-
-    //     console.log("isGreenCandle", isGreenCandle)
-
-    //     let yCoord;
-
-    //     if (isGreenCandle) {
-    //         const candleHigh = candleData[2]; // High price of the candle
-    //         yCoord = this.$p.layout.screen2$(candleHigh); // Convert high price to screen coordinates
-    //     } else {
-    //         const candleLow = candleData[3]; // Low price of the candle
-    //         yCoord = this.$p.layout.screen2$(candleLow) + 5; // Adjust the offset as needed
-    //     }
-
-    //     ctx.save();
-    //     ctx.strokeStyle = this.$p.colors.cross;
-    //     ctx.beginPath();
-    //     ctx.setLineDash([3]);
-
-    //     ctx.moveTo(0, yCoord);
-    //     ctx.lineTo(this.layout.width - 0.5, yCoord);
-
-    //     ctx.moveTo(cursor.x, 0);
-    //     ctx.lineTo(cursor.x, this.layout.height);
-
-    //     if (this.enableCrosshair) {
-    //         ctx.stroke();
-    //     }
-
-    //     ctx.restore();
-    // }
   }, {
     key: "hide",
     value: function hide() {
@@ -12506,8 +12397,8 @@ var Sidebar_component = normalizeComponent(
 )
 
 /* harmony default export */ const components_Sidebar = (Sidebar_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=edc9dcc0
-var Legendvue_type_template_id_edc9dcc0_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=7e32678b
+var Legendvue_type_template_id_7e32678b_render = function render() {
   var _vm$common;
   var _vm = this,
     _c = _vm._self._c;
@@ -12692,16 +12583,16 @@ var Legendvue_type_template_id_edc9dcc0_render = function render() {
     }) : _vm._e()], 1)], 1)]);
   })], 2);
 };
-var Legendvue_type_template_id_edc9dcc0_staticRenderFns = [function () {
+var Legendvue_type_template_id_7e32678b_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "legend-center-section"
   }, [_c("p", [_vm._v("International Business Machines Corporation")])]);
 }];
-Legendvue_type_template_id_edc9dcc0_render._withStripped = true;
+Legendvue_type_template_id_7e32678b_render._withStripped = true;
 
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=edc9dcc0
+;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=template&id=7e32678b
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ButtonGroup.vue?vue&type=template&id=72b6dd45
 var ButtonGroupvue_type_template_id_72b6dd45_render = function render() {
@@ -13156,9 +13047,9 @@ var settingPng = icons_namespaceObject["gear.png"];
 });
 ;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Legendvue_type_script_lang_js = (Legendvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=edc9dcc0&prod&lang=css
-var Legendvue_type_style_index_0_id_edc9dcc0_prod_lang_css = __webpack_require__(663);
-;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=edc9dcc0&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=7e32678b&prod&lang=css
+var Legendvue_type_style_index_0_id_7e32678b_prod_lang_css = __webpack_require__(614);
+;// CONCATENATED MODULE: ./src/components/Legend.vue?vue&type=style&index=0&id=7e32678b&prod&lang=css
 
 ;// CONCATENATED MODULE: ./src/components/Legend.vue
 
@@ -13171,8 +13062,8 @@ var Legendvue_type_style_index_0_id_edc9dcc0_prod_lang_css = __webpack_require__
 
 var Legend_component = normalizeComponent(
   components_Legendvue_type_script_lang_js,
-  Legendvue_type_template_id_edc9dcc0_render,
-  Legendvue_type_template_id_edc9dcc0_staticRenderFns,
+  Legendvue_type_template_id_7e32678b_render,
+  Legendvue_type_template_id_7e32678b_staticRenderFns,
   false,
   null,
   null,
