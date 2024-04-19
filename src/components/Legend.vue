@@ -615,6 +615,7 @@ export default {
   box-shadow: 2px 2px 5px 1px #0000001A;
   border: 1px solid #F2F2F2;
   color: rgba(0, 0, 0, 1);
+  /* added background_color */
   background-color: #fff;
   padding: 5px 9px;
   font-weight: 500;
