@@ -58,7 +58,6 @@ export default class Crosshair {
             ctx.lineTo(this.layout.width - 0.5, this.y)
         }
 
-
         // V
         ctx.moveTo(this.x, 0)
         ctx.lineTo(this.x, this.layout.height)
