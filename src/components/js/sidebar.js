@@ -16,7 +16,6 @@ export default class Sidebar {
     this.range = this.$p.range;
     this.id = this.$p.grid_id;
     this.layout = this.$p.layout.grids[this.id];
-
     this.side = side;
     this.calc_range_function = this.calc_range_by_layout;
     this.listeners();
@@ -176,7 +175,7 @@ export default class Sidebar {
 
     this.ctx.stroke();
 
-    if (this.$p.grid_id) this.upper_border();
+    // if (this.$p.grid_id) this.upper_border();
     this.apply_shaders();
 
     if (this.$p.cursor.y && this.$p.cursor.y$) this.panel();
@@ -197,14 +196,7 @@ export default class Sidebar {
     }
   }
 
-  upper_border() {
-    this.ctx.strokeStyle = this.$p.colors.scale;
-    this.ctx.beginPath();
-    this.ctx.moveTo(0, 0.5);
-    this.ctx.lineTo(this.layout.width, 0.5);
-    this.ctx.stroke();
-  }
-
+//
   // A gray bar behind the current price
   panel() {
     // console.log("this is panel", this.$p);
@@ -230,22 +222,22 @@ export default class Sidebar {
     //    lbl = this.$p.cursor.y$.toFixed(2);
     // }
     // let lbl = this.$p.cursor.y$.toFixed(this.$p.decimalPlace);
-    const isCurrentCandle = this.$p.cursor.values[0].Candles_0[4] > this.$p.cursor.values[0].Candles_0[1];
-    console.log("isCurrentCandle",this.$p.cursor.values[0].Candles_0[4] > this.$p.cursor.values[0].Candles_0[1]) ;
+    // const isCurrentCandle = this.$p.cursor.values[0].Candles_0[4] > this.$p.cursor.values[0].Candles_0[1];
+    // console.log("isCurrentCandle",this.$p.cursor.values[0].Candles_0[4] > this.$p.cursor.values[0].Candles_0[1]) ;
 
   // Determine the fill color of the sidebar based on whether the cursor is on the current candle
   // const sidebarColor = isCurrentCandle
     const array =  this.$p.cursor.values[0].Candles_0;
   // Set the fill style for the panel background
 
-    for (let i = 0; i < this.$p.cursor.values[0].Candles_0.length; i++) {
-      const element = this.$p.cursor.values[0].Candles_0[i];
+    // for (let i = 0; i < this.$p.cursor.values[0].Candles_0.length; i++) {
+    //   const element = this.$p.cursor.values[0].Candles_0[i];
 
-      console.log("candle element", element);
-    }
+    //   console.log("candle element", element);
+    // }
 
-    console.log("singleCandleCheck",this.$p.cursor.values[0].Candles_0[4]);
-    console.log("cursorY", this.$p.cursor.y);
+    // console.log("singleCandleCheck",this.$p.cursor.values[0].Candles_0[4]);
+    // console.log("cursorY", this.$p.cursor.y);
     // this.ctx.fillStyle = isCurrentCandle ? 'blue' : 'red';
     this.ctx.fillStyle = this.$p.colors.panel;
 

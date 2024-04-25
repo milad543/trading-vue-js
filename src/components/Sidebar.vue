@@ -1,8 +1,15 @@
+<!-- <template>
+    <div>
+      <button>adfafds</button>
+    </div>
+  </template> -->
+  
 <script>
 // The side bar (yep, that thing with a bunch of $$$)
 
 import Sidebar from './js/sidebar.js'
 import Canvas from '../mixins/canvas.js'
+
 
 export default {
     name: 'Sidebar',

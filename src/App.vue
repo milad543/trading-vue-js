@@ -8,13 +8,13 @@
       <option value="Candle">Candle</option>
       <option value="Splines">Splines</option>
     </select>-->
-    <button class="ui icon button" @click="sliceD">
+    <!-- <button class="ui icon button" @click="sliceD">
       <i class="icon">Toggle {{ auto_y_axis ? "A" : "M" }}</i>
     </button>
 
     max<input type="number" id="max" name="max" v-model.number="max" />
     min<input type="number" id="min" name="min" v-model.number="min" />
-    <button @click="handleChangeRange()">range</button>
+    <button @click="handleChangeRange()">range</button> -->
 
     <trading-vue
       v-on:range-changed="handleChartRange"
@@ -37,23 +37,25 @@
       :indexBased="true"
       :ignoreNegativeIndex="true"
       ref="tradeRef"
-      :waterMarkText="'incometradercharts.com'"
+      :waterMarkText="'incometradercharts'"
       :color-back="colors.colorBack"
       :color-grid="colors.colorGrid"
       :color-text="colors.colorText"
-      :colorWickUp="'black'"
-      :colorWickDw="'black'"
+      :colorWickUp="colors ? colors.colorWickUp : 'black'"
+      :colorWickDw="colors ? colors.colorWickDw : 'black'"
       :colorCandleUp="candleColorUp()"
       :colorCandleDw="candleColorDw()"
-      :magnet="magnet"
       :candleBorder="candleBorder"
+      :magnet="magnet"
       @showMagnetOnChart="toggleMagnet"
+      @darkMode="darkMode"
+      :isDark="isDark"
       :firstVariant="firstVariant" 
       :secondVariant="secondVariant"
       :thirdVariant="thirdVariant"
       :fourthVariant="fourthVariant"
-      :colorPanel="'blue'"
       :title-txt="'IBM'"
+      :colorCross="colors.colorCross"
     >
     </trading-vue>
     
@@ -94,14 +96,22 @@ export default {
       width: window.innerWidth,
       height: window.innerHeight,
       date: "",
-      colors: {
-        colorBack: "#fff",
-        colorGrid: "#eee",
-        colorText: "#333",
-      },
+      // colors: {
+      //   colorBack: "#fff",
+      //   colorGrid: "#eee",
+      //   colorText: "#333",
+      // },
+      // darkModeObj:{
+      //   colorBack: "#fff",
+      //   colorGrid: "#eee",
+      //   colorText: "#6B6B6B",
+      //   colorWickUp:"#188874",
+      //   colorWickDw:"#B21523"
+      // },
       // colorCandleUp: "candleColorUp",
       // colorCandleDw: "candleColorDw",
-      watermarkText : "Invest-EDU",
+      // watermarkText : "Invest-EDU",
+      isDark: false,
       magnet: false,
       
       
@@ -117,8 +127,8 @@ export default {
     this.chart.set("chart.type", "Candles");
     this.chart.set("chart.tf", "1D");
     this.$nextTick(() => {
-      this.width = window.innerWidth * 0.98;
-      this.height = window.innerHeight * 0.97;
+      this.width = window.innerWidth * 1.0; // 0.98 previous
+      this.height = window.innerHeight * 1.0; // 0.98 previous
     });
 
     // this.chart.data.chart.type = "Splines";
@@ -129,7 +139,29 @@ export default {
   beforeDestroy() {
     window.removeEventListener("resize", this.onResize);
   },
-  computed: {},
+  computed: {
+    colors(){
+      if(!this.isDark){
+         return {
+            colorBack: '#fff',
+            colorGrid: '#eee',
+            colorText: '#333',
+            colorWickUp:'#000000',
+            colorWickDw:'#000000' ,
+            colorCross: '#8091a0'
+        }
+      }else{
+        return {
+          colorBack: '#1A1A1A',
+          colorGrid: '#3B3B3B',
+          colorText: '#6B6B6B',
+          colorWickUp:'#188874',
+          colorWickDw:'#B21523',
+          colorCross: '#6B6B6B'
+        }
+      }
+    }
+  },
   methods: {
     // candleColorUp and candleColorDw
     candleColorUp(){
@@ -181,6 +213,20 @@ export default {
     toggleMagnet(){
       console.log("this is magnet", this.magnet)
       this.magnet =  !this.magnet
+    },
+    darkMode(){
+      this.isDark = !this.isDark;
+      // console.log("this.isDark",this.isDark);
+      // if(this.isDark){
+      //   this.colors.colorBack = "#000000"
+      //   this.colors.colorGrid = "#3B3B3B"
+      //   this.colors.colorText = "#6B6B6B"
+      //   this.
+      // }else {
+      //   this.colors.colorBack = "#fff"
+      //   this.colors.colorGrid = "#eee"
+      //   this.colors.colorText = "#333"
+      // }
     },
     handleChangeRange() {
       this.$refs?.tradeRef?.toggleSidebarCustomRange([this.max, this.min]);

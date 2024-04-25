@@ -1,6 +1,5 @@
 <template>
-<!--              margin: config.L_BTN_MARGIN
--->
+<!--margin: config.L_BTN_MARGIN-->
     <img :id="uuid" class="t-vue-lbtn"
         :src="base64" :style="{
             width: config.L_BTN_SIZE + 'px',

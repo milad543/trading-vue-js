@@ -94,6 +94,8 @@ export default class Price {
 
     // Regular draw call for overaly
     draw(ctx) {
+
+        console.log("this.comp.colorCandleDw",typeof this.comp.colorCandleDw);
         if (!this.comp.$props.meta.last) return
         if (!this.shader) this.init_shader()
 
@@ -137,7 +139,12 @@ export default class Price {
     }
 
     red() {
-        return this.comp.colorCandleDw
+        if(this.comp.colorCandleDw === "#FCFCFC"){
+            return "#B0B0B0"
+        }else{
+            return this.comp.colorCandleDw
+        }
+        // return this.comp.colorCandleDw
     }
 
     drawArrow(ctx, fromx, fromy, tox, toy, arrowWidth, color){

@@ -12,14 +12,17 @@
     @mousedown="mousedown"
     @mouseleave="mouseleave"
   >
-    <span @click="showMagnet" class="mgt">
+    <div style="display:flex; justify-content:flex-end; cursor: pointer;   pointer-events: all;">
+      <span @click="showMagnet" class="mgt">
       <svg :fill="magnet ? 'green' : '#000000'" height="18" width="18" version="1.1" id="Capa_1" xm lns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M245,0C109.8,0,0.5,109.2,0.5,243.4v225.8c0,11.4,9.4,20.8,20.8,20.8h90.5c11.4,0,20.8-9.4,20.8-20.8 c0-0.4,0-225.8,0-225.8c0-62.4,51-112.4,112.4-112.4s112.4,51,112.4,112.4c0,0,0,224.4,0,224.7c0,11.4,9.4,20.8,20.8,20.8h90.5 c11.4,0,20.8-9.4,20.8-19.8V243.4C489.5,109.2,380.2,0,245,0z M41.1,369.3H91v79.1H41.1V369.3z M245,90.5 c-85.3,0-154,68.7-154,152.9v84.3H41.1v-84.3C41.1,131,132.6,40.5,245,40.5S448.9,132,448.9,243.4v84.3H399v-84.3 C399,159.2,330.3,90.5,245,90.5z M399,447.3v-78h49.9v78H399z"></path> </g> </g>
       </svg>
-    </span>
+     </span>
+      <button  @click="$emit('darkMode')" style="margin-left:8px; cursor: pointer;">Dark</button>
+    </div>
 
     <toolbar
       v-if="toolbar"
-      ref="toolbar"
+      ref="toolbar" 
       v-bind="chart_props"
       :config="chart_config"
       @custom-event="custom_event"
@@ -100,9 +103,13 @@ export default {
       type: Boolean,
       default: false
     },
+    isDark:{
+      type: Boolean,
+      default: false
+    },
     waterMarkText:{
       type: String,
-      default: "Water Mark"
+      default: "incometradercharts.com"
     },
     candleBorder:{
       type: Boolean,
@@ -140,6 +147,10 @@ export default {
     height: {
       type: Number,
       default: 421,
+    },
+    colors:{
+      type: Object,
+      default: {}
     },
     colorTitle: {
       type: String,
@@ -333,6 +344,7 @@ export default {
         legend_txt_color: this.$props.legendTxtColor,
         waterMarkText: this.$props.waterMarkText,
         magnet: this.$props.magnet,
+        isDark: this.$props.isDark,
         firstVariant: this.$props.firstVariant,
         secondVariant: this.$props.secondVariant,
         thirdVariant: this.$props.thirdVariant,

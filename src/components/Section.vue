@@ -1,6 +1,7 @@
 <template>
   <!-- Horizontal section: (grid + sidebar) -->
   <div class="trading-vue-section">
+    
     <chart-legend
       ref="legend"
       :values="section_values"

@@ -17,7 +17,32 @@
     border: 1px solid #F2F2F2;
     /* background-color: lightblue; */
     background-color: #fff;
+    margin-top: -19px;
     /* flex-shrink: 0; */
+}
+
+/* for dark mode */
+.sub-main-legend-dark{
+    display: flex;
+    align-items: center;
+    /* background: #847373; */
+    /* padding: 5px 9px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    gap: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 1px #0000001A;
+    border: 1px solid #727272;
+    /* background-color: lightblue; */
+    background-color: #1A1A1A;
+    margin-top: -19px;
+    /* flex-shrink: 0; */
+}
+
+.right-title-dark{
+    color: #FFFFFF;
 }
 
 .legend-right-section {
@@ -34,13 +59,15 @@
 
 }
 
+
 .legend-center-section {
     /* background-color: lightcoral; */
     font-family: "Inter", sans-serif;
     font-size: 12px;
-    font-weight: 600;
+    /* font-weight: 400; */
     line-height: 12.1px;
     text-align: left;
+    color: gray;
     /* background-color: lightcyan; */
     /* background-color: lightgrey; */
 
@@ -50,6 +77,10 @@
            -webkit-box-orient: vertical;
           -webkit-line-clamp: 5;
           display: -webkit-box; */
+}
+.legend-center-section-dark{
+    color: #FFFFFF;
+   
 }
 
 .legend-left-section {
@@ -65,12 +96,18 @@
     /* justify-content: space-between; */
     /* justify-content: space-between; */
     gap: 15px;
+    /* white-space: nowrap; */
     /* background-color: lightyellow; */
 
 }
 
+.stx-text-dark{
+    color: #FFFFFF;
+}
+
 .stx-text, .stx-value{
-    flex-basis: 250px;
+    flex-basis: 250;
+    /* background-color: lightgreen; */
 }
 
 @media screen and (max-width: 1515px) {
@@ -133,11 +170,20 @@
     color: #000000;
 }
 
-.legend-last-section {
+/* .legend-last-section {
     font-family: inter;
     font-size: 12px;
     font-weight: 400;
     line-height: 9.68px;
        text-align: left;
     background-color: red ;
+} */
+
+/* styling for change */
+
+.main-legend .sub-main-legend .legend-left-section .change {
+    width: 100px; /* Set the width as per your requirement */
+    overflow: hidden;
+    white-space: nowrap;
+    /* background-color: lightgreen; */
 }

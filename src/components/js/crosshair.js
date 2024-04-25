@@ -53,7 +53,7 @@ export default class Crosshair {
             ctx.moveTo(0,yCoord);
             ctx.lineTo(this.layout.width - 0.5, yCoord);
         }
-       else if (this.$p.cursor.grid_id === this.layout.id) {
+        else if (this.$p.cursor.grid_id === this.layout.id) {
             ctx.moveTo(0, this.y)
             ctx.lineTo(this.layout.width - 0.5, this.y)
         }
