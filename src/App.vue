@@ -15,6 +15,7 @@
     max<input type="number" id="max" name="max" v-model.number="max" />
     min<input type="number" id="min" name="min" v-model.number="min" />
     <button @click="handleChangeRange()">range</button> -->
+    <!-- :chart-config=" { DEFAULT_LEN: 20 } " -->
 
     <trading-vue
       v-on:range-changed="handleChartRange"
@@ -144,7 +145,7 @@ export default {
       if(!this.isDark){
          return {
             colorBack: '#fff',
-            colorGrid: '#eee',
+            colorGrid: '#e0dcdc',
             colorText: '#333',
             colorWickUp:'#000000',
             colorWickDw:'#000000' ,

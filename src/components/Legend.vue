@@ -28,14 +28,14 @@
       <!-- <span  v-if="show_values && !show_CustomProps"> -->
       <span
         @click="openModal"
-        class="stx-panel legendArea"
+        class="stx-panel legendArea" :class="{ 'dark-stx': common?.isDark }"
         v-if="show_values && !show_CustomProps && common.firstVariant"
       >
         <span class="clr"></span>
         <span class="stx-info">
-          <span class="stx-sym">{{ common.title_txt }}</span>
+          <span :class="common.isDark ? 'stx-sym-dark' : 'stx-sym'">{{ common.title_txt }}</span>
           <!-- <span class="stx-price">{{ ohlcv[3] }}</span> -->
-          <span class="stx-com"
+          <span class="stx-com" style="color: #a0a0a0;"
             >International Business Machines Corporation</span
           >
         </span>
@@ -57,32 +57,32 @@
         v-if="
           common.firstVariant && show_values && !show_CustomProps && showModal
         "
-        class="stx-tooltip legendArea"
+        class="stx-tooltip legendArea" :class="{ 'dark-bg': common?.isDark }"
       >
-        <div class="close-btn legendArea" @click="showModal = false">X</div>
+        <div :class="common.isDark ? 'close-btn-dark' : 'close-btn legendArea'" @click="showModal = false">X</div>
         <div class="stx-tooltip-field auto">
-          <div class="stx-field-name">Open</div>
-          <div class="stx-field-value">{{ ohlcv[0] }}</div>
+          <div :class="common.isDark ? 'stx-field-name-dark' : 'stx-field-name'">Open</div>
+          <div :class="common.isDark ? 'stx-field-value-dark' : 'stx-field-value'">{{ ohlcv[0] }}</div>
         </div>
         <div class="stx-tooltip-field auto">
-          <div class="stx-field-name">High</div>
-          <div class="stx-field-value">{{ ohlcv[1] }}</div>
+          <div :class="common.isDark ? 'stx-field-name-dark' : 'stx-field-name'">High</div>
+          <div :class="common.isDark ? 'stx-field-value-dark' : 'stx-field-value'">{{ ohlcv[1] }}</div>
         </div>
         <div class="stx-tooltip-field auto">
-          <div class="stx-field-name">Low</div>
-          <div class="stx-field-value">{{ ohlcv[2] }}</div>
+          <div :class="common.isDark ? 'stx-field-name-dark' : 'stx-field-name'">Low</div>
+          <div :class="common.isDark ? 'stx-field-value-dark' : 'stx-field-value'">{{ ohlcv[2] }}</div>
         </div>
         <div class="stx-tooltip-field auto">
-          <div class="stx-field-name">Close</div>
-          <div class="stx-field-value">{{ ohlcv[3] }}</div>
+          <div :class="common.isDark ? 'stx-field-name-dark' : 'stx-field-name'">Close</div>
+          <div :class="common.isDark ? 'stx-field-value-dark' : 'stx-field-value'">{{ ohlcv[3] }}</div>
         </div>
         <div class="stx-tooltip-field auto">
-          <div class="stx-field-name">Volume</div>
-          <div class="stx-field-value">{{ formatVolume(ohlcv[4]) }}</div>
+          <div :class="common.isDark ? 'stx-field-name-dark' : 'stx-field-name'">Volume</div>
+          <div :class="common.isDark ? 'stx-field-value-dark' : 'stx-field-value'">{{ formatVolume(ohlcv[4]) }}</div>
         </div>
         <div class="stx-tooltip-field auto">
-          <div class="stx-field-name">% Change</div>
-          <div class="stx-field-value">{{ ohlcv[7] }}%</div>
+          <div :class="common.isDark ? 'stx-field-name-dark' : 'stx-field-name'">% Change</div>
+           <div :class="common.isDark ? 'stx-field-value-dark' : 'stx-field-value'">{{ ohlcv[7] }}%</div>
         </div>
       </div>
       <br />
@@ -559,6 +559,12 @@ export default {
   white-space: nowrap;
 }
 
+.stx-tooltip.dark-bg {
+    background-color: black;
+    border: 1px solid #727272;
+    border-radius: 5px;
+}
+
 .stx-field-value {
   font-weight: 600;
   background-color: #fff;
@@ -566,6 +572,14 @@ export default {
   font-size: 13px;
   line-height: 18px;
 }
+.stx-field-value-dark{
+  font-weight: 600;
+  /* background-color: gray; */
+  color: #a0a0a0;
+  font-size: 13px;
+  line-height: 18px;
+}
+
 .stx-info {
   padding: 5px 5px;
 }
@@ -593,6 +607,21 @@ export default {
   right: 5px;
   top: 2px;
 }
+.close-btn-dark{
+  /* background-color: gray; */
+  cursor: pointer;
+  font-size: 11px;
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+
+.stx-field-name-dark{
+  color: #fff;
+  font-weight: 400;
+}
 
 .stx-field-name {
   font-weight: 400;
@@ -603,6 +632,10 @@ export default {
 }
 .stx-sym {
   font-weight: bold;
+}
+.stx-sym-dark{
+  font-weight: bold;
+  color: #eee;
 }
 .stx-panel {
   height: 30px;
@@ -616,6 +649,12 @@ export default {
   padding: 5px 5px 5px 5px;
   align-items: center;
   text-align: center;
+  border-left: 5px solid rgb(0, 129, 242);
+}
+
+.stx-panel.dark-stx{
+  background: #000000;
+  border: 1px solid #727272;
   border-left: 5px solid rgb(0, 129, 242);
 }
 

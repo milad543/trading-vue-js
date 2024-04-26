@@ -354,20 +354,26 @@ export default class Grid {
     this.ctx.beginPath();
 
     const ymax = this.layout.height;
-    // for (var [x, p] of this.layout.xs) {
-    //
-    //     this.ctx.moveTo(x - 0.5, 0)
-    //     this.ctx.lineTo(x - 0.5, ymax)
-    //
-    // }
+    this.ctx.save();
+    this.ctx.setLineDash([3,3])
+    /* dev1 just uncomment the this lines t add the grid vertically lines */
+    for (var [x, p] of this.layout.xs) {
+    
+        this.ctx.moveTo(x - 0.5, 0)
+        this.ctx.lineTo(x - 0.5, ymax)
+    
+    }
+
     for (var [y, y$] of this.layout.ys) {
       this.ctx.moveTo(0, y - 0.5);
       this.ctx.lineTo(this.layout.width, y - 0.5);
     }
 
     this.ctx.stroke();
-
+    this.ctx.restore();
     if (this.$p.grid_id) this.upper_border();
+
+    
   }
 
   upper_border() {

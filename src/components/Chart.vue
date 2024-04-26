@@ -32,10 +32,10 @@
     >
     </grid-section>
 
-    <botbar v-bind="botbar_props"  :timezone="timezone"></botbar>
+    <botbar v-bind="botbar_props"   :timezone="timezone"></botbar>
 
 
-    <div  :class="this.$props.isDark ? 'watermark-dark' : 'watermark'" v-if="main_section?.waterMarkText && !smeFunc()">
+    <div :class="this.$props.isDark ? 'watermark-dark' : 'watermark'" v-if="main_section?.waterMarkText && !smeFunc()">
      {{ main_section.waterMarkText }}
      </div>
       <div class="watermark" v-else-if="smeFunc() === 'sme'">
@@ -48,8 +48,6 @@
      <div class="watermark" v-else-if="smeFunc() === 'it'">
       <img v-bind:src="'../../assets/itLogo.png'" alt="Logo" />
     </div>
-
-    
   </div>
 </template>
 
@@ -190,6 +188,7 @@ export default {
       p.width = p.layout.botbar.width;
       p.height = p.layout.botbar.height;
       p.rerender = this.rerender;
+      p.showSettingsButton = this.$props.showSettingsButton; // i added the button
       return p;
     },
     offsub() {
@@ -673,7 +672,7 @@ export default {
 
 .watermark-dark{
   color: #6B6B6B;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 .watermark {
   color: rgba(0, 0, 0, 0.5); /* Light theme color */
