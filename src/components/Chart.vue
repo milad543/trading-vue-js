@@ -75,6 +75,7 @@ export default {
   mixins: [Shaders, DataTrack],
   props: [
     "title_txt",
+    "company_name",
     "data",
     "width",
     "height",
@@ -471,6 +472,7 @@ export default {
     common_props() {
       return {
         title_txt: this.chart.name || this.$props.title_txt,
+        company_name: this.$props.company_name,
         legend_txt_color: this.$props.legend_txt_color,
         waterMarkText: this.$props.waterMarkText,
         magnet: this.$props.magnet,

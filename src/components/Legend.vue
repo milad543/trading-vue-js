@@ -17,13 +17,24 @@
           {{ n.name }}&nbsp;
         </span>
       </template>
-      <!-- <span
+      <span
         class="t-vue-title"
-        v-if="!show_CustomProps"
+        v-if="!common.firstVariant && !common.secondVariant && !common.thirdVariant && !common.fourthVariant && !show_CustomProps" 
         :style="{ color: common.colors.title }"
       >
         {{common.title_txt}}
-      </span> -->
+        
+      </span>
+        <span v-if="!common.firstVariant && !common.secondVariant && !common.thirdVariant && !common.fourthVariant &&show_values && !show_CustomProps" :style="{color: common.colors.title}" >
+            O<span :style="styleTxt" class="t-vue-lspan" >{{ohlcv[0]}}</span>
+            H<span :style="styleTxt" class="t-vue-lspan" >{{ohlcv[1]}}</span>
+            L<span  :style="styleTxt" class="t-vue-lspan" >{{ohlcv[2]}}</span>
+            C<span :style="styleTxt" class="t-vue-lspan" >{{ohlcv[3]}}</span>
+            V<span :style="styleTxt" class="t-vue-lspan" >{{ohlcv[4]}}</span>
+            <span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[6]  }}</span>
+            <span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[7] }}%</span> 
+
+        </span>
       <!-- Old legend -->
       <!-- <span  v-if="show_values && !show_CustomProps"> -->
       <span
@@ -35,12 +46,11 @@
         <span class="stx-info">
           <span :class="common.isDark ? 'stx-sym-dark' : 'stx-sym'">{{ common.title_txt }}</span>
           <!-- <span class="stx-price">{{ ohlcv[3] }}</span> -->
-          <span class="stx-com" style="color: #a0a0a0;"
-            >International Business Machines Corporation</span
-          >
+          <!-- <span class="stx-com" style="color: #a0a0a0">International Business Machines Corporation</span> -->
+          <span class="stx-com" style="color: #a0a0a0">{{ common.company_name }}</span>
         </span>
 
-        <!-- <span v-if="show_values && !show_CustomProps">
+        <!-- <span v-if="!common.firstVariant && !common.secondVariant && !common.thirdVariant && !common.fourthVariant &&  show_values && !show_CustomProps">
             O<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[0] }}</span>
             H<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[1] }}</span>
             L<span :style="styleTxt" class="t-vue-lspan">{{ ohlcv[2] }}</span>
@@ -49,9 +59,12 @@
          </span>
           <span :style="styleTxt" class="cs-vue-title">{{ ohlcv[6]  }}</span>
           <span :style="styleTxt" class="cs-vue-title">{{ ohlcv[7] }}%</span> -->
+
       </span>
 
       <!-- //TODO: work for firstvariant of charts -->
+
+      <!-- variant for incometradercharts.com -->
 
       <div
         v-if="
@@ -81,7 +94,7 @@
           <div :class="common.isDark ? 'stx-field-value-dark' : 'stx-field-value'">{{ formatVolume(ohlcv[4]) }}</div>
         </div>
         <div class="stx-tooltip-field auto">
-          <div :class="common.isDark ? 'stx-field-name-dark' : 'stx-field-name'">% Change</div>
+          <div :class="common.isDark ? 'stx-fie2d-name-dark' : 'stx-field-name'">% Change</div>
            <div :class="common.isDark ? 'stx-field-value-dark' : 'stx-field-value'">{{ ohlcv[7] }}%</div>
         </div>
       </div>
@@ -103,7 +116,8 @@
             <span :class="common?.isDark ? 'right-title-dark' : 'right-title'">{{ common.title_txt }}</span>
           </div>
           <div :class="common?.isDark ? 'legend-center-section-dark' : 'legend-center-section'">
-            <p>International Business Machines Corporation</p>
+            <!-- <p>International Business Machines Corporation</p> -->
+            <p>{{ common.company_name }}</p>
           </div>
           <div class="legend-left-section">
             <span>
@@ -756,6 +770,18 @@ export default {
   text-align: center;
   font-size: 13px;
 }
+/* 
+.t-vue-ind-sub {
+  width: 100%;
+  display: flex;
+  text-align: left;
+  border: 1px solid #f2f2f2;
+  color: rgba(0, 0, 0, 1);
+  background-color: #E6E6E6;
+  padding-left: 2px;
+  font-weight: bold;
+  font-size: 14px;
+} */
 
 .magnet {
   /* display: flex;

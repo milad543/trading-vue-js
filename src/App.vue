@@ -17,6 +17,18 @@
     <button @click="handleChangeRange()">range</button> -->
     <!-- :chart-config=" { DEFAULT_LEN: 20 } " -->
 
+    <button style="cursor: pointer" @click="toggleVariant('firstVariant')">Activate V1</button>
+    <button style="cursor: pointer"  @click="toggleVariant('secondVariant')">Activate V2</button>
+    <button style="cursor: pointer" @click="toggleVariant('thirdVariant')">Activate V3</button>
+    <button style="cursor: pointer" @click="toggleVariant('fourthVariant')">Activate V4</button>
+    <button style="cursor: pointer" @click="darkMode">Dark</button>
+    <button>
+      <span @click="toggleMagnet" style="display: flex; align-items: center" class="mgt">
+      <svg :fill="magnet ? 'green' : '#000000'" height="14" width="14" version="1.1" id="Capa_1" xm lns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M245,0C109.8,0,0.5,109.2,0.5,243.4v225.8c0,11.4,9.4,20.8,20.8,20.8h90.5c11.4,0,20.8-9.4,20.8-20.8 c0-0.4,0-225.8,0-225.8c0-62.4,51-112.4,112.4-112.4s112.4,51,112.4,112.4c0,0,0,224.4,0,224.7c0,11.4,9.4,20.8,20.8,20.8h90.5 c11.4,0,20.8-9.4,20.8-19.8V243.4C489.5,109.2,380.2,0,245,0z M41.1,369.3H91v79.1H41.1V369.3z M245,90.5 c-85.3,0-154,68.7-154,152.9v84.3H41.1v-84.3C41.1,131,132.6,40.5,245,40.5S448.9,132,448.9,243.4v84.3H399v-84.3 C399,159.2,330.3,90.5,245,90.5z M399,447.3v-78h49.9v78H399z"></path> </g> </g>
+      </svg>
+     </span>
+    </button>
+
     <trading-vue
       v-on:range-changed="handleChartRange"
       v-on:sidebar-transform="sidebar_transform"
@@ -48,7 +60,7 @@
       :colorCandleDw="candleColorDw()"
       :candleBorder="candleBorder"
       :magnet="magnet"
-      @showMagnetOnChart="toggleMagnet"
+      v-on-click="toggleMagnet"
       @darkMode="darkMode"
       :isDark="isDark"
       :firstVariant="firstVariant" 
@@ -57,6 +69,7 @@
       :fourthVariant="fourthVariant"
       :title-txt="'IBM'"
       :colorCross="colors.colorCross"
+      companyName="International Business Machines Corporation"
     >
     </trading-vue>
     
@@ -114,10 +127,8 @@ export default {
       // watermarkText : "Invest-EDU",
       isDark: false,
       magnet: false,
-      
-      
       firstVariant: false, // for like yahoo charts
-      secondVariant: true,
+      secondVariant: false,
       thirdVariant: false,
       fourthVariant: false
     };
@@ -164,16 +175,27 @@ export default {
     }
   },
   methods: {
+    toggleVariant(variant){
+      this.firstVariant = false;
+      this.secondVariant = false;
+      this.thirdVariant = false;
+      this.fourthVariant = false;
+
+      this[variant] = true;
+    },
     // candleColorUp and candleColorDw
     candleColorUp(){
       if(this.firstVariant){
         this.candleBorder = false
         return "#00B061"
       }else if(this.secondVariant){
+        this.candleBorder = true;
         return "#16B195"
       }else if(this.thirdVariant){
+        this.candleBorder = true;
         return "#7D7E7E"
       }else if(this.fourthVariant) {
+        this.candleBorder = true;
         return "#0D66CE"
       }
     },
