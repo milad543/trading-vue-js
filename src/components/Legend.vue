@@ -94,7 +94,7 @@
           <div :class="common.isDark ? 'stx-field-value-dark' : 'stx-field-value'">{{ formatVolume(ohlcv[4]) }}</div>
         </div>
         <div class="stx-tooltip-field auto">
-          <div :class="common.isDark ? 'stx-fie2d-name-dark' : 'stx-field-name'">% Change</div>
+          <div :class="common.isDark ? 'stx-field-name-dark' : 'stx-field-name'">% Change</div>
            <div :class="common.isDark ? 'stx-field-value-dark' : 'stx-field-value'">{{ ohlcv[7] }}%</div>
         </div>
       </div>
