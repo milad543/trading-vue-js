@@ -51,7 +51,7 @@ export default class CandleExt {
             )
             if(this.self.candle_border){
                 this.ctx.strokeStyle = this.style.borderColor || 'black';
-                // this.ctx.lineWidth = "3";
+                this.ctx.lineWidth = "1";
                 this.ctx.strokeRect(
                     x1,
                     y1,

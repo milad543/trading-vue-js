@@ -23,6 +23,8 @@ export default class Crosshair {
         // console.log(this.vis)
         if (!this.visible && cursor.mode === 'explore') return
 
+      
+
         this.x = this.$p.cursor.x
         this.y = this.$p.cursor.y
 

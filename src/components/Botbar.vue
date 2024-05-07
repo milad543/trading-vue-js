@@ -24,7 +24,7 @@ export default {
     ],
     computed: {
         bot_shaders() {
-            return this.$props.shaders
+            return this.$props.shaders 
                 .filter(x => x.target === 'botbar')
         }
     },

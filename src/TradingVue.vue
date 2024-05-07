@@ -115,6 +115,12 @@ export default {
       type: String,
       default: "incometradercharts.com"
     },
+    waterMark:{
+      type: String,
+      default: function(){
+        return
+      }
+    },
     candleBorder:{
       type: Boolean,
       deafault: false
@@ -348,6 +354,7 @@ export default {
         company_name: this.$props.companyName,
         legend_txt_color: this.$props.legendTxtColor,
         waterMarkText: this.$props.waterMarkText,
+        waterMark: this.$props.waterMark,
         magnet: this.$props.magnet,
         isDark: this.$props.isDark,
         firstVariant: this.$props.firstVariant,

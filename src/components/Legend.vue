@@ -292,10 +292,10 @@ export default {
             return Array(8).fill("n/a");
         }
       }
-      console.log("ohlcv is here", this.$props.values.ohlcv[3]);
+      // console.log("ohlcv is here", this.$props.values.ohlcv[3]);
       // const prec = this.layout.prec
       const prec = this.decimalPlace;
-      console.log("prec==>", prec);
+      // console.log("prec==>", prec);
       // const prec = 3
       // TODO: main the main legend more customizable
       let id = this.main_type + "_0";

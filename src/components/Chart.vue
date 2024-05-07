@@ -46,7 +46,7 @@
       />
      </div>
      <div class="watermark" v-else-if="smeFunc() === 'it'">
-      <img v-bind:src="'../../assets/itLogo.png'" alt="Logo" />
+      <img v-bind:src="'../../assets/itLogo.svg'" alt="Logo" />
     </div>
   </div>
 </template>
@@ -83,6 +83,7 @@ export default {
     "colors",
     "legend_txt_color",
     "waterMarkText",
+    "waterMark",
     "magnet",
     "isDark",
     "firstVariant",
@@ -324,9 +325,9 @@ export default {
     smeFunc() {
       const queryParams = new URLSearchParams(window.location.search);
       if (queryParams.get("sme") === "true") {
-        return "sme";
+        return 'sme';
       } else if (queryParams.get("it") === "true") {
-        return "it";
+        return 'it';
       } else {
         return false;
       }
@@ -475,6 +476,7 @@ export default {
         company_name: this.$props.company_name,
         legend_txt_color: this.$props.legend_txt_color,
         waterMarkText: this.$props.waterMarkText,
+        waterMark: this.$props.waterMark,
         magnet: this.$props.magnet,
         isDark: this.$props.isDark,
         firstVariant: this.$props.firstVariant,
@@ -641,7 +643,7 @@ export default {
     const newKeyValues = new URLSearchParams(keyword);
     console.log("window", newKeyValues.get("sme"));
 
-
+    console.log("sme from charts", this.main_section.waterMark);
     console.log("propscharts",this.$props?.isDark)
 
     // console.log("layout==>",this._layout.grids)
@@ -659,11 +661,14 @@ export default {
 /* Watermark style */
 .watermark, .watermark-dark {
   position: absolute;
+  /* background-color: #6B6B6B; */
   top: 35%;
   left: 47%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width:80vw;
+  height:80vh;
   transform: translate(-50%, -50%);
   font-size: 34px;
   font-weight: 600;
