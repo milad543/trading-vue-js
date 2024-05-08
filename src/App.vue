@@ -201,6 +201,7 @@ export default {
       isOpenModal: false,
       showModal: false,
       general: true,
+      
       chartSetting:[
         {lable: 'Up Color',type: 'edit', color: '#ff0000'},
         {lable: 'Down Color',type: 'edit', color: '#00ff00'},
@@ -221,7 +222,27 @@ export default {
         {lable: 'secondVariant', check: false},
         {lable: 'thirdVariant', check: false},
         {lable: 'fourthVariant', check: false},
-      ]
+      ],
+      chartSett: [
+               { firstVariant: {
+                    candleColorUp: "#00B061",
+                    candleColorDw: "#F23645",
+                    candleVolumeUp:  "#4cc790",
+                    candleVolumeDw:  "#fc6d72",
+                    candleBorder: false,
+                    magnet: false,
+                    darkMode: false,
+                }},
+               { secondVariant: {
+                    candleColorUp: "#16B195",
+                    candleColorDw: "#F23645",
+                    candleVolumeUp: "#16B195",
+                    candleVolumeDw:  "#F23645",
+                    candleBorder: true,
+                    magnet: false,
+                    darkMode: false,
+                }},
+              ],
     };
   },
   mounted() {
@@ -297,10 +318,10 @@ export default {
     candleColorUp(){
       if(this.firstVariant){
         this.candleBorder = false
-        return this.chartSetting ? this.chartSetting[0].color : "#00B061"
+        return this.chartSetting[0].color
       }else if(this.secondVariant){
         this.candleBorder = true;
-        return "#16B195"
+        return this.chartSett.secondVariant.candleColorUp
       }else if(this.thirdVariant){
         this.candleBorder = true;
         return "#7D7E7E"
@@ -311,9 +332,9 @@ export default {
     },
     candleColorDw(){
       if(this.firstVariant){
-        return this.chartSetting ? this.chartSetting[1].color :  "#F23645"
+        return this.chartSetting[1].color
       }else if(this.secondVariant){
-        return "#F23645"
+        return this.chartSett.secondVariant.candleColorDw
       }else if(this.thirdVariant){
         return "#FCFCFC"
       }
@@ -323,9 +344,9 @@ export default {
     },
     candleVolumeUp(){
       if(this.firstVariant){
-        return "#4cc790"
+        return this.chartSett.firstVariant.candleVolumeUp
       }else if(this.secondVariant){
-        return "#16B195"
+        return this.chartSet.secondVariant.candleVolumeUp
       }else if(this.thirdVariant){
         return "#7D7E7E"
       }else if(this.fourthVariant) {
@@ -334,9 +355,9 @@ export default {
     },
     candleVolumeDw(){
       if(this.firstVariant){
-        return "#fc6d72"
+        return this.chartSett.firstVariant.candleVolumeDw
       }else if(this.secondVariant){
-        return "#F23645 "
+        return this.chartSett.secondVariant.candleVolumeDw
       }else if(this.thirdVariant){
         return "#D3D3D3"
       }else if(this.fourthVariant) {
@@ -414,9 +435,10 @@ export default {
       this.enableCrosshair = !this.enableCrosshair;
     },
   },
-  //   mounted(){
-  //   this.goto(1543572000000)
-  // }
+    mounted(){
+      console.log("chartSett", this.chartSett)
+    // this.goto(1543572000000)
+  }
 };
 </script>
 
