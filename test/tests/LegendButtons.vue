@@ -41,7 +41,7 @@ export default {
                     )
                 }
             }
-            console.log(event)
+            // console.log(event)
         }
     },
     mounted() {

@@ -360,14 +360,14 @@ export default {
     range_changed_by_time(startTime, endTime) {
       // Find Index For Start
       let dataChanged = this.data_changed();
-      console.log("range_changed_by_time dataChanged", dataChanged);
+      // console.log("range_changed_by_time dataChanged", dataChanged);
       let startTimeIndex = this.ti_map.t2i(startTime);
       let endTimeIndex = this.ti_map.t2i(endTime);
-      console.log("range_changed_by_time updatedIndex", {
-        dataChanged,
-        startTimeIndex,
-        endTimeIndex,
-      });
+      // console.log("range_changed_by_time updatedIndex", {
+      //   dataChanged,
+      //   startTimeIndex,
+      //   endTimeIndex,
+      // });
       let newRange = [startTimeIndex, endTimeIndex];
       this.range_changed(newRange);
       // console.log('this.ti_map.t2i(r[0])',this.ti_map.t2i(r[0]))
@@ -620,9 +620,9 @@ export default {
 
         this.update_layout();
         this.$emit("sidebar-transform", this.y_transforms["0"]);
-        console.log("noideawill", this.y_transforms["0"], gridKeys);
+        // console.log("noideawill", this.y_transforms["0"], gridKeys);
       } else {
-        console.log("mainSideBar", mainSideBar);
+        // console.log("mainSideBar", mainSideBar);
         if (mainSideBar?.renderer?.calc_range_function) {
           let currentRange = mainSideBar.renderer.calc_range_function();
           this.y_transforms["0"] = {
@@ -641,10 +641,10 @@ export default {
   mounted() {
     const keyword = window.location.search;
     const newKeyValues = new URLSearchParams(keyword);
-    console.log("window", newKeyValues.get("sme"));
+    // console.log("window", newKeyValues.get("sme"));
 
-    console.log("sme from charts", this.main_section.waterMark);
-    console.log("propscharts",this.$props?.isDark)
+    // console.log("sme from charts", this.main_section.waterMark);
+    // console.log("propscharts",this.$props?.isDark)
 
     // console.log("layout==>",this._layout.grids)
     // console.log("this is layout from charts", this._layout)

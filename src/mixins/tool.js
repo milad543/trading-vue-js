@@ -74,7 +74,7 @@ export default {
         },
         remove_tool() {
             if (this.selected) {
-                console.log("remove_tool")
+                // console.log("remove_tool")
                 this.$emit('remove-tool')
             }
         },

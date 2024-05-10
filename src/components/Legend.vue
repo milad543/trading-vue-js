@@ -13,14 +13,14 @@
         ><br />
       </template>
       <template v-if="show_CustomProps">
-        <span v-for="(n, i) in legendTxtConfig" :key="i" :style="n.style">
+        <span v-for="(n, i) in legendTxtConfig" :key="i" :style="n.style" >
           {{ n.name }}&nbsp;
         </span>
       </template>
       <span
         class="t-vue-title"
         v-if="!common.firstVariant && !common.secondVariant && !common.thirdVariant && !common.fourthVariant && !show_CustomProps" 
-        :style="{ color: common.colors.title }"
+        :style="{ color: common.colors.title}" 
       >
         {{common.title_txt}}
         
@@ -117,7 +117,7 @@
           </div>
           <div :class="common?.isDark ? 'legend-center-section-dark' : 'legend-center-section'">
             <!-- <p>International Business Machines Corporation</p> -->
-            <p>{{ common.company_name }}</p>
+            <span>{{ common.company_name }}</span>
           </div>
           <div class="legend-left-section">
             <span>
@@ -729,6 +729,7 @@ export default {
 .t-vue-title {
   margin-right: 0.25em;
   font-size: 1.45em;
+  
 }
 
 .t-vue-ind {
@@ -806,5 +807,8 @@ export default {
 .tvjs-appear-enter,
 .tvjs-appear-leave-to {
   opacity: 0;
+}
+.istitleDark{
+  color: white
 }
 </style>

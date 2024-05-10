@@ -26,7 +26,7 @@
         },
         methods:{
             modeFunction(payload){
-                console.log("somethidn");
+                // console.log("somethidn");
                 this.isModeSelected = payload
             }
         },

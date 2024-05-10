@@ -5849,7 +5849,7 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
     var right = array.length - 1;
     var found = false;
     var interval_ms = this.detect_interval(array);
-    console.log("searchResults", interval_ms);
+    // console.log("searchResults", interval_ms);
     var GetValue = function GetValue(i) {
       var _array$i;
       return array === null || array === void 0 || (_array$i = array[i]) === null || _array$i === void 0 ? void 0 : _array$i[0];
@@ -6039,7 +6039,7 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
     },
     // Time-axis nearest step
     t_magnet: function t_magnet(t) {
-      console.log("magnet");
+      // console.log("magnet");
       if (ib) t = self.ti_map.smth2i(t);
       var cn = self.candles || self.master_grid.candles;
       var arr = cn.map(function (x) {
@@ -12906,10 +12906,10 @@ var settingPng = icons_namespaceObject["gear.png"];
           return Array(8).fill("n/a");
         }
       }
-      console.log("ohlcv is here", this.$props.values.ohlcv[3]);
+      // console.log("ohlcv is here", this.$props.values.ohlcv[3]);
       // const prec = this.layout.prec
       var prec = this.decimalPlace;
-      console.log("prec==>", prec);
+      // console.log("prec==>", prec);
       // const prec = 3
       // TODO: main the main legend more customizable
       var id = this.main_type + "_0";
@@ -14416,14 +14416,14 @@ var TI = /*#__PURE__*/function () {
     range_changed_by_time: function range_changed_by_time(startTime, endTime) {
       // Find Index For Start
       var dataChanged = this.data_changed();
-      console.log("range_changed_by_time dataChanged", dataChanged);
+      // console.log("range_changed_by_time dataChanged", dataChanged);
       var startTimeIndex = this.ti_map.t2i(startTime);
       var endTimeIndex = this.ti_map.t2i(endTime);
-      console.log("range_changed_by_time updatedIndex", {
-        dataChanged: dataChanged,
-        startTimeIndex: startTimeIndex,
-        endTimeIndex: endTimeIndex
-      });
+      // console.log("range_changed_by_time updatedIndex", {
+      //   dataChanged: dataChanged,
+      //   startTimeIndex: startTimeIndex,
+      //   endTimeIndex: endTimeIndex
+      // });
       var newRange = [startTimeIndex, endTimeIndex];
       this.range_changed(newRange);
       // console.log('this.ti_map.t2i(r[0])',this.ti_map.t2i(r[0]))
@@ -14684,10 +14684,10 @@ var TI = /*#__PURE__*/function () {
         }
         this.update_layout();
         this.$emit("sidebar-transform", this.y_transforms["0"]);
-        console.log("noideawill", this.y_transforms["0"], gridKeys);
+        // console.log("noideawill", this.y_transforms["0"], gridKeys);
       } else {
         var _mainSideBar$renderer2;
-        console.log("mainSideBar", mainSideBar);
+        // console.log("mainSideBar", mainSideBar);
         if (mainSideBar !== null && mainSideBar !== void 0 && (_mainSideBar$renderer2 = mainSideBar.renderer) !== null && _mainSideBar$renderer2 !== void 0 && _mainSideBar$renderer2.calc_range_function) {
           var _currentRange = mainSideBar.renderer.calc_range_function();
           this.y_transforms["0"] = {
@@ -14707,8 +14707,8 @@ var TI = /*#__PURE__*/function () {
     var _this$$props;
     var keyword = window.location.search;
     var newKeyValues = new URLSearchParams(keyword);
-    console.log("window", newKeyValues.get("sme"));
-    console.log("propscharts", (_this$$props = this.$props) === null || _this$$props === void 0 ? void 0 : _this$$props.isDark);
+    // console.log("window", newKeyValues.get("sme"));
+    // console.log("propscharts", (_this$$props = this.$props) === null || _this$$props === void 0 ? void 0 : _this$$props.isDark);
 
     // console.log("layout==>",this._layout.grids)
     // console.log("this is layout from charts", this._layout)

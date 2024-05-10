@@ -8,8 +8,8 @@
                 <div style="margin-top: 6px; display: flex; justify-content: space-between;  width: 100%; align-items: center;">
                     <span style="font-size: 13px; font-weight: medium; margin-left: 8px;">{{ item.lable }}</span>
                     <span v-if="item.type === 'check'" style="margin-right: 10px; border-radius: 6px; display: flex; align-items: center; justify-content: center"> 
-                     <input v-model="item.checked" type="checkbox" @change="updateSetting(item)"  /></span>
-                     <input v-model="item.color" @change="updateSetting(item)" v-else style="width: 30px;  height: 22px;" type="color">
+                     <input v-model="item.checked" type="checkbox"  /></span>
+                     <input v-model="item.color" v-else style="width: 30px;  height: 22px;" type="color">
                 </div>
                 <hr style="border-bottom: 1px solid rgba(34, 36, 38, 0.1); margin-bottom:6px; width: 96%;">
             </div>
@@ -33,13 +33,17 @@
 <script>
 export default {
     props:{
+        chartSett:{
+            type: Array,
+            required: true
+        },
         ChartSetting:{
             type: Array,
             required: true
         },
         chartSetting2:{
             type: Array
-        }
+        },
     },
     data(){
         return {
@@ -48,12 +52,13 @@ export default {
     },
     mounted(){
         this.setting = {...this.ChartSetting}
+        // console.log("chartSetting", chartSett);
         
     },
     methods:{
-        updateSetting(){
-            console.log("update setting",this.setting)
-            this.$emit("updateSettingFromChild", this.setting)
+        updateSetting(item){
+            console.log("update setting",item)
+            this.$emit("updateSettingFromChild", setting)
         }
     },
 }

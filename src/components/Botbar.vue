@@ -24,8 +24,8 @@ export default {
     ],
     computed: {
         bot_shaders() {
-            return this.$props.shaders 
-                .filter(x => x.target === 'botbar')
+            // console.log("botbar",this.$props.shaders)
+            return this.$props.shaders?.filter(x => x.target === 'botbar')
         }
     },
     watch: {
@@ -43,7 +43,7 @@ export default {
     },
     methods:{
         openSetting(){
-           console.log("checking the form!");
+        //    console.log("checking the form!");
         }
     },
     mounted() {

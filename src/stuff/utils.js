@@ -328,7 +328,7 @@ export default {
         let right = array.length - 1;
         let found = false;
         let interval_ms = this.detect_interval(array);
-        console.log("searchResults",interval_ms)
+        // console.log("searchResults",interval_ms)
         const GetValue = (i) => array?.[i]?.[0]
         while (left <= right) {
             const mid = Math.floor((left + right) / 2);
@@ -376,3 +376,4 @@ export default {
         (typeof window !== 'undefined' ? window : {})
 
 }
+

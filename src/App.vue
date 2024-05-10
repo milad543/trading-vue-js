@@ -268,10 +268,10 @@ export default {
   methods: {
     handleOkay(){
       this.showModal = false
-      console.log("setting",this.chartSetting)
+      // console.log("setting",this.chartSetting)
     },
     updateSetting(item){
-      console.log("item==>", item)
+      // console.log("item==>", item)
     },
     selected(selectedValue){
       this.isSelected = selectedValue;
@@ -344,7 +344,7 @@ export default {
       }
     },
     toggleMagnet(){
-      console.log("this is magnet", this.magnet)
+      // console.log("this is magnet", this.magnet)
       this.magnet =  !this.magnet
     },
     darkMode(){
@@ -365,7 +365,7 @@ export default {
       this.$refs?.tradeRef?.toggleSidebarCustomRange([this.max, this.min]);
     },
     sidebar_transform(yTransform) {
-      console.log("yTransform", yTransform);
+      // console.log("yTransform", yTransform);
       this.auto_y_axis = yTransform.auto;
     },
     handleChartRange(timeBased, indexBased) {
@@ -379,10 +379,10 @@ export default {
       // this.chart.set("chart",{data: dataSlice})
       // this.chart.tv.setRange(0,dataSlice.length + 10)
 
-      console.log(
-        "this.$refs.tradeRef",
-        this.$refs?.tradeRef?.toggleSideBarYAxis
-      );
+      // console.log(
+      //   "this.$refs.tradeRef",
+      //   this.$refs?.tradeRef?.toggleSideBarYAxis
+      // );
       this.$refs?.tradeRef?.toggleSideBarYAxis();
     },
     changeType(val) {

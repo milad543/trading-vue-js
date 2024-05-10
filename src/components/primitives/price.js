@@ -95,7 +95,7 @@ export default class Price {
     // Regular draw call for overaly
     draw(ctx) {
 
-        console.log("this.comp.colorCandleDw",typeof this.comp.colorCandleDw);
+        // console.log("this.comp.colorCandleDw",typeof this.comp.colorCandleDw);
         if (!this.comp.$props.meta.last) return
         if (!this.shader) this.init_shader()
 

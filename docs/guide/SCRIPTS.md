@@ -514,7 +514,7 @@ export default class Main {
         if (e.data.mod === 'superdog') {
             switch (e.data.type) {
                 case 'serious-data':
-                    console.log(e.data.data)
+                    // console.log(e.data.data)
                     break
             }
         }

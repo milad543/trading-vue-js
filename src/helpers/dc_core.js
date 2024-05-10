@@ -118,7 +118,7 @@ export default class DCCore extends DCEvents {
     // Update ids for all overlays
     update_ids() {
         this.data.chart.id = `chart.${this.data.chart.type}`
-        console.log("this.data.chart.id",this.data.chart.id )
+        // console.log("this.data.chart.id",this.data.chart.id )
         var count = {}
         // grid_id,layer_id => DC id mapping
         this.gldc = {}, this.dcgl = {}

@@ -48,6 +48,11 @@ export default {
 }
 </script> -->
 
+<template>
+    <div>
+        
+    </div>
+</template>
 
 <script>
 import Crosshair from './js/crosshair.js'
