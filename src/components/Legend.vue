@@ -117,7 +117,7 @@
           </div>
           <div :class="common?.isDark ? 'legend-center-section-dark' : 'legend-center-section'">
             <!-- <p>International Business Machines Corporation</p> -->
-            <p>{{ common.company_name }}</p>
+            <span>{{ common.company_name }}</span>
           </div>
           <div class="legend-left-section">
             <span>
